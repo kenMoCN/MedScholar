@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_8bd2342676514ff888a4dab1cfc1274a",
+  "created_at": "2026-10-06T03:54:25.935240+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "clinical_hypokalemia_excitability_001",
+      "question": "某患者因严重低钾血症出现四肢无力、腱反射减弱。从静息电位产生的离子机制角度，分析为什么低钾血症会导致骨骼肌兴奋性降低？",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.25,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 56.1433,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "答案在允许的修订次数内未通过语义核验。",
+      "answer_text": "从静息电位产生的离子机制看，骨骼肌静息电位主要依赖膜内外K+浓度差和静息时膜对K+的高通透性；改变细胞内、外的K+浓度就可改变静息电位的值。因此，低钾血症时细胞外K+浓度降低，可改变骨骼肌静息电位，从而影响骨骼肌兴奋性。但所给证据未直接提供低钾血症导致骨骼肌兴奋性降低的临床或实验结论，也未提供低钾血症时骨骼肌静息电位具体变化数值或阈电位具体变化数值。\n骨骼肌静息电位主要依赖膜内外K+浓度差和静息时膜对K+的高通透性。正常情况下，钠-钾泵维持膜内高K+、膜外低K+，K+顺浓度差外流，达到电化学平衡形成K+平衡电位，成为静息电位的主要成分。能斯特方程可计算K+平衡电位，若膜内K+浓度为膜外的20倍，则约为-80 mV。改变细胞内、外K+浓度可改变静息电位值。因此，低钾血症时细胞外K+浓度降低，可改变骨骼肌静息电位，从而影响骨骼肌兴奋性。但所给证据未直接提供低钾血症导致骨骼肌兴奋性降低的临床或实验结论，也未提供低钾血症时骨骼肌静息电位具体变化数值或阈电位具体变化数值。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "candidates_only",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_hemostasis_coordination_001",
+      "question": "某患者血管破损后数分钟内出血停止。血管收缩、血小板止血栓形成和凝血三个环节如何相互配合完成生理性止血？",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.75,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 16.6756,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "生理性止血由血管收缩、血小板止血栓形成和血液凝固三个过程相继发生并相互重叠、彼此促进，从而在数分钟内使出血停止。血管收缩首先减少局部血流，血小板黏附聚集形成松软止血栓实现初步止血，随后凝血系统被激活形成纤维蛋白网加固止血栓。\n\n血管破损后，损伤刺激反射性引起血管收缩、局部肌源性收缩以及内皮细胞和血小板释放缩血管物质，共同减少局部血流。血流减少的同时，暴露的内皮下成分激活血小板，使其黏附、聚集并释放内容物，形成松软的血小板止血栓实现初步止血。血小板止血栓和暴露的组织因子启动凝血过程，激活的血小板提供磷脂表面并吸附凝血因子，加速凝血酶生成和纤维蛋白网形成，从而加固止血栓。血凝块中的血小板收缩蛋白使血凝块回缩，形成坚实止血栓；同时抗凝与纤溶系统被激活，将止血反应限制在损伤局部。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 46（PDF第 53 页），第三节生理性止血\n- 《生理学》第三章 血液2(1).pdf：幻灯片 11，一、生理性止血的基本过程\n- 《生理学》第三章 血液2(1).pdf：幻灯片 12，一、生理性止血的基本过程\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 47（PDF第 54 页），第三节生理性止血\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 45（PDF第 52 页），第二节血细胞生理",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": null,
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_exercise_muscle_fatigue_001",
+      "question": "骨骼肌剧烈运动后出现短暂无力，并在之后出现肌肉酸痛。请区分急性肌肉疲劳与延迟性肌肉酸痛，并从代谢和兴奋-收缩耦联角度解释。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.25,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 43.4774,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "答案在允许的修订次数内未通过语义核验。",
+      "answer_text": "急性肌肉疲劳是剧烈运动当时或刚结束时出现的短暂无力，与骨骼肌在相对缺氧时主要依靠糖酵解供能、以及缺血缺氧和pH降低等使肌肉收缩能力减弱有关。所给证据未涉及延迟性肌肉酸痛的发生机制，因此无法从代谢和兴奋-收缩耦联角度解释其成因。\n剧烈运动时骨骼肌处于相对缺氧状态，糖酵解成为主要供能方式；同时缺血缺氧和pH降低等因素可直接削弱肌肉收缩能力，使张力下降、缩短速度减慢，表现为短暂无力。骨骼肌收缩本身依赖神经肌肉接头兴奋传递、兴奋-收缩耦联和横桥周期等环节的协调，其中兴奋-收缩耦联把电兴奋与机械收缩连接起来，关键部位是三联管；骨骼肌舒张时胞质内增加的Ca2+几乎全部由肌质网钙泵回摄返回终池。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "candidates_only",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_cardiogenic_vs_anaphylactic_shock_001",
+      "question": "一名患者急性心肌梗死后发生心源性休克，另一名患者发生过敏性休克。比较两者典型血流动力学机制，并说明紧急治疗原则为什么不同。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": null,
+      "term_coverage": 0.0,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 52.4734,
+      "error_categories": [
+        "answer_concept_miss",
+        "answer_source_mismatch"
+      ],
+      "error": null,
+      "answer_text": "所给证据仅能支持对休克相关血流动力学一般原理的讨论：动脉血压取决于心输出量与外周阻力，心输出量减少或外周阻力下降均可导致血压降低。但证据未涉及急性心肌梗死后心源性休克或过敏性休克的具体血流动力学机制，也未涉及两者的紧急治疗原则，因此无法完成两者的比较及治疗原则差异的说明。\n\n所给证据只提供了理解休克血流动力学的一般框架：动脉血压由心输出量与外周阻力共同决定，心输出量减少时主要表现为收缩压降低，外周阻力减小时主要表现为舒张压降低。同时，证据列举了若干可改变心输出量或外周阻力的体液因素，例如去甲肾上腺素使血管广泛收缩、外周阻力升高而心输出量下降，小剂量肾上腺素使心输出量增多、骨骼肌血管舒张而外周阻力下降，缓激肽使血管平滑肌舒张和毛细血管通透性增高，血管升压素使全身血管平滑肌收缩，心房钠尿肽使血管舒张、心输出量减少。这些内容可用于理解“心输出量下降”和“外周阻力下降”两类血压降低的基本途径，但证据本身并未将这些机制与急性心肌梗死后心源性休克或过敏性休克的具体临床情境相联系，也未涉及两者的紧急治疗原则。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 79（PDF第 86 页），第三节血管生理\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 75（PDF第 82 页），第三节血管生理\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 92（PDF第 99 页），第四节心血管活动的调节\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 93（PDF第 100 页），第四节心血管活动的调节\n\n思考提示：\n- 根据现有证据，动脉血压由哪两个主要因素决定？它们各自变化时对收缩压和舒张压的影响有何不同？\n\n还需要进一步核实：\n- 急性心肌梗死后心源性休克的典型血流动力学机制（如心肌收缩力下降、心输出量减少、外周阻力代偿性变化等）缺乏证据支持。\n- 过敏性休克的典型血流动力学机制（如血管扩张、外周阻力下降、毛细血管通透性增高、血容量相对不足等）缺乏证据支持。\n- 两种休克血流动力学机制的具体比较（如心输出量、外周阻力、血容量分布等维度的异同）缺乏证据支持。\n- 两种休克紧急治疗原则的具体内容及其差异（如为何心源性休克与过敏性休克在液体复苏、血管活性药物选择等方面不同）缺乏证据支持。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "eligible_for_verified_external_answer",
+      "answer_source_correct": false,
+      "publication_decision_correct": true
+    }
+  ],
+  "metrics": {
+    "case_count": 4,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 0.5,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.3125,
+    "answer_source_accuracy": 0.75,
+    "publication_decision_accuracy": 1.0,
+    "mean_duration_seconds": 42.192425,
+    "skill_recall_case_count": 0
+  }
+}

@@ -1,0 +1,1277 @@
+{
+  "schema_version": "1.0",
+  "document_id": "doc_5a79d2d028bf5318ef536191ba27b6b027a68bede68345e1f87e70ea8cc1c929",
+  "source_path": "G:\\智能体大赛\\a\\data\\library\\doc_5a79d2d028bf5318ef536191ba27b6b027a68bede68345e1f87e70ea8cc1c929\\核酸的结构与功能.pptx",
+  "original_name": "核酸的结构与功能.pptx",
+  "document_type": "course_deck",
+  "page_count": 138,
+  "metadata": {
+    "title": "第 二 章核酸的结构与功能"
+  },
+  "outline_available": false,
+  "toc_pdf_pages": [],
+  "toc_entries": [],
+  "text_layer": "partial",
+  "sampled_text_page_ratio": 0.9927536231884058,
+  "nodes": [
+    {
+      "level": 2,
+      "title": "第 二 章核酸的结构与功能",
+      "pdf_start": 1,
+      "pdf_end": 1,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1、重要概念：DNA 变性；开放阅读框（ORF）；ribozyme； RNAi；",
+      "pdf_start": 2,
+      "pdf_end": 2,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "本 章 内 容",
+      "pdf_start": 3,
+      "pdf_end": 3,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核 酸(nucleic acid)",
+      "pdf_start": 4,
+      "pdf_end": 4,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酸的分类及分布",
+      "pdf_start": 5,
+      "pdf_end": 5,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一节",
+      "pdf_start": 6,
+      "pdf_end": 6,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、脱氧核糖核苷酸和核糖核苷酸是构成核酸的基本组成单位",
+      "pdf_start": 7,
+      "pdf_end": 7,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酸或核苷酸含特定碱基和戊糖",
+      "pdf_start": 8,
+      "pdf_end": 8,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "嘧啶(pyrimidine)",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "嘌呤(purine)",
+      "pdf_start": 10,
+      "pdf_end": 10,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "部分稀有碱基",
+      "pdf_start": 11,
+      "pdf_end": 11,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "酮式 烯醇式",
+      "pdf_start": 12,
+      "pdf_end": 12,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（构成RNA）",
+      "pdf_start": 13,
+      "pdf_end": 13,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "碱性条件下，RNA很容易降解",
+      "pdf_start": 14,
+      "pdf_end": 14,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "利用mRNA经逆转录生成cDNA时，在逆转录生成cDNA第一链后，提高pH, RNA-DNA杂交双链中的RNA将被降解，而cDNA第一链不被降解，可继续做模板合成其互补链，得到双链cDNA。",
+      "pdf_start": 15,
+      "pdf_end": 15,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA与RNA的分子组成差异",
+      "pdf_start": 16,
+      "pdf_end": 16,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "17",
+      "pdf_start": 17,
+      "pdf_end": 17,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖苷键",
+      "pdf_start": 18,
+      "pdf_end": 18,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "通常是戊糖的C1′与嘧啶碱的N1或嘌呤碱的N9相连接",
+      "pdf_start": 19,
+      "pdf_end": 19,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "体内重要的游离核苷酸及其衍生物",
+      "pdf_start": 20,
+      "pdf_end": 20,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "cAMP",
+      "pdf_start": 21,
+      "pdf_end": 21,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "含核苷酸的生物活性物质：",
+      "pdf_start": 22,
+      "pdf_end": 22,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二甲基异咯嗪",
+      "pdf_start": 23,
+      "pdf_end": 23,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "辅酶A（Coenzyme A, HSCoA, CoA-SH）",
+      "pdf_start": 24,
+      "pdf_end": 24,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "5‘-脱氧腺苷钴铵素",
+      "pdf_start": 25,
+      "pdf_end": 25,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核苷酸的生理功能",
+      "pdf_start": 26,
+      "pdf_end": 26,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酸一级结构(primary structure)指RNA中的核苷酸以及DNA中的脱氧核苷酸从5’端到3’端的排列顺序，也称为碱基序列（base sequence)。",
+      "pdf_start": 27,
+      "pdf_end": 27,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酸一级结构书写方法",
+      "pdf_start": 28,
+      "pdf_end": 28,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "bp: base pair 碱基对",
+      "pdf_start": 29,
+      "pdf_end": 29,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第二节",
+      "pdf_start": 30,
+      "pdf_end": 30,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、 DNA的二级结构",
+      "pdf_start": 31,
+      "pdf_end": 31,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（一）一些经典实验为DNA 双螺旋结构的提出奠定了基础",
+      "pdf_start": 32,
+      "pdf_end": 32,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "碱基组成分析",
+      "pdf_start": 33,
+      "pdf_end": 33,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "高质量的DNA 分子X射线衍射照片",
+      "pdf_start": 34,
+      "pdf_end": 34,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1953年，Watson和Crick提出B型DNA双螺旋模型",
+      "pdf_start": 35,
+      "pdf_end": 35,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Molecular Structure of Nucleic Acids. Nature ,April 25, 1953",
+      "pdf_start": 36,
+      "pdf_end": 36,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "获得1962年诺贝尔生理学或医学奖",
+      "pdf_start": 37,
+      "pdf_end": 37,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. DNA是由两条多聚脱氧核苷酸链围绕着同一个螺旋轴形成的反向平行的右手双螺旋结构。",
+      "pdf_start": 38,
+      "pdf_end": 38,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "为什么有大沟和小沟",
+      "pdf_start": 39,
+      "pdf_end": 39,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2. 双螺旋外侧:脱氧核糖-磷酸骨架链;",
+      "pdf_start": 40,
+      "pdf_end": 40,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "碱基互补配对",
+      "pdf_start": 41,
+      "pdf_end": 41,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "亲水性的骨架位于双链的外侧。",
+      "pdf_start": 42,
+      "pdf_end": 42,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "碱基对平面与螺旋轴垂直",
+      "pdf_start": 43,
+      "pdf_end": 43,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "3. DNA双链是右手螺旋结构",
+      "pdf_start": 44,
+      "pdf_end": 44,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "4. DNA双螺旋结构的维持:",
+      "pdf_start": 45,
+      "pdf_end": 45,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA二级结构记忆口诀",
+      "pdf_start": 46,
+      "pdf_end": 46,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "巨型雕塑“生命螺旋”",
+      "pdf_start": 47,
+      "pdf_end": 47,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 48",
+      "pdf_start": 48,
+      "pdf_end": 48,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "（三）DNA双螺旋结构具有多样性",
+      "pdf_start": 49,
+      "pdf_end": 49,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "A 型",
+      "pdf_start": 50,
+      "pdf_end": 50,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "反向重复序列可形成发夹结构或十字型结构",
+      "pdf_start": 51,
+      "pdf_end": 51,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "回文序列（正着读反着读都一样）",
+      "pdf_start": 52,
+      "pdf_end": 52,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA的三链结构",
+      "pdf_start": 53,
+      "pdf_end": 53,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三股链中的非Watson-Crick配对称为Hoogsteen配对",
+      "pdf_start": 54,
+      "pdf_end": 54,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA的四链结构",
+      "pdf_start": 55,
+      "pdf_end": 55,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、DNA双链经过盘绕折叠形成致密的高级结构",
+      "pdf_start": 56,
+      "pdf_end": 56,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "解链过程中正超螺旋（左侧，顺着解链的方向）以及负超螺旋（右侧）的形成。",
+      "pdf_start": 57,
+      "pdf_end": 57,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "(一）原核生物封闭环状DNA具有负超螺旋结构",
+      "pdf_start": 58,
+      "pdf_end": 58,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "经改造的质粒（plasmid, 细菌内独立于细菌染色体之外的环状小DNA分子）是基因工程技术中最常用的载体。",
+      "pdf_start": 59,
+      "pdf_end": 59,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "M： DNA marker , DNA标准分子量对照",
+      "pdf_start": 60,
+      "pdf_end": 60,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（二）真核生物基因组DNA 被逐级有序地组装成高级结构",
+      "pdf_start": 61,
+      "pdf_end": 61,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "电镜下，DNA染色质呈现出串珠样结构/10nm纤维，使DNA长度压缩了约7倍。",
+      "pdf_start": 62,
+      "pdf_end": 62,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "30nm纤维的生成",
+      "pdf_start": 63,
+      "pdf_end": 63,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "在30nm纤维基础上进一步组装的两种模型",
+      "pdf_start": 64,
+      "pdf_end": 64,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA length: 4.67 x 107 bp = 16mm (未压缩）",
+      "pdf_start": 65,
+      "pdf_end": 65,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人线粒体DNA（mtDNA）",
+      "pdf_start": 66,
+      "pdf_end": 66,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "20 世纪30 年代，已知染色体是遗传物质，也知道DNA是染色体的组成部分。随后多年，学界主流认为染色体中的蛋白质是遗传物质。",
+      "pdf_start": 67,
+      "pdf_end": 67,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1944年，Avery的体外肺炎球菌转化实验",
+      "pdf_start": 68,
+      "pdf_end": 68,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1952年",
+      "pdf_start": 69,
+      "pdf_end": 69,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA的基本功能： 以基因的形式荷载遗传信息，并作为基因复制和转录的模板。DNA是遗传的物质基础，也是个体生命活动的信息基础。",
+      "pdf_start": 70,
+      "pdf_end": 70,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人类染色体大小及所含蛋白编码基因数量",
+      "pdf_start": 71,
+      "pdf_end": 71,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "美国国家生物技术信息中心 National Center for Biotechnology Information(NCBI)",
+      "pdf_start": 72,
+      "pdf_end": 72,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "常见核苷酸的结构、符号, 戊糖与碱基、磷酸的连接方式。",
+      "pdf_start": 73,
+      "pdf_end": 73,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 74,
+      "pdf_end": 74,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 75,
+      "pdf_end": 75,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Structure and Function of RNA",
+      "pdf_start": 76,
+      "pdf_end": 76,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "RNA的种类",
+      "pdf_start": 77,
+      "pdf_end": 77,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "动物细胞内主要RNA种类及功能",
+      "pdf_start": 78,
+      "pdf_end": 78,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分子小",
+      "pdf_start": 79,
+      "pdf_end": 79,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "许多RNA有复杂的三维结构",
+      "pdf_start": 80,
+      "pdf_end": 80,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "RNA与DNA的比较",
+      "pdf_start": 81,
+      "pdf_end": 81,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一 、信使RNA（messenger RNA, mRNA）是蛋白质合成的模板",
+      "pdf_start": 82,
+      "pdf_end": 82,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* (真核生物）mRNA结构特点",
+      "pdf_start": 83,
+      "pdf_end": 83,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "pre-mRNA在5末端加入帽子结构 (m7GpppGp —)",
+      "pdf_start": 84,
+      "pdf_end": 84,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "真核mRNA5加帽过程",
+      "pdf_start": 85,
+      "pdf_end": 85,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 86",
+      "pdf_start": 86,
+      "pdf_end": 86,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "鸡卵清蛋白基因",
+      "pdf_start": 87,
+      "pdf_end": 87,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "成熟mRNA含编码区和两端非编码区",
+      "pdf_start": 88,
+      "pdf_end": 88,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "遗传学将编码一个多肽的遗传单位称为顺反子(cistron)。",
+      "pdf_start": 89,
+      "pdf_end": 89,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "原核生物mRNA是多顺反子",
+      "pdf_start": 90,
+      "pdf_end": 90,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、转运RNA是蛋白质合成中氨基酸的载体",
+      "pdf_start": 91,
+      "pdf_end": 91,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* tRNA的一级结构特点",
+      "pdf_start": 92,
+      "pdf_end": 92,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "N-甲基鸟嘌呤",
+      "pdf_start": 93,
+      "pdf_end": 93,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "tRNA的二级结构",
+      "pdf_start": 94,
+      "pdf_end": 94,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "氨基酸臂结合氨基酸",
+      "pdf_start": 95,
+      "pdf_end": 95,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "A U C",
+      "pdf_start": 96,
+      "pdf_end": 96,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "与密码子5’-AUU-3’相识别的反密码子为:",
+      "pdf_start": 97,
+      "pdf_end": 97,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "tRNA的三级结构",
+      "pdf_start": 98,
+      "pdf_end": 98,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* rRNA(ribosomal RNA）",
+      "pdf_start": 99,
+      "pdf_end": 99,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "rRNA的花状三级结构",
+      "pdf_start": 100,
+      "pdf_end": 100,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核糖体的组成",
+      "pdf_start": 101,
+      "pdf_end": 101,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核糖体的组成",
+      "pdf_start": 102,
+      "pdf_end": 102,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核糖体有三个tRNA结合位点",
+      "pdf_start": 103,
+      "pdf_end": 103,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "104",
+      "pdf_start": 104,
+      "pdf_end": 104,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "四、组成性非编码RNA参与RNA修饰及蛋白质转运",
+      "pdf_start": 105,
+      "pdf_end": 105,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "五、调控性非编码RNA调控基因表达",
+      "pdf_start": 106,
+      "pdf_end": 106,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "内源性，单链",
+      "pdf_start": 107,
+      "pdf_end": 107,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "small interfering RNA",
+      "pdf_start": 108,
+      "pdf_end": 108,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "109",
+      "pdf_start": 109,
+      "pdf_end": 109,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "新进展：",
+      "pdf_start": 110,
+      "pdf_end": 110,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1959～ 美国",
+      "pdf_start": 111,
+      "pdf_end": 111,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2024年诺贝尔生理或医学奖",
+      "pdf_start": 112,
+      "pdf_end": 112,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "lncRNA（长链非编码RNA）",
+      "pdf_start": 113,
+      "pdf_end": 113,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "六、 核酶是具有生物催化功能的RNA 分子",
+      "pdf_start": 114,
+      "pdf_end": 114,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酶（ribozyme)的意义",
+      "pdf_start": 115,
+      "pdf_end": 115,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 116",
+      "pdf_start": 116,
+      "pdf_end": 116,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "第 四 节",
+      "pdf_start": 117,
+      "pdf_end": 117,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 酸水解与碱水解： DNA和RNA在酸性条件下都易水解。DNA对碱较稳定，RNA易被碱水解。",
+      "pdf_start": 118,
+      "pdf_end": 118,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核苷酸的紫外吸收",
+      "pdf_start": 119,
+      "pdf_end": 119,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "A260的应用",
+      "pdf_start": 120,
+      "pdf_end": 120,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、DNA的变性(denaturation)",
+      "pdf_start": 121,
+      "pdf_end": 121,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "部分变性DNA的电镜图像",
+      "pdf_start": 122,
+      "pdf_end": 122,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "DNA变性后其它理化性质的变化",
+      "pdf_start": 123,
+      "pdf_end": 123,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Tm：通常将核酸加热变性过程中，紫外光吸收值达到最大增加值50%时的温度称为核酸的解链温度。",
+      "pdf_start": 124,
+      "pdf_end": 124,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Tm大小与G+C含量成正比（一定范围内）：",
+      "pdf_start": 125,
+      "pdf_end": 125,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酸分子越长，Tm值越大",
+      "pdf_start": 126,
+      "pdf_end": 126,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三、变性的核酸可以复性或形成杂交双链",
+      "pdf_start": 127,
+      "pdf_end": 127,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "将热变性的DNA骤然冷却至低温时，DNA不可能复性。",
+      "pdf_start": 128,
+      "pdf_end": 128,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "核酸分子杂交(hybridization): 不同来源的变性核酸，在复性时依照碱基互补配对的原则，形成互补双链的过程。",
+      "pdf_start": 129,
+      "pdf_end": 129,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "探针（probe）：",
+      "pdf_start": 130,
+      "pdf_end": 130,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Southern 杂交（Southern blotting）",
+      "pdf_start": 131,
+      "pdf_end": 131,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "132",
+      "pdf_start": 132,
+      "pdf_end": 132,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "研究DNA分子中特异基因的定位及检测",
+      "pdf_start": 133,
+      "pdf_end": 133,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1、重要概念：DNA 变性；ORF；ribozyme； siRNA; RNAi；miRNA",
+      "pdf_start": 134,
+      "pdf_end": 134,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "比较RNA和DNA在分子组成、大分子结构上、生物学功能上的异同点。",
+      "pdf_start": 135,
+      "pdf_end": 135,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 稀有核苷酸主要存在于下列哪一种核酸中",
+      "pdf_start": 136,
+      "pdf_end": 136,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "3. 关于真核细胞mRNA的叙述，下列哪项是错误的",
+      "pdf_start": 137,
+      "pdf_end": 137,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "5．下列关于tRNA的叙述．错误的是 A．二级结构通常呈三叶草型",
+      "pdf_start": 138,
+      "pdf_end": 138,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    }
+  ],
+  "page_map_segments": [],
+  "warnings": [
+    "1 张图片页需要人工复核，未进入回答证据"
+  ],
+  "subject_ids": [
+    "biochemistry"
+  ],
+  "source_format": "pptx",
+  "visual_indexed_pages": [
+    116
+  ],
+  "visual_review_pages": [
+    48
+  ],
+  "visual_failed_pages": [],
+  "visual_indexed_at": "2026-10-08T11:37:02.118423+00:00",
+  "visual_failure_reasons": {}
+}

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedScholar 快速配置向导</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Local Scripts with Fallbacks -->
+  <script src="web/assets/tailwindcss.js"></script>
+  <script>
+    if (!window.tailwind) {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+            display: ['Outfit', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#F4F5FF',
+              100: '#E9ECFF',
+              200: '#D5DAFF',
+              300: '#A8B4FF',
+              400: '#7B88FF',
+              500: '#5B6CFF',
+              600: '#4858EC',
+              700: '#3846D4',
+            },
+            surface: {
+              bg: '#FAFAFA',
+              card: '#FFFFFF',
+              border: '#E5E5E5',
+              subtle: '#EEEEEE',
+              muted: '#71717A',
+            }
+          },
+          boxShadow: {
+            'soft-xs': '0 1px 3px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03)',
+            'soft-sm': '0 2px 8px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02)',
+            'soft-md': '0 6px 20px -2px rgba(0,0,0,0.04), 0 2px 6px -1px rgba(0,0,0,0.02)',
+            'soft-lg': '0 12px 32px -4px rgba(0,0,0,0.06), 0 4px 12px -2px rgba(0,0,0,0.03)',
+            'card-selected': '0 0 0 1px #5B6CFF, 0 10px 28px -4px rgba(91, 108, 255, 0.16)',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(12px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            popIn: {
+              '0%': { transform: 'scale(0)', opacity: '0' },
+              '75%': { transform: 'scale(1.15)' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'pop-in': 'popIn 160ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="web/assets/react.min.js"></script>
+  <script src="web/assets/react-dom.min.js"></script>
+  <script src="web/assets/babel.min.js"></script>
+  <script src="web/assets/qwebchannel.js"></script>
+  <script>
+    if (!window.React) {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"><\/script>');
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"><\/script>');
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"><\/script>');
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #D4D4D8; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #A1A1AA; }
+
+    /* Card Interactive Styles */
+    .harness-card {
+      transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .harness-card:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Soft Gradient Border for Hover / Selected (DeepSeek Harness style) */
+    .card-border-default {
+      border: 1px solid #E5E5E5;
+      background: #FFFFFF;
+    }
+    .dark .card-border-default {
+      border: 1px solid #27272A;
+      background: #18181B;
+    }
+
+    .card-border-hover:hover {
+      border: 1px solid transparent;
+      background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(135deg, rgba(91, 108, 255, 0.45), rgba(72, 88, 236, 0.20));
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: 0 8px 24px -4px rgba(91, 108, 255, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+    .dark .card-border-hover:hover {
+      background-image: linear-gradient(#18181B, #18181B), linear-gradient(135deg, rgba(91, 108, 255, 0.55), rgba(72, 88, 236, 0.30));
+    }
+
+    .card-border-selected {
+      border: 1px solid transparent !important;
+      background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(135deg, #5B6CFF, #8B98FF) !important;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: 0 0 0 1px rgba(91, 108, 255, 0.6), 0 10px 28px -4px rgba(91, 108, 255, 0.18) !important;
+      transform: translateY(-2px);
+    }
+    .dark .card-border-selected {
+      background-image: linear-gradient(#1E1E24, #1E1E24), linear-gradient(135deg, #5B6CFF, #8B98FF) !important;
+      box-shadow: 0 0 0 1px rgba(91, 108, 255, 0.7), 0 10px 28px -4px rgba(91, 108, 255, 0.25) !important;
+    }
+
+    /* Dot Pulse */
+    .dot-active-glow {
+      box-shadow: 0 0 0 3px rgba(91, 108, 255, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] dark:bg-[#121214] text-[#18181B] dark:text-[#F4F4F5] antialiased selection:bg-[#5B6CFF]/15 selection:text-[#5B6CFF] min-h-screen font-sans transition-colors duration-200">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // --- DeepSeek Harness Unified Stroke Icon Set (1.6px Stroke, Zero Color Emoji) ---
+    const StrokeIcon = ({ name, size = 18, className = '' }) => {
+      const strokeProps = {
+        width: size,
+        height: size,
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: 1.6,
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round',
+        className
+      };
+
+      const icons = {
+        // Navigation & Actions
+        check: <polyline points="20 6 9 17 4 12" />,
+        arrowRight: <path d="M5 12h14M12 5l7 7-7 7" />,
+        arrowLeft: <path d="M19 12H5M12 19l-7-7 7-7" />,
+        eye: (
+          <g>
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </g>
+        ),
+        eyeOff: (
+          <g>
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+            <line x1="1" y1="1" x2="23" y2="23" />
+          </g>
+        ),
+        folder: <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />,
+        fileText: (
+          <g>
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </g>
+        ),
+        trash: (
+          <g>
+            <polyline points="3 6 5 6 21 6" />
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            <line x1="10" y1="11" x2="10" y2="17" />
+            <line x1="14" y1="11" x2="14" y2="17" />
+          </g>
+        ),
+        plus: <path d="M12 5v14M5 12h14" />,
+
+        // Features & Domain Stroke Icons
+        visionScan: (
+          <g>
+            <rect x="3" y="3" width="18" height="18" rx="3" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </g>
+        ),
+        bookOpen: (
+          <g>
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </g>
+        ),
+        bookStack: (
+          <g>
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </g>
+        ),
+        shieldCheck: (
+          <g>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <polyline points="9 12 11 14 15 10" />
+          </g>
+        ),
+        shieldLock: (
+          <g>
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </g>
+        ),
+        zap: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
+        compass: (
+          <g>
+            <circle cx="12" cy="12" r="10" />
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+          </g>
+        ),
+        cpuChip: (
+          <g>
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <rect x="9" y="9" width="6" height="6" />
+            <line x1="9" y1="1" x2="9" y2="4" />
+            <line x1="15" y1="1" x2="15" y2="4" />
+            <line x1="9" y1="20" x2="9" y2="23" />
+            <line x1="15" y1="20" x2="15" y2="23" />
+            <line x1="20" y1="9" x2="23" y2="9" />
+            <line x1="20" y1="14" x2="23" y2="14" />
+            <line x1="1" y1="9" x2="4" y2="9" />
+            <line x1="1" y1="14" x2="4" y2="14" />
+          </g>
+        ),
+        bookmarkPin: (
+          <g>
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+          </g>
+        ),
+        cleanAlign: (
+          <g>
+            <line x1="21" y1="10" x2="3" y2="10" />
+            <line x1="21" y1="6" x2="3" y2="6" />
+            <line x1="21" y1="14" x2="3" y2="14" />
+            <line x1="11" y1="18" x2="3" y2="18" />
+          </g>
+        ),
+        playCircle: (
+          <g>
+            <circle cx="12" cy="12" r="10" />
+            <polygon points="10 8 16 12 10 16 10 8" />
+          </g>
+        ),
+        sun: (
+          <g>
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        ),
+        moon: <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />,
+        monitor: (
+          <g>
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </g>
+        ),
+        rocket: (
+          <g>
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4.5c1.62-1.63 5-2.5 5-2.5" />
+            <path d="M12 9v5s3.03-.55 4.5-2c1.63-1.62 2.5-5 2.5-5" />
+          </g>
+        )
+      };
+
+      return <svg {...strokeProps}>{icons[name] || null}</svg>;
+    };
+
+    // --- Interactive Card Component (Clean Stroke Line Style) ---
+    const OptionCard = ({
+      title,
+      description,
+      strategy,
+      iconName,
+      badge,
+      isSelected,
+      onSelect,
+      className = ''
+    }) => {
+      return (
+        <div
+          onClick={onSelect}
+          className={`harness-card card-border-hover rounded-[18px] p-6 select-none relative flex flex-col justify-between ${
+            isSelected ? 'card-border-selected' : 'card-border-default shadow-soft-sm'
+          } ${className}`}
+        >
+          {/* Top Row: Badge + Checkmark */}
+          <div className="flex items-start justify-between mb-4">
+            {badge ? (
+              <span className="inline-flex items-center px-2.5 py-1 rounded-[7px] text-[10px] font-bold font-mono tracking-wider bg-[#F4F5FF] dark:bg-[#232438] text-[#5B6CFF] dark:text-[#8B98FF] border border-[#5B6CFF]/20">
+                {badge}
+              </span>
+            ) : <div />}
+
+            {/* Checkmark Capsule (Soft blue-purple, pop-in animation) */}
+            <div
+              className={`w-5 h-5 rounded-full flex items-center justify-center transition-all duration-200 ${
+                isSelected
+                  ? 'bg-[#5B6CFF] text-white shadow-soft-xs animate-pop-in'
+                  : 'border border-[#D0D0D0] dark:border-[#3F3F46] bg-transparent text-transparent'
+              }`}
+            >
+              {isSelected && <StrokeIcon name="check" size={12} className="stroke-[2.5]" />}
+            </div>
+          </div>
+
+          {/* Center Content: Stroke Icon + Title + Description */}
+          <div>
+            <div className="flex items-center space-x-3 mb-2.5">
+              <div className="w-8 h-8 rounded-[9px] bg-[#F4F4F5] dark:bg-[#27272A] text-[#5B6CFF] flex items-center justify-center flex-shrink-0">
+                <StrokeIcon name={iconName} size={18} />
+              </div>
+              <h3 className="text-base font-bold text-[#18181B] dark:text-[#F4F4F5] tracking-tight">
+                {title}
+              </h3>
+            </div>
+            
+            {description && (
+              <p className="text-[13px] text-[#52525B] dark:text-[#A1A1AA] leading-relaxed mb-3">
+                {description}
+              </p>
+            )}
+          </div>
+
+          {/* Bottom Strategy Hint (if present) */}
+          {strategy && (
+            <div className="pt-2.5 mt-auto border-t border-[#F4F4F5] dark:border-[#27272A] text-[11px] font-medium text-[#71717A] dark:text-[#71717A] flex items-center space-x-1">
+              <span className="text-[#5B6CFF] font-semibold">策略说明</span>
+              <span>·</span>
+              <span className="truncate">{strategy}</span>
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    // --- Main Wizard Component ---
+    function WizardPreviewApp() {
+      // Step Index: 0 = 欢迎页, 1..6 = 配置流程
+      const [currentStep, setCurrentStep] = useState(0);
+      const TOTAL_STEPS = 6;
+
+      // Config State
+      const [config, setConfig] = useState({
+        enableImageRecognition: true,
+        deepseekModelName: 'deepseek-flash',
+        deepseekApiKey: '',
+        doubaoVisionModelName: 'doubao-seed-evolving',
+        doubaoApiKey: '',
+        proficiency: 'beginner',
+        needTextbook: true,
+        selectedFiles: [],
+        citeLocation: true,
+        requireFileApproval: true,
+        themeMode: 'light'
+      });
+
+      // UI Control States
+      const [showDsKey, setShowDsKey] = useState(false);
+      const [showDbKey, setShowDbKey] = useState(false);
+      const [showCompletedModal, setShowCompletedModal] = useState(false);
+      const [showTutorialModal, setShowTutorialModal] = useState(false);
+      const [tutorialProvider, setTutorialProvider] = useState('deepseek');
+      const [tutorialImages, setTutorialImages] = useState({ deepseek: [], doubao: [] });
+      const [tutorialIndex, setTutorialIndex] = useState(0);
+      const [showApiKeyErrors, setShowApiKeyErrors] = useState(false);
+      const tutorialPreloadsRef = useRef([]);
+      const tutorialTriggerRefs = useRef({});
+      const tutorialCloseButtonRef = useRef(null);
+      const tutorialOverlayRef = useRef(null);
+      const TUTORIAL_IMAGES = tutorialImages[tutorialProvider] || [];
+
+      const openTutorial = (provider) => {
+        setTutorialProvider(provider);
+        setTutorialIndex(0);
+        setShowTutorialModal(true);
+      };
+      const closeTutorial = () => setShowTutorialModal(false);
+      const openProviderSite = (provider) => {
+        if (window.wizardBridge?.openProviderSite) {
+          window.wizardBridge.openProviderSite(provider);
+        }
+      };
+
+      useEffect(() => {
+        if (!showTutorialModal) return;
+        tutorialPreloadsRef.current = TUTORIAL_IMAGES.map((path) => {
+          const image = new Image();
+          image.src = path;
+          if (image.decode) image.decode().catch(() => {});
+          return image;
+        });
+        return () => { tutorialPreloadsRef.current = []; };
+      }, [showTutorialModal, tutorialProvider, tutorialImages]);
+
+      useEffect(() => {
+        if (!showTutorialModal) return;
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        const focusTimer = window.setTimeout(() => tutorialCloseButtonRef.current?.focus(), 0);
+        const onKeyDown = (event) => {
+          if (event.key === 'Escape') closeTutorial();
+          if (event.key === 'ArrowLeft') setTutorialIndex(index => Math.max(0, index - 1));
+          if (event.key === 'ArrowRight' && TUTORIAL_IMAGES.length) setTutorialIndex(index => Math.min(TUTORIAL_IMAGES.length - 1, index + 1));
+          if (event.key === 'Tab') {
+            const buttons = Array.from(tutorialOverlayRef.current?.querySelectorAll('button:not([disabled])') || []);
+            if (!buttons.length) return;
+            const first = buttons[0];
+            const last = buttons[buttons.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+              event.preventDefault();
+              last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+              event.preventDefault();
+              first.focus();
+            }
+          }
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => {
+          window.clearTimeout(focusTimer);
+          window.removeEventListener('keydown', onKeyDown);
+          document.body.style.overflow = previousOverflow;
+          tutorialTriggerRefs.current[tutorialProvider]?.focus();
+        };
+      }, [showTutorialModal, tutorialProvider, tutorialImages]);
+
+      // Connect with PySide6 QWebChannel
+      useEffect(() => {
+        window.setWizardStep = (s) => setCurrentStep(s);
+        window.loadWizardConfig = (jsonStr) => {
+          try {
+            const loaded = typeof jsonStr === 'string' ? JSON.parse(jsonStr) : jsonStr;
+            if (loaded.tutorialImages) setTutorialImages(loaded.tutorialImages);
+            setConfig(prev => ({
+              ...prev,
+              ...loaded,
+              enableImageRecognition: loaded.enableImageRecognition ?? true,
+            }));
+          } catch (e) {
+            console.error('loadWizardConfig err:', e);
+          }
+        };
+
+        let pollTimer = null;
+        let isConnected = false;
+
+        const setupBridge = () => {
+          if (isConnected) return true;
+          if (window.qt && window.qt.webChannelTransport) {
+            isConnected = true;
+            new QWebChannel(window.qt.webChannelTransport, function(channel) {
+              window.wizardBridge = channel.objects.wizardBridge;
+
+              // 1. Initial config loaded from Python
+              if (window.wizardBridge.initialConfigLoaded) {
+                window.wizardBridge.initialConfigLoaded.connect(function(jsonStr) {
+                  try {
+                    const loaded = JSON.parse(jsonStr);
+                    if (loaded.tutorialImages) setTutorialImages(loaded.tutorialImages);
+                    setConfig(prev => ({
+                      ...prev,
+                      ...loaded,
+                      enableImageRecognition: loaded.enableImageRecognition ?? true,
+                    }));
+                  } catch (e) {
+                    console.error('initialConfigLoaded err:', e);
+                  }
+                });
+              }
+
+              // 2. Files selected from native QFileDialog
+              if (window.wizardBridge.filesSelected) {
+                window.wizardBridge.filesSelected.connect(function(jsonStr) {
+                  try {
+                    const newFiles = JSON.parse(jsonStr);
+                    if (Array.isArray(newFiles) && newFiles.length > 0) {
+                      setConfig(prev => {
+                        const existing = new Set(prev.selectedFiles);
+                        const merged = [...prev.selectedFiles];
+                        for (const f of newFiles) {
+                          if (!existing.has(f)) {
+                            merged.push(f);
+                            existing.add(f);
+                          }
+                        }
+                        return { ...prev, selectedFiles: merged, needTextbook: true };
+                      });
+                    }
+                  } catch (e) {
+                    console.error('filesSelected err:', e);
+                  }
+                });
+              }
+
+              // Signal frontend is ready
+              if (window.wizardBridge.onFrontendReady) {
+                window.wizardBridge.onFrontendReady();
+              }
+            });
+            return true;
+          }
+          return false;
+        };
+
+        if (!setupBridge()) {
+          pollTimer = setInterval(() => {
+            if (setupBridge() && pollTimer) {
+              clearInterval(pollTimer);
+              pollTimer = null;
+            }
+          }, 50);
+        }
+
+        return () => {
+          if (pollTimer) clearInterval(pollTimer);
+        };
+      }, []);
+
+      // Handle Theme Switch
+      useEffect(() => {
+        const root = document.documentElement;
+        if (config.themeMode === 'dark') {
+          root.classList.add('dark');
+        } else if (config.themeMode === 'light') {
+          root.classList.remove('dark');
+        } else {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.classList.add('dark');
+          } else {
+            root.classList.remove('dark');
+          }
+        }
+        if (window.wizardBridge && window.wizardBridge.setTheme) {
+          window.wizardBridge.setTheme(config.themeMode);
+        }
+      }, [config.themeMode]);
+
+      // Navigation Handlers (6 Steps flow)
+      const goToNext = () => {
+        if (currentStep === 1 && !validateApiKeys()) {
+          return;
+        }
+        if (currentStep === 3 && !config.needTextbook) {
+          // If no textbook, skip Step 4 (Citation) directly to Step 5 (Approval)
+          setCurrentStep(5);
+          return;
+        }
+        if (currentStep < TOTAL_STEPS) {
+          setCurrentStep(currentStep + 1);
+        } else {
+          if (window.wizardBridge && window.wizardBridge.finishWizard) {
+            window.wizardBridge.finishWizard(JSON.stringify(config));
+          } else {
+            setShowCompletedModal(true);
+          }
+        }
+      };
+
+      const hasValue = (value) => Boolean(String(value || '').trim());
+      const apiKeysComplete = hasValue(config.deepseekModelName) && hasValue(config.deepseekApiKey)
+        && (!config.enableImageRecognition || (hasValue(config.doubaoVisionModelName) && hasValue(config.doubaoApiKey)));
+      const validateApiKeys = () => {
+        if (apiKeysComplete) {
+          setShowApiKeyErrors(false);
+          return true;
+        }
+        setShowApiKeyErrors(true);
+        return false;
+      };
+      const goToStep = (step) => {
+        if (step > 1 && !validateApiKeys()) return;
+        setCurrentStep(step);
+      };
+
+      const goToPrev = () => {
+        if (currentStep === 5 && !config.needTextbook) {
+          setCurrentStep(3);
+          return;
+        }
+        if (currentStep > 0) {
+          setCurrentStep(currentStep - 1);
+        }
+      };
+
+      const handleRemoveFile = (index) => {
+        setConfig(prev => ({
+          ...prev,
+          selectedFiles: prev.selectedFiles.filter((_, i) => i !== index)
+        }));
+      };
+
+      return (
+        <div className="flex flex-col min-h-screen">
+          {/* ===================================================================
+              主内容区 (完全无顶栏干扰，纯净极简大留白)
+             =================================================================== */}
+          <main className="flex-1 flex flex-col justify-center max-w-4xl w-full mx-auto px-8 py-12">
+            {/* -----------------------------------------------------------------
+                0. 欢迎页 (Welcome Page - 极简文案，三张卡片只留标题)
+               ----------------------------------------------------------------- */}
+            {currentStep === 0 && (
+              <div className="animate-fade-in-up text-center max-w-2xl mx-auto py-8">
+                {/* 第一行：快速配置流程（圆角矩形框，填充淡蓝色） */}
+                <div className="inline-flex items-center px-3.5 py-1 rounded-[8px] bg-[#EBF2FF] dark:bg-[#1E254A] border border-[#5B6CFF]/20 text-xs font-semibold text-[#4858EC] dark:text-[#8B98FF] tracking-wide mb-3.5 shadow-soft-xs">
+                  快速配置流程
+                </div>
+
+                {/* 第二行：欢迎使用 MedScholar */}
+                <h1 className="text-3xl md:text-4xl font-extrabold text-[#18181B] dark:text-white tracking-tight leading-tight mb-10">
+                  欢迎使用 MedScholar
+                </h1>
+
+                {/* 3 个卡片（只保留线条图标与小标题，删除所有灰色小字） */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
+                  <div className="p-6 rounded-[16px] bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] shadow-soft-xs flex flex-col items-center justify-center space-y-3 hover:-translate-y-1 transition-all duration-200">
+                    <div className="w-10 h-10 rounded-full bg-[#F4F5FF] dark:bg-[#27272A] text-[#5B6CFF] flex items-center justify-center">
+                      <StrokeIcon name="visionScan" size={20} />
+                    </div>
+                    <div className="font-bold text-sm text-[#18181B] dark:text-white">视觉多模态</div>
+                  </div>
+
+                  <div className="p-6 rounded-[16px] bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] shadow-soft-xs flex flex-col items-center justify-center space-y-3 hover:-translate-y-1 transition-all duration-200">
+                    <div className="w-10 h-10 rounded-full bg-[#F4F5FF] dark:bg-[#27272A] text-[#5B6CFF] flex items-center justify-center">
+                      <StrokeIcon name="bookOpen" size={20} />
+                    </div>
+                    <div className="font-bold text-sm text-[#18181B] dark:text-white">专属教材 RAG</div>
+                  </div>
+
+                  <div className="p-6 rounded-[16px] bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] shadow-soft-xs flex flex-col items-center justify-center space-y-3 hover:-translate-y-1 transition-all duration-200">
+                    <div className="w-10 h-10 rounded-full bg-[#F4F5FF] dark:bg-[#27272A] text-[#5B6CFF] flex items-center justify-center">
+                      <StrokeIcon name="shieldCheck" size={20} />
+                    </div>
+                    <div className="font-bold text-sm text-[#18181B] dark:text-white">安全与本地控制</div>
+                  </div>
+                </div>
+
+                {/* 黑色实心大按钮「开始设置」 */}
+                <div>
+                  <button
+                    onClick={() => setCurrentStep(1)}
+                    className="inline-flex items-center space-x-2.5 px-9 py-3.5 rounded-[10px] bg-[#18181B] hover:bg-[#27272A] dark:bg-white dark:hover:bg-[#F4F4F5] text-white dark:text-[#18181B] font-semibold text-sm shadow-soft-md transition-all duration-150 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                  >
+                    <span>开始设置</span>
+                    <StrokeIcon name="arrowRight" size={15} />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                1-6 步内容区标题（保留 STEP 编号和大标题，位置与样式不变）
+               ----------------------------------------------------------------- */}
+            {currentStep > 0 && (
+              <div className="mb-8 animate-fade-in-up">
+                <div className="text-xs font-semibold text-[#5B6CFF] font-mono tracking-wider uppercase mb-1.5">
+                  STEP 0{currentStep}
+                </div>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-[#18181B] dark:text-white tracking-tight">
+                  {currentStep === 1 && '配置模型 API Key'}
+                  {currentStep === 2 && '选择 AI 工具熟练程度'}
+                  {currentStep === 3 && '教材及专业资料库'}
+                  {currentStep === 4 && '标注教材引用位置'}
+                  {currentStep === 5 && '文件操作权限与安全'}
+                  {currentStep === 6 && '外观与界面主题设置'}
+                </h2>
+                <p className="mt-2 text-sm text-[#71717A] dark:text-[#A1A1AA] leading-relaxed max-w-2xl">
+                  {currentStep === 1 && '请输入您的模型 API Key（安全承诺：仅明文保存在本地 config.env，绝不会上传至第三方）：'}
+                  {currentStep === 2 && '请选择您使用 AI 的习惯，我们将调整 Agent 的回答策略（直接高效输出 vs 主动引导提问）：'}
+                  {currentStep === 3 && '是否需要为 AI Agent 注入专属教材或本地知识库（自动复制至 ./textbook 目录）：'}
+                  {currentStep === 4 && '在解答问题时，是否要求 Agent 在回答末尾附带具体的教材来源及页码段落？'}
+                  {currentStep === 5 && '当 AI Agent 需要对本地目录文件执行创建、修改或删除等高风险操作时：'}
+                  {currentStep === 6 && '请选择应用主题外观（点击选项可立即实时预览整体模式变化）：'}
+                </p>
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                Step 1: 配置回答模型与豆包视觉模型
+               ----------------------------------------------------------------- */}
+            {currentStep === 1 && (
+              <div className="animate-fade-in-up w-full">
+                <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,0.35fr)] gap-5 items-stretch">
+                {/* DeepSeek Box */}
+                <div className="p-6 rounded-[18px] bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] shadow-soft-sm space-y-4">
+                  <div>
+                    <label className="block text-xs font-bold text-[#18181B] dark:text-white tracking-wider mb-2">
+                      DEEPSEEK 模型名称：（默认填写deepseek-flash）
+                    </label>
+                    <input
+                      type="text"
+                      value={config.deepseekModelName}
+                      onChange={(e) => setConfig({ ...config, deepseekModelName: e.target.value })}
+                      placeholder="请输入 API 实际调用使用的模型 ID"
+                      aria-invalid={showApiKeyErrors && !hasValue(config.deepseekModelName)}
+                      className={`w-full px-4 py-2.5 rounded-[10px] border ${showApiKeyErrors && !hasValue(config.deepseekModelName) ? 'border-red-500' : 'border-[#E5E5E5] dark:border-[#3F3F46]'} bg-[#FAFAFA] dark:bg-[#27272A] text-xs font-mono text-[#18181B] dark:text-white focus:outline-none focus:border-[#5B6CFF] transition-colors`}
+                    />
+                    {showApiKeyErrors && !hasValue(config.deepseekModelName) && <p className="mt-1.5 text-xs text-red-600">请填写 DeepSeek 模型名称。</p>}
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-[#18181B] dark:text-white uppercase tracking-wider mb-2">
+                      DeepSeek API Key:
+                    </label>
+                    <div className="relative">
+                      <input
+                        type={showDsKey ? 'text' : 'password'}
+                        value={config.deepseekApiKey}
+                        onChange={(e) => setConfig({ ...config, deepseekApiKey: e.target.value })}
+                        placeholder="sk-..."
+                        aria-invalid={showApiKeyErrors && !hasValue(config.deepseekApiKey)}
+                        className={`w-full px-4 py-2.5 pr-11 rounded-[10px] border ${showApiKeyErrors && !hasValue(config.deepseekApiKey) ? 'border-red-500' : 'border-[#E5E5E5] dark:border-[#3F3F46]'} bg-[#FAFAFA] dark:bg-[#27272A] text-xs font-mono text-[#18181B] dark:text-white focus:outline-none focus:border-[#5B6CFF] transition-colors`}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowDsKey(!showDsKey)}
+                        className="absolute right-3 top-2.5 text-[#71717A] hover:text-[#18181B] dark:hover:text-white transition-colors"
+                      >
+                        <StrokeIcon name={showDsKey ? 'eyeOff' : 'eye'} size={15} />
+                      </button>
+                    </div>
+                    {showApiKeyErrors && !hasValue(config.deepseekApiKey) && <p className="mt-1.5 text-xs text-red-600">请先填写 DeepSeek API Key，才能进入下一页。</p>}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => openProviderSite('deepseek')}
+                    className="block max-w-full break-all text-left text-xs font-medium leading-5 text-[#5B6CFF] underline decoration-current underline-offset-2 transition-colors hover:text-[#3846D4] cursor-pointer"
+                  >一键跳转 https://www.deepseek.com/</button>
+                </div>
+
+                <div className="flex h-full min-h-0 flex-col">
+                  <button
+                    type="button"
+                    ref={(node) => { tutorialTriggerRefs.current.deepseek = node; }}
+                    onClick={() => openTutorial('deepseek')}
+                    className="flex h-full min-h-0 flex-col items-center justify-center gap-2 rounded-[18px] border border-[#D5DAFF] bg-[#EEF2FF] px-4 text-center text-[#4F46E5] shadow-soft-xs transition-all duration-150 hover:-translate-y-1 hover:bg-[#E0E7FF] cursor-pointer dark:border-[#312E81] dark:bg-[#1E1C4E] dark:text-[#8B98FF] dark:hover:bg-[#282566]"
+                    aria-label="查看 DeepSeek API Key 配置教程"
+                  >
+                    <img src="Process/ds.png" alt="" className="h-8 w-8 flex-shrink-0 object-contain" />
+                    <span className="text-xs font-bold leading-5">还不会获取 API Key？<br />点这里查看教程</span>
+                  </button>
+                </div>
+
+                </div>
+
+                <label className="mt-5 inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-[#27272A] dark:text-[#E4E4E7]">
+                  <input
+                    type="checkbox"
+                    checked={config.enableImageRecognition}
+                    onChange={(event) => setConfig({ ...config, enableImageRecognition: event.target.checked })}
+                    className="h-4 w-4 cursor-pointer accent-[#5B6CFF]"
+                  />
+                  启用豆包图片识别
+                </label>
+
+                <div
+                  className={`grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,0.35fr)] gap-5 items-stretch overflow-hidden transition-[max-height,opacity,margin-top] duration-200 ease-in-out ${config.enableImageRecognition ? 'mt-5 max-h-[600px] opacity-100' : 'mt-0 max-h-0 opacity-0 pointer-events-none'}`}
+                  aria-hidden={!config.enableImageRecognition}
+                >
+
+                {/* Doubao vision settings */}
+                <div className="p-6 rounded-[18px] bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] shadow-soft-sm space-y-4">
+                      <div>
+                        <label className="block text-xs font-bold text-[#18181B] dark:text-white tracking-wider mb-2">
+                          豆包 模型名称:(默认填写doubao-seed-evolving)
+                        </label>
+                        <input
+                          type="text"
+                          value={config.doubaoVisionModelName}
+                          disabled={!config.enableImageRecognition}
+                          onChange={(e) => setConfig({ ...config, doubaoVisionModelName: e.target.value })}
+                          placeholder="例如 doubao-seed-evolving"
+                          aria-invalid={showApiKeyErrors && config.enableImageRecognition && !hasValue(config.doubaoVisionModelName)}
+                          className={`w-full px-4 py-2.5 rounded-[10px] border ${showApiKeyErrors && config.enableImageRecognition && !hasValue(config.doubaoVisionModelName) ? 'border-red-500' : 'border-[#E5E5E5] dark:border-[#3F3F46]'} bg-[#FAFAFA] dark:bg-[#27272A] text-xs font-mono text-[#18181B] dark:text-white focus:outline-none focus:border-[#5B6CFF] transition-colors`}
+                        />
+                        {showApiKeyErrors && config.enableImageRecognition && !hasValue(config.doubaoVisionModelName) && <p className="mt-1.5 text-xs text-red-600">请填写豆包视觉模型名称。</p>}
+                      </div>
+                      <div>
+                        <label className="block text-xs font-bold text-[#18181B] dark:text-white uppercase tracking-wider mb-2">
+                          豆包 API Key（仅图片识别时调用）:
+                        </label>
+                        <div className="relative">
+                          <input
+                            type={showDbKey ? 'text' : 'password'}
+                            value={config.doubaoApiKey}
+                            disabled={!config.enableImageRecognition}
+                            onChange={(e) => setConfig({ ...config, doubaoApiKey: e.target.value })}
+                            placeholder="ark-..."
+                            aria-invalid={showApiKeyErrors && config.enableImageRecognition && !hasValue(config.doubaoApiKey)}
+                            className={`w-full px-4 py-2.5 pr-11 rounded-[10px] border ${showApiKeyErrors && config.enableImageRecognition && !hasValue(config.doubaoApiKey) ? 'border-red-500' : 'border-[#E5E5E5] dark:border-[#3F3F46]'} bg-[#FAFAFA] dark:bg-[#27272A] text-xs font-mono text-[#18181B] dark:text-white focus:outline-none focus:border-[#5B6CFF] transition-colors`}
+                          />
+                          <button
+                            type="button"
+                            disabled={!config.enableImageRecognition}
+                            onClick={() => setShowDbKey(!showDbKey)}
+                            className="absolute right-3 top-2.5 text-[#71717A] hover:text-[#18181B] dark:hover:text-white transition-colors"
+                          >
+                            <StrokeIcon name={showDbKey ? 'eyeOff' : 'eye'} size={15} />
+                          </button>
+                        </div>
+                        {showApiKeyErrors && config.enableImageRecognition && !hasValue(config.doubaoApiKey) && <p className="mt-1.5 text-xs text-red-600">请先填写豆包 API Key，才能进入下一页。</p>}
+                      </div>
+                      <button
+                        type="button"
+                        disabled={!config.enableImageRecognition}
+                        onClick={() => openProviderSite('doubao')}
+                        className="block max-w-full break-all text-left text-xs font-medium leading-5 text-[#5B6CFF] underline decoration-current underline-offset-2 transition-colors hover:text-[#3846D4] cursor-pointer"
+                      >一键跳转 https://ark.volcengine.com/region:cn-beijing/model?view=DEFAULT_VIEW&amp;groupType=ModelGroups</button>
+                </div>
+
+                <div className="flex h-full min-h-0 flex-col">
+                  <button
+                    type="button"
+                    disabled={!config.enableImageRecognition}
+                    ref={(node) => { tutorialTriggerRefs.current.doubao = node; }}
+                    onClick={() => openTutorial('doubao')}
+                    className="flex h-full min-h-0 flex-col items-center justify-center gap-2 rounded-[18px] border border-[#D5DAFF] bg-[#EEF2FF] px-4 text-center text-[#4F46E5] shadow-soft-xs transition-all duration-150 hover:-translate-y-1 hover:bg-[#E0E7FF] cursor-pointer dark:border-[#312E81] dark:bg-[#1E1C4E] dark:text-[#8B98FF] dark:hover:bg-[#282566]"
+                    aria-label="查看豆包 API Key 配置教程"
+                  >
+                    <img src="Process/db.png" alt="" className="h-8 w-8 flex-shrink-0 object-contain" />
+                    <span className="text-xs font-bold leading-5">还不会获取 API Key？<br />点这里查看教程</span>
+                  </button>
+                </div>
+
+                </div>
+
+                {/* Security Hint Frame (保留安全承诺) */}
+                <div className="mt-5 p-4 rounded-[12px] bg-[#F4F4F5] dark:bg-[#27272A] border border-[#EEEEEE] dark:border-[#333338] flex items-start space-x-3 text-xs text-[#71717A] dark:text-[#A1A1AA]">
+                  <StrokeIcon name="shieldCheck" size={16} className="text-[#5B6CFF] flex-shrink-0 mt-0.5" />
+                  <span>
+                    <strong>安全承诺：</strong>您的密钥仅明文保存在本地 <code className="px-1.5 py-0.5 rounded bg-white dark:bg-[#18181B] font-mono text-[11px] text-[#5B6CFF]">config.env</code> 文件中，绝不会向任何第三方或云端上传。
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                Step 2: 选择 AI 工具熟练程度
+               ----------------------------------------------------------------- */}
+            {currentStep === 2 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 animate-fade-in-up">
+                <OptionCard
+                  title="我能熟练使用"
+                  description="能够正确且详尽地描述问题，目的明确。"
+                  strategy="直接输出精准解答，减少确认提示。"
+                  iconName="zap"
+                  badge="EXPERT DIRECT"
+                  isSelected={config.proficiency === 'proficient'}
+                  onSelect={() => setConfig({ ...config, proficiency: 'proficient' })}
+                />
+                <OptionCard
+                  title="我还不太熟练"
+                  description="暂时无法全面表达需求，需要 AI 引导。"
+                  strategy="启用双向追问模式，帮助梳理补全需求。"
+                  iconName="compass"
+                  badge="GUIDED INTERACTIVE"
+                  isSelected={config.proficiency === 'beginner'}
+                  onSelect={() => setConfig({ ...config, proficiency: 'beginner' })}
+                />
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                Step 3: 教材及专业资料库
+               ----------------------------------------------------------------- */}
+            {currentStep === 3 && (
+              <div className="space-y-6 animate-fade-in-up">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <OptionCard
+                    title="上传专属教材资料"
+                    description="支持 PDF、Word 等格式，开启本地检索。"
+                    iconName="bookStack"
+                    badge="RAG KNOWLEDGE"
+                    isSelected={config.needTextbook === true}
+                    onSelect={() => setConfig({ ...config, needTextbook: true })}
+                  />
+                  <OptionCard
+                    title="无需通用教材"
+                    description="不依赖外部参考资料，使用通用模型知识库。"
+                    iconName="cpuChip"
+                    badge="GENERAL MODEL"
+                    isSelected={config.needTextbook === false}
+                    onSelect={() => setConfig({ ...config, needTextbook: false })}
+                  />
+                </div>
+
+                {/* File List & Uploader Container */}
+                {config.needTextbook ? (
+                  <div className="p-6 rounded-[18px] bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] shadow-soft-sm space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="text-xs font-bold text-[#18181B] dark:text-white uppercase tracking-wider flex items-center space-x-2">
+                        <StrokeIcon name="folder" size={15} className="text-[#5B6CFF]" />
+                        <span>已选择 {config.selectedFiles.length} 个教材文件：</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <button
+                          onClick={() => {
+                            if (window.wizardBridge && window.wizardBridge.browseFiles) {
+                              window.wizardBridge.browseFiles();
+                            }
+                          }}
+                          className="px-3.5 py-1.5 rounded-[8px] bg-[#18181B] dark:bg-white text-white dark:text-[#18181B] hover:bg-[#27272A] text-xs font-semibold flex items-center space-x-1.5 shadow-soft-xs transition-all"
+                        >
+                          <StrokeIcon name="folder" size={13} />
+                          <span>选择教材文件...</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* File Chips */}
+                    {config.selectedFiles.length > 0 ? (
+                      <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                        {config.selectedFiles.map((file, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-center justify-between p-3 rounded-[10px] bg-[#FAFAFA] dark:bg-[#27272A] border border-[#EEEEEE] dark:border-[#333338] hover:border-[#D4D4D8] transition-colors text-xs"
+                          >
+                            <div className="flex items-center space-x-2.5 truncate mr-2">
+                              <StrokeIcon name="fileText" size={15} className="text-[#5B6CFF] flex-shrink-0" />
+                              <span className="font-mono text-[#27272A] dark:text-[#F4F4F5] truncate">{file}</span>
+                            </div>
+                            <button
+                              onClick={() => handleRemoveFile(idx)}
+                              title="移除此文件"
+                              className="text-[#A1A1AA] hover:text-[#DC2626] transition-colors p-1"
+                            >
+                              <StrokeIcon name="trash" size={13} />
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="p-8 text-center text-xs text-[#A1A1AA] border border-dashed border-[#E5E5E5] dark:border-[#3F3F46] rounded-[12px]">
+                        暂未添加文件，请点击上方按钮选择本地教材（支持 PDF / Word / PPTX）
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="p-5 rounded-[14px] bg-[#F4F4F5] dark:bg-[#27272A] border border-[#EEEEEE] dark:border-[#333338] text-xs text-[#71717A] dark:text-[#A1A1AA] leading-relaxed">
+                    <p className="font-semibold text-[#27272A] dark:text-white mb-1">
+                      当前选择不使用专属教材资料：
+                    </p>
+                    AI Agent 将仅依赖语言模型本身具备的全量知识进行对话答疑。<br />
+                    <span className="text-[#5B6CFF] font-medium">(选择不需要教材时，下一步将自动跳过「引文位置标注」设置。)</span>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                Step 4: 标注教材引用位置
+               ----------------------------------------------------------------- */}
+            {currentStep === 4 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 animate-fade-in-up">
+                <OptionCard
+                  title="需要标注位置"
+                  description="严谨模式。明确标明参考文件名、页码，方便快速查阅原始出处。"
+                  iconName="bookmarkPin"
+                  badge="STRICT CITATION"
+                  isSelected={config.citeLocation === true}
+                  onSelect={() => setConfig({ ...config, citeLocation: true })}
+                />
+                <OptionCard
+                  title="不需要标注位置"
+                  description="流畅模式。Agent 融合教材知识直接解答，文本更加简洁干净。"
+                  iconName="cleanAlign"
+                  badge="CLEAN TEXT"
+                  isSelected={config.citeLocation === false}
+                  onSelect={() => setConfig({ ...config, citeLocation: false })}
+                />
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                Step 5: 文件操作权限与安全
+               ----------------------------------------------------------------- */}
+            {currentStep === 5 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 animate-fade-in-up">
+                <OptionCard
+                  title="每个步骤都需要批准"
+                  description="高安全性模式。每次修改本地磁盘前均会弹出确认框，经人工同意后才执行。"
+                  iconName="shieldLock"
+                  badge="HIGH SECURITY"
+                  isSelected={config.requireFileApproval === true}
+                  onSelect={() => setConfig({ ...config, requireFileApproval: true })}
+                />
+                <OptionCard
+                  title="不需要批准 (全自动)"
+                  description="高效率模式。Agent 自动完成文件的读写编辑与清理工作，无需频繁人工打扰。"
+                  iconName="playCircle"
+                  badge="AUTONOMOUS EXEC"
+                  isSelected={config.requireFileApproval === false}
+                  onSelect={() => setConfig({ ...config, requireFileApproval: false })}
+                />
+              </div>
+            )}
+
+            {/* -----------------------------------------------------------------
+                Step 6: 外观与界面主题设置
+               ----------------------------------------------------------------- */}
+            {currentStep === 6 && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 animate-fade-in-up">
+                <OptionCard
+                  title="白天模式"
+                  description="明亮清爽界面，适合高亮环境与白天自习。"
+                  iconName="sun"
+                  badge="LIGHT"
+                  isSelected={config.themeMode === 'light'}
+                  onSelect={() => setConfig({ ...config, themeMode: 'light' })}
+                />
+                <OptionCard
+                  title="黑夜模式"
+                  description="沉浸护眼深色，深夜刷题与低光环境更佳。"
+                  iconName="moon"
+                  badge="DARK"
+                  isSelected={config.themeMode === 'dark'}
+                  onSelect={() => setConfig({ ...config, themeMode: 'dark' })}
+                />
+                <OptionCard
+                  title="跟随系统"
+                  description="自动读取 Windows 主题设置，无缝智能适配。"
+                  iconName="monitor"
+                  badge="AUTO"
+                  isSelected={config.themeMode === 'system'}
+                  onSelect={() => setConfig({ ...config, themeMode: 'system' })}
+                />
+              </div>
+            )}
+          </main>
+
+          {/* ===================================================================
+              底部导航栏 (左下角「上一页」 + 中间低调小圆点 + 右下角「下一页/完成」)
+             =================================================================== */}
+          {currentStep > 0 && (
+            <footer className="h-16 bg-white/90 dark:bg-[#18181B]/90 backdrop-blur-md border-t border-[#E5E5E5] dark:border-[#27272A] sticky bottom-0 z-40 px-8 flex items-center justify-between">
+              {/* 左下角：上一页按钮 */}
+              <button
+                onClick={goToPrev}
+                disabled={currentStep === 1}
+                className={`flex items-center space-x-2 px-5 py-2.5 rounded-[10px] text-xs font-semibold transition-all duration-120 ${
+                  currentStep === 1
+                    ? 'opacity-40 cursor-not-allowed bg-[#E5E5E5] dark:bg-[#27272A] text-[#71717A]'
+                    : 'bg-[#F4F4F5] dark:bg-[#27272A] text-[#27272A] dark:text-[#F4F4F5] hover:bg-[#EAEAEA] dark:hover:bg-[#333338] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer'
+                }`}
+              >
+                <StrokeIcon name="arrowLeft" size={14} />
+                <span>上一页</span>
+              </button>
+
+              {/* 中间：6 个低调步骤进度小圆点 (已完成 #A8B4FF，当前 #5B6CFF，未完成 #D0D0D0) */}
+              <div className="flex items-center space-x-2.5 select-none py-2">
+                {[1, 2, 3, 4, 5, 6].map((step) => {
+                  const isCurrent = step === currentStep;
+                  const isCompleted = step < currentStep;
+
+                  return (
+                    <button
+                      key={step}
+                      onClick={() => goToStep(step)}
+                      title={`跳转至步骤 ${step}`}
+                      className="p-1 focus:outline-none cursor-pointer group"
+                    >
+                      <div
+                        className={`rounded-full transition-all duration-200 group-hover:scale-125 ${
+                          isCurrent
+                            ? 'w-[8px] h-[8px] bg-[#5B6CFF] dot-active-glow scale-110'
+                            : isCompleted
+                            ? 'w-[7px] h-[7px] bg-[#A8B4FF]'
+                            : 'w-[7px] h-[7px] bg-[#D0D0D0] dark:bg-[#404040]'
+                        }`}
+                      />
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* 右下角：下一页 / 完成生成按钮 */}
+              <button
+                onClick={goToNext}
+                className="flex items-center space-x-2 px-6 py-2.5 rounded-[10px] bg-[#5B6CFF] hover:bg-[#4858EC] text-white text-xs font-semibold shadow-soft-sm transition-all duration-120 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              >
+                <span>{currentStep === TOTAL_STEPS ? '完成配置并生成' : '下一页 →'}</span>
+              </button>
+            </footer>
+          )}
+
+          {/* ===================================================================
+              完成配置模拟弹窗 (Config Completion Modal)
+             =================================================================== */}
+          {showCompletedModal && (
+            <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in-up">
+              <div className="bg-white dark:bg-[#18181B] border border-[#E5E5E5] dark:border-[#27272A] rounded-[20px] p-8 max-w-md w-full shadow-soft-lg text-center">
+                <div className="w-12 h-12 rounded-full bg-[#5B6CFF]/15 text-[#5B6CFF] flex items-center justify-center mx-auto mb-4">
+                  <StrokeIcon name="rocket" size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-[#18181B] dark:text-white mb-2">
+                  AI Agent 配置已准备就绪！
+                </h3>
+                <p className="text-xs text-[#71717A] dark:text-[#A1A1AA] leading-relaxed mb-6">
+                  所有配置项将自动生成并写入 <code className="text-[#5B6CFF] font-mono">config.env</code>，已选的 {config.selectedFiles.length} 份教材将同步复制至本地资料库。
+                </p>
+                <div className="flex space-x-3">
+                  <button
+                    onClick={() => setShowCompletedModal(false)}
+                    className="flex-1 py-2.5 rounded-[10px] bg-[#F4F4F5] dark:bg-[#27272A] text-xs font-semibold text-[#52525B] dark:text-[#D4D4D8] hover:bg-[#EAEAEA]"
+                  >
+                    返回检查
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowCompletedModal(false);
+                      setCurrentStep(0);
+                    }}
+                    className="flex-1 py-2.5 rounded-[10px] bg-[#5B6CFF] hover:bg-[#4858EC] text-white text-xs font-semibold shadow-soft-xs"
+                  >
+                    确定并启动主程序
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+          {showTutorialModal && ReactDOM.createPortal(
+            <div
+              ref={tutorialOverlayRef}
+              className="fixed inset-0 isolate flex items-center justify-center bg-[#FAFAFA]/[0.85] dark:bg-[#121214]/[0.88]"
+              style={{ zIndex: 2147483647 }}
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${tutorialProvider === 'deepseek' ? 'DeepSeek' : '豆包'} API Key 获取教程`}
+              onMouseDown={(event) => {
+                if (event.target === event.currentTarget) closeTutorial();
+              }}
+            >
+              <button
+                type="button"
+                ref={tutorialCloseButtonRef}
+                onClick={closeTutorial}
+                className="absolute top-5 right-6 z-10 text-3xl font-light leading-none text-[#71717A] hover:text-[#27272A] dark:hover:text-white"
+                aria-label="关闭教程"
+              >×</button>
+              <button
+                type="button"
+                onClick={() => setTutorialIndex(index => Math.max(0, index - 1))}
+                disabled={tutorialIndex === 0}
+                className="absolute z-10 left-[6vw] md:left-[7vw] top-1/2 -translate-y-1/2 w-16 h-24 flex items-center justify-center text-5xl font-light text-[#71717A] hover:text-[#27272A] disabled:text-[#D0D0D0] disabled:cursor-default dark:hover:text-white focus-visible:outline-2 focus-visible:outline-[#5B6CFF]"
+                aria-label="上一张"
+              >‹</button>
+              <div
+                className="relative w-[80vw] h-[72vh]"
+                onMouseDown={(event) => {
+                  if (event.target === event.currentTarget) closeTutorial();
+                }}
+              >
+                {TUTORIAL_IMAGES.map((path, index) => (
+                  <img
+                    key={path}
+                    src={path}
+                    alt={`API Key 获取教程第 ${index + 1} 步`}
+                    className={`absolute inset-0 w-full h-full object-contain rounded-[16px] ${index === tutorialIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                    aria-hidden={index !== tutorialIndex}
+                  />
+                ))}
+                {TUTORIAL_IMAGES.length === 0 && (
+                  <div className="flex h-full items-center justify-center text-sm text-[#71717A]">未找到教程图片，请检查 Process 文件夹。</div>
+                )}
+              </div>
+              <button
+                type="button"
+                onClick={tutorialIndex === TUTORIAL_IMAGES.length - 1
+                  ? closeTutorial
+                  : () => setTutorialIndex(index => Math.min(TUTORIAL_IMAGES.length - 1, index + 1))}
+                disabled={TUTORIAL_IMAGES.length === 0}
+                className={`absolute z-10 right-[6vw] md:right-[7vw] top-1/2 -translate-y-1/2 ${tutorialIndex === TUTORIAL_IMAGES.length - 1 ? 'w-36 text-sm font-semibold text-[#5B6CFF]' : 'w-16 text-5xl font-light text-[#71717A]'} h-24 flex items-center justify-center hover:text-[#27272A] dark:hover:text-white focus-visible:outline-2 focus-visible:outline-[#5B6CFF]`}
+                aria-label={tutorialIndex === TUTORIAL_IMAGES.length - 1 ? '返回配置界面' : '下一张'}
+              >{tutorialIndex === TUTORIAL_IMAGES.length - 1 ? '返回配置界面' : '›'}</button>
+              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3">
+                {TUTORIAL_IMAGES.map((_, index) => (
+                  <button
+                    type="button"
+                    key={index}
+                    onClick={() => setTutorialIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-colors ${index === tutorialIndex ? 'bg-[#5B6CFF]' : 'bg-[#D0D0D0] hover:bg-[#A1A1AA]'}`}
+                    aria-label={`跳转到第 ${index + 1} 张`}
+                    aria-current={index === tutorialIndex ? 'step' : undefined}
+                  />
+                ))}
+              </div>
+            </div>,
+            document.body
+          )}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<WizardPreviewApp />);
+  </script>
+</body>
+</html>

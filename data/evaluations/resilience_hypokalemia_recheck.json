@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_96c335faa3f348afb4a768c3576c2cfa",
+  "created_at": "2026-10-06T03:55:55.262860+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "clinical_hypokalemia_excitability_001",
+      "question": "某患者因严重低钾血症出现四肢无力、腱反射减弱。从静息电位产生的离子机制角度，分析为什么低钾血症会导致骨骼肌兴奋性降低？",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.5,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 34.2218,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "从静息电位产生的离子机制看，骨骼肌静息电位主要由膜内高K⁺、膜外高Na⁺的浓度差以及安静时细胞膜对K⁺的高通透性共同形成，其数值接近K⁺平衡电位。严重低钾血症时细胞外K⁺浓度降低，膜内外K⁺浓度差增大，按能斯特方程计算K⁺平衡电位变得更负，静息电位因此超极化，使静息电位与阈电位的距离增大，骨骼肌兴奋性降低，表现为四肢无力和腱反射减弱。\n\n静息电位的形成依赖两个条件：膜内外离子分布不均，膜内K⁺高、膜外Na⁺高；安静时细胞膜主要对K⁺有通透性，K⁺顺浓度差外流，达到电化学平衡形成K⁺平衡电位，骨骼肌静息电位即以此为主要成分。K⁺平衡电位可用能斯特方程计算，其数值随膜内外K⁺浓度比而变化；当膜内K⁺为膜外20倍时，计算值约为−80 mV。因此，改变细胞外K⁺浓度会改变静息电位。静息电位与阈电位的差距是决定兴奋性的重要因素：差距增大时兴奋性降低，差距减小时兴奋性增高。低钾血症使静息电位超极化、与阈电位差距增大，故骨骼肌兴奋性降低，出现四肢无力和腱反射减弱。\n\n依据：\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 13，（二）静息电位的产生机制\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 14，（二）静息电位的产生机制\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 17（PDF第 24 页），第三节生物电现象和兴奋性\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 19，（二）静息电位的产生机制\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 20，（二）静息电位的产生机制\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 58（PDF第 65 页），第一节心脏的电活动\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 32（PDF第 39 页），第四节肌细胞的收缩\n\n思考提示：\n- 如果细胞外K⁺浓度降低，K⁺平衡电位会向哪个方向变化？这会使静息电位更接近还是更远离阈电位？\n- 为什么说静息电位主要由K⁺平衡电位决定，而不是由Na⁺平衡电位决定？这与安静时膜对哪种离子的通透性更高有关？\n\n还需要进一步核实：\n- 严重低钾血症时骨骼肌静息电位具体超极化多少毫伏、阈电位是否发生变化，所给证据未提供。\n- 低钾血症导致四肢无力和腱反射减弱的直接临床电生理证据（如肌电图、神经传导测定）在所给证据中未涉及。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "candidates_only",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    }
+  ],
+  "metrics": {
+    "case_count": 1,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 1.0,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.5,
+    "answer_source_accuracy": 1.0,
+    "publication_decision_accuracy": 1.0,
+    "mean_duration_seconds": 34.2218,
+    "skill_recall_case_count": 0
+  }
+}

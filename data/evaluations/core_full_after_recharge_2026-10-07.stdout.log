@@ -1,0 +1,18 @@
+{"completed": 1, "total": 17, "case_id": "clinical_copd_controlled_oxygen_001", "status": "completed"}
+{"completed": 2, "total": 17, "case_id": "clinical_hypokalemia_excitability_001", "status": "review_required"}
+{"completed": 3, "total": 17, "case_id": "clinical_cardiac_ap_arrhythmia_001", "status": "completed"}
+{"completed": 4, "total": 17, "case_id": "clinical_hemorrhage_baroreflex_001", "status": "review_required"}
+{"completed": 5, "total": 17, "case_id": "clinical_left_hf_pulmonary_edema_001", "status": "completed"}
+{"completed": 6, "total": 17, "case_id": "clinical_septic_vs_cardiogenic_shock_001", "status": "completed"}
+{"completed": 7, "total": 17, "case_id": "clinical_septic_shock_steroid_001", "status": "completed"}
+{"completed": 8, "total": 17, "case_id": "clinical_dumping_syndrome_001", "status": "completed"}
+{"completed": 9, "total": 17, "case_id": "clinical_right_hf_edema_001", "status": "completed"}
+{"completed": 10, "total": 17, "case_id": "clinical_cirrhosis_portal_hypertension_001", "status": "completed"}
+{"completed": 11, "total": 17, "case_id": "clinical_hemostasis_coordination_001", "status": "completed"}
+{"completed": 12, "total": 17, "case_id": "clinical_exercise_muscle_fatigue_001", "status": "review_required"}
+{"completed": 13, "total": 17, "case_id": "clinical_cardiogenic_vs_anaphylactic_shock_001", "status": "completed"}
+{"completed": 14, "total": 17, "case_id": "clinical_fev1_fvc_interpretation_001", "status": "completed"}
+{"completed": 15, "total": 17, "case_id": "clinical_atropine_toxicity_001", "status": "completed"}
+{"completed": 16, "total": 17, "case_id": "clinical_vomiting_diarrhea_acid_base_001", "status": "completed"}
+{"completed": 17, "total": 17, "case_id": "clinical_stretch_reflex_localization_001", "status": "completed"}
+{"done": true, "metrics": {"case_count": 17, "pass_rate": 0.0, "outcome_accuracy": 0.8235294117647058, "retrieval_hit_rate": 1.0, "citation_verification_rate": 1.0, "hallucination_block_rate": null, "mean_term_coverage": 0.33650793650793653, "answer_source_accuracy": 0.8823529411764706, "publication_decision_accuracy": 1.0, "mean_duration_seconds": 45.37938235294117, "skill_recall_case_count": 0}}

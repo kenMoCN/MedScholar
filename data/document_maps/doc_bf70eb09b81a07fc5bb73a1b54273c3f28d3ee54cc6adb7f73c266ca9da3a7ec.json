@@ -1,0 +1,1104 @@
+{
+  "schema_version": "1.0",
+  "document_id": "doc_bf70eb09b81a07fc5bb73a1b54273c3f28d3ee54cc6adb7f73c266ca9da3a7ec",
+  "source_path": "G:\\智能体大赛\\a\\data\\library\\doc_bf70eb09b81a07fc5bb73a1b54273c3f28d3ee54cc6adb7f73c266ca9da3a7ec\\蛋白质结构与功能2.pptx",
+  "original_name": "蛋白质结构与功能2.pptx",
+  "document_type": "course_deck",
+  "page_count": 119,
+  "metadata": {
+    "title": "第三节 蛋白质结构与功能的关系"
+  },
+  "outline_available": false,
+  "toc_pdf_pages": [],
+  "toc_entries": [],
+  "text_layer": "full",
+  "sampled_text_page_ratio": 1.0,
+  "nodes": [
+    {
+      "level": 2,
+      "title": "第三节 蛋白质结构与功能的关系",
+      "pdf_start": 1,
+      "pdf_end": 1,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、蛋白质通过与其他生物分子相互作用执行功能",
+      "pdf_start": 2,
+      "pdf_end": 2,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质相互作用实例",
+      "pdf_start": 3,
+      "pdf_end": 3,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（二）抗原与抗体的特异性结合",
+      "pdf_start": 4,
+      "pdf_end": 4,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "IgG的三维结构",
+      "pdf_start": 5,
+      "pdf_end": 5,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 6",
+      "pdf_start": 6,
+      "pdf_end": 6,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "抗体能与抗原紧密、特异地结合",
+      "pdf_start": 7,
+      "pdf_end": 7,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、蛋白质一级结构是高级结构与功能的基础",
+      "pdf_start": 8,
+      "pdf_end": 8,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "举例：牛核糖核酸酶的变性复性实验(安芬森实验)",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "天然状态，有催化活性",
+      "pdf_start": 10,
+      "pdf_end": 10,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "先去除BME，再去除尿素，蛋白不能复性，活性几乎为零",
+      "pdf_start": 11,
+      "pdf_end": 11,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "“他在核糖核酸酶方面的工作，特别是在氨基酸序列与生物活性构象之间的联系方面”",
+      "pdf_start": 12,
+      "pdf_end": 12,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "破坏非共价键的试剂：",
+      "pdf_start": 13,
+      "pdf_end": 13,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一级结构是蛋白质空间构象和特异生物学功能的基础，但不是决定蛋白质空间构象的唯一因素。",
+      "pdf_start": 14,
+      "pdf_end": 14,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分子伴侣(molecular chaperone)是一类能介导蛋白质进行正确折叠的蛋白质。",
+      "pdf_start": 15,
+      "pdf_end": 15,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "细胞外也有分子伴侣",
+      "pdf_start": 16,
+      "pdf_end": 16,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（一)一级结构与功能的关系",
+      "pdf_start": 17,
+      "pdf_end": 17,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "泛素（ubiquitin)",
+      "pdf_start": 18,
+      "pdf_end": 18,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "组成：一条肽链（人的Cyt C含104个氨基酸残基）+铁卟啉",
+      "pdf_start": 19,
+      "pdf_end": 19,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "细胞色素C一级结构差异",
+      "pdf_start": 20,
+      "pdf_end": 20,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "比较同源蛋白质的一级结构可以阐明生命进化/演化史，氨基酸序列的相似性越大，物种之间的进化关系越近。",
+      "pdf_start": 21,
+      "pdf_end": 21,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（四）重要蛋白质氨基酸序列的改变引起疾病",
+      "pdf_start": 22,
+      "pdf_end": 22,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "N-val-his-leu-thr-pro- glu -glu · · · C(146)",
+      "pdf_start": 23,
+      "pdf_end": 23,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "谷A（极性） 缬A（非极性）",
+      "pdf_start": 24,
+      "pdf_end": 24,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "镰状细胞性状的分布，以粉红色和紫色显示。",
+      "pdf_start": 25,
+      "pdf_end": 25,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "病例讨论",
+      "pdf_start": 26,
+      "pdf_end": 26,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三、蛋白质的功能依赖特定空间结构",
+      "pdf_start": 27,
+      "pdf_end": 27,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（一）血红蛋白亚基与肌红蛋白的结构相似",
+      "pdf_start": 28,
+      "pdf_end": 28,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Fe 2+有六个配位键：",
+      "pdf_start": 29,
+      "pdf_end": 29,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血红素辅基的结构及其氧合部位",
+      "pdf_start": 30,
+      "pdf_end": 30,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血红蛋白(Hemoglobin, Hb)",
+      "pdf_start": 31,
+      "pdf_end": 31,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "A comparison of the structure of myoglobin(PDB ID 1MBO) and the subunit of hemoglobin(PDB ID 1HGA)",
+      "pdf_start": 32,
+      "pdf_end": 32,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血红蛋白亚基间盐键示意图",
+      "pdf_start": 33,
+      "pdf_end": 33,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Hb与Mb一样能可逆地与O2结合， Hb与O2结合后称为氧合Hb。",
+      "pdf_start": 34,
+      "pdf_end": 34,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "肌红蛋白(Mb)和血红蛋白(Hb)的氧解离曲线",
+      "pdf_start": 35,
+      "pdf_end": 35,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "协同效应(cooperativity)",
+      "pdf_start": 36,
+      "pdf_end": 36,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "紧张态（tense state）",
+      "pdf_start": 37,
+      "pdf_end": 37,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "结合氧后，血红蛋白由T态向R态转变",
+      "pdf_start": 38,
+      "pdf_end": 38,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "O2",
+      "pdf_start": 39,
+      "pdf_end": 39,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血红蛋白与氧的结合引起构象变化",
+      "pdf_start": 40,
+      "pdf_end": 40,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血红蛋白与氧结合时发生构象变化",
+      "pdf_start": 41,
+      "pdf_end": 41,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "别构效应(allosteric effect)",
+      "pdf_start": 42,
+      "pdf_end": 42,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2，3-二磷酸甘油酸与非氧合Hb结合",
+      "pdf_start": 43,
+      "pdf_end": 43,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "BPG调节Hb与氧的结合",
+      "pdf_start": 44,
+      "pdf_end": 44,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "pO2(mmHg)",
+      "pdf_start": 45,
+      "pdf_end": 45,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "波尔效应（Bohr effect)",
+      "pdf_start": 46,
+      "pdf_end": 46,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2,3-BPG、H+和CO2都是Hb的别构效应剂， 它们与Hb结合，都有利于Hb从R态变为T态，从而有利于氧合Hb释放氧给组织细胞。",
+      "pdf_start": 47,
+      "pdf_end": 47,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "S形曲线的氧结合、Bohr效应以及BPG效应物的调节，使得Hb的输氧达到最高效率，能在较窄的氧分压范围完成输氧功能。",
+      "pdf_start": 48,
+      "pdf_end": 48,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Hb与氧结合效应要点",
+      "pdf_start": 49,
+      "pdf_end": 49,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "CO与Hb的亲和力比氧高200多倍",
+      "pdf_start": 50,
+      "pdf_end": 50,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "有关血红蛋白(Hb)和肌红蛋白(Mb)的叙述不正确的是",
+      "pdf_start": 51,
+      "pdf_end": 51,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质构象变化可引起疾病",
+      "pdf_start": 52,
+      "pdf_end": 52,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "海绵状脑病（TSE)/朊病毒病: 一组由变异朊蛋白(PrPsc)引起的进行性大脑退化性疾病。 致命性疾病，无有效治疗。 具有传染性。",
+      "pdf_start": 53,
+      "pdf_end": 53,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "朊蛋白存在于身体所有细胞中，在脑中浓度很高。因此，大多数朊蛋白病主要或只影响神经系统。",
+      "pdf_start": 54,
+      "pdf_end": 54,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "斯坦利·普鲁西纳 独享1997年诺奖",
+      "pdf_start": 55,
+      "pdf_end": 55,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "案 例 分 析",
+      "pdf_start": 56,
+      "pdf_end": 56,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质结构与功能的关系 小结",
+      "pdf_start": 57,
+      "pdf_end": 57,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 58,
+      "pdf_end": 58,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第四节 蛋白质的理化性质Physical and Chemical Characters of Protein",
+      "pdf_start": 59,
+      "pdf_end": 59,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "本节要求",
+      "pdf_start": 60,
+      "pdf_end": 60,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "具有氨基酸类似的性质",
+      "pdf_start": 61,
+      "pdf_end": 61,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质分子除两端的氨基和羧基可解离外，氨基酸残基侧链中某些基团，在一定的溶液pH条件下都可解离成带负电荷或正电荷的基团。",
+      "pdf_start": 62,
+      "pdf_end": 62,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人体蛋白质，大多 pI ≈ 5.0",
+      "pdf_start": 63,
+      "pdf_end": 63,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "由于蛋白质分子中含有共轭双键的色氨酸和酪氨酸，因此在280nm波长处有特征性吸收峰。蛋白质的OD280与其浓度呈正比关系，因此可作蛋白质定量测定。",
+      "pdf_start": 64,
+      "pdf_end": 64,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⒈茚三酮反应(ninhydrin reaction)",
+      "pdf_start": 65,
+      "pdf_end": 65,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "在双缩脲反应的基础上，生成的蛋白质-Cu2+复合物中所含的酪氨酸酚基与Folin-酚试剂(磷钼酸和磷钨酸化合物)反应，生产蓝色的化合物(钼蓝和钨蓝的混合物)。 蓝色的深浅与蛋白质含量成正比",
+      "pdf_start": 66,
+      "pdf_end": 66,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "反应 试剂 颜色 反应基团 反应的Pr及AA",
+      "pdf_start": 67,
+      "pdf_end": 67,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质分子的直径可达1～100nm，为胶粒范围之内。",
+      "pdf_start": 68,
+      "pdf_end": 68,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "带正电荷的蛋白质",
+      "pdf_start": 69,
+      "pdf_end": 69,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "在某些物理和化学因素作用下，蛋白质特定的空间构象被破坏，从而导致其生物活性的丧失和理化性质改变。",
+      "pdf_start": 70,
+      "pdf_end": 70,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "“天然蛋白质分子借助次级键连接而成一种紧密、有规则的空间结构，变性作用使次级键破坏从而使结构松散。”",
+      "pdf_start": 71,
+      "pdf_end": 71,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "失去蛋白质特定空间构象（非共价键和二硫键断裂），一级结构不变（肽键、分子组成、分子量不变）。",
+      "pdf_start": 72,
+      "pdf_end": 72,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "物理因素：",
+      "pdf_start": 73,
+      "pdf_end": 73,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "变性后的表现：",
+      "pdf_start": 74,
+      "pdf_end": 74,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "② 防止变性：低温保存生物制品",
+      "pdf_start": 75,
+      "pdf_end": 75,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "可逆变性：Pr变性后如将变性剂除去，该Pr分子的天然构象和生物学活性还能恢复（即复性，renaturation）。",
+      "pdf_start": 76,
+      "pdf_end": 76,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "在一定条件下，多个蛋白质分子相互聚集成团，从溶液中析出。",
+      "pdf_start": 77,
+      "pdf_end": 77,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "变性后的蛋白质可因溶解度降低而“析出”为絮状物，如果加入强酸或强碱，此絮状物会重新溶解。 如果加热，则絮状物变成比较坚固的凝块，不再溶于强酸和强碱中，此即蛋白质的凝固。",
+      "pdf_start": 78,
+      "pdf_end": 78,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "变性蛋白质易于沉淀，但不一定沉淀",
+      "pdf_start": 79,
+      "pdf_end": 79,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "熟悉： 蛋白质分离纯化方法",
+      "pdf_start": 80,
+      "pdf_end": 80,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分离纯化蛋白质的一般程序",
+      "pdf_start": 81,
+      "pdf_end": 81,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "溶解度",
+      "pdf_start": 82,
+      "pdf_end": 82,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "常用蛋白质分离纯化方法",
+      "pdf_start": 83,
+      "pdf_end": 83,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、透析及超滤法",
+      "pdf_start": 84,
+      "pdf_end": 84,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血液透析（Hemodialysis）",
+      "pdf_start": 85,
+      "pdf_end": 85,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "超滤（ultrafiltration）",
+      "pdf_start": 86,
+      "pdf_end": 86,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "盐析法",
+      "pdf_start": 87,
+      "pdf_end": 87,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "定 义：加入大量中性盐以破坏Pr的稳定因素并",
+      "pdf_start": 88,
+      "pdf_end": 88,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "有机溶剂沉淀法",
+      "pdf_start": 89,
+      "pdf_end": 89,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* 免疫沉淀法：将某一纯化蛋白质免疫动物可获得抗该蛋白的特异抗体。利用特异抗体识别相应的抗原蛋白，并形成抗原抗体复合物的性质，可从蛋白质混合溶液中分离获得抗原蛋白。",
+      "pdf_start": 90,
+      "pdf_end": 90,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "定义：带电粒子在电场中向着与其电性相反的电极移动的现象。",
+      "pdf_start": 91,
+      "pdf_end": 91,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "几种重要的蛋白质电泳技术：",
+      "pdf_start": 92,
+      "pdf_end": 92,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "SDS-PAGE",
+      "pdf_start": 93,
+      "pdf_end": 93,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分子量的对数值与迁移率呈线性关系",
+      "pdf_start": 94,
+      "pdf_end": 94,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "等电聚焦（isoelectric focusing, IEF）",
+      "pdf_start": 95,
+      "pdf_end": 95,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "等电聚焦电泳",
+      "pdf_start": 96,
+      "pdf_end": 96,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "双向电泳（two dimensional electrophoresis）",
+      "pdf_start": 97,
+      "pdf_end": 97,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "四 、层析(chromatography)",
+      "pdf_start": 98,
+      "pdf_end": 98,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "离子交换层析：利用各蛋白质的电荷量及性质不同进行分离。",
+      "pdf_start": 99,
+      "pdf_end": 99,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 100",
+      "pdf_start": 100,
+      "pdf_end": 100,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "阳离子交换层析",
+      "pdf_start": 101,
+      "pdf_end": 101,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "阴离子交换层析",
+      "pdf_start": 102,
+      "pdf_end": 102,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一种混合溶液中两种蛋白，蛋白A带负电荷， 蛋白B带正电荷，请问：",
+      "pdf_start": 103,
+      "pdf_end": 103,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "凝胶过滤（分子筛层析）",
+      "pdf_start": 104,
+      "pdf_end": 104,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "亲和层析",
+      "pdf_start": 105,
+      "pdf_end": 105,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "高效液相色谱（HPLC)是层析技术的强化版",
+      "pdf_start": 106,
+      "pdf_end": 106,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "*利用机械的快速旋转所产生的离心力，根据蛋白质的分子量及形状进行分离。",
+      "pdf_start": 107,
+      "pdf_end": 107,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 108",
+      "pdf_start": 108,
+      "pdf_end": 108,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "差速离心分离不同细胞器",
+      "pdf_start": 109,
+      "pdf_end": 109,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "细胞rRNA的分离",
+      "pdf_start": 110,
+      "pdf_end": 110,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 111",
+      "pdf_start": 111,
+      "pdf_end": 111,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "方法1. 通过核酸来推演蛋白质中的氨基酸序列",
+      "pdf_start": 112,
+      "pdf_end": 112,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "COOH",
+      "pdf_start": 113,
+      "pdf_end": 113,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* 二级结构测定",
+      "pdf_start": 114,
+      "pdf_end": 114,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "主要方法：",
+      "pdf_start": 115,
+      "pdf_end": 115,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "https://alphafold.ebi.ac.uk/",
+      "pdf_start": 116,
+      "pdf_end": 116,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1、重要概念： 别构效应 协同效应 等电点 蛋白质的变性 分子伴侣",
+      "pdf_start": 117,
+      "pdf_end": 117,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1.试述蛋白质螺旋、折叠的结构特点。",
+      "pdf_start": 118,
+      "pdf_end": 118,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1 天然蛋白质中不存在的氨基酸是",
+      "pdf_start": 119,
+      "pdf_end": 119,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    }
+  ],
+  "page_map_segments": [],
+  "warnings": [],
+  "subject_ids": [
+    "biochemistry"
+  ],
+  "source_format": "pptx",
+  "visual_indexed_pages": [
+    6,
+    100,
+    108,
+    111
+  ],
+  "visual_review_pages": [],
+  "visual_failed_pages": [],
+  "visual_indexed_at": "2026-10-08T09:44:11.117591+00:00"
+}

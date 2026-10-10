@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "items": [
+    {
+      "import_id": "a5d80f20-09d4-4872-8c50-de930f626b39",
+      "source_path": "C:\\Users\\33381\\Desktop\\维生素等6个文件 (1)\\07 糖代谢(1).pptx",
+      "original_name": "07 糖代谢(1).pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "cc0b17526a8ee13aada24cf24b5e70d08da5ac20758c8b8d5f5233782cc492e2",
+      "document_id": "doc_cc0b17526a8ee13aada24cf24b5e70d08da5ac20758c8b8d5f5233782cc492e2",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_cc0b17526a8ee13aada24cf24b5e70d08da5ac20758c8b8d5f5233782cc492e2\\07 糖代谢(1).pptx",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:17:12.554749+00:00"
+    },
+    {
+      "import_id": "c682b42b-3fc2-4e40-baa6-17526726d8d3",
+      "source_path": "C:\\Users\\33381\\Desktop\\维生素等6个文件 (1)\\蛋白质结构与功能1.pptx",
+      "original_name": "蛋白质结构与功能1.pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "4ce0ed6a014107883f21065d54e6735d86a7dfca5cae162ece8a4df3cd35e1a9",
+      "document_id": "doc_4ce0ed6a014107883f21065d54e6735d86a7dfca5cae162ece8a4df3cd35e1a9",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_4ce0ed6a014107883f21065d54e6735d86a7dfca5cae162ece8a4df3cd35e1a9\\蛋白质结构与功能1.pptx",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:17:12.642077+00:00"
+    },
+    {
+      "import_id": "a874e1cd-4cfe-40f9-9ddf-707e22bf05fe",
+      "source_path": "C:\\Users\\33381\\Desktop\\维生素等6个文件 (1)\\蛋白质结构与功能2.pptx",
+      "original_name": "蛋白质结构与功能2.pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "bf70eb09b81a07fc5bb73a1b54273c3f28d3ee54cc6adb7f73c266ca9da3a7ec",
+      "document_id": "doc_bf70eb09b81a07fc5bb73a1b54273c3f28d3ee54cc6adb7f73c266ca9da3a7ec",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_bf70eb09b81a07fc5bb73a1b54273c3f28d3ee54cc6adb7f73c266ca9da3a7ec\\蛋白质结构与功能2.pptx",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:17:12.717224+00:00"
+    },
+    {
+      "import_id": "cc919921-533d-43e9-9d88-56b594f0a3ea",
+      "source_path": "C:\\Users\\33381\\Desktop\\维生素等6个文件 (1)\\核酸的结构与功能.pptx",
+      "original_name": "核酸的结构与功能.pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "5a79d2d028bf5318ef536191ba27b6b027a68bede68345e1f87e70ea8cc1c929",
+      "document_id": "doc_5a79d2d028bf5318ef536191ba27b6b027a68bede68345e1f87e70ea8cc1c929",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_5a79d2d028bf5318ef536191ba27b6b027a68bede68345e1f87e70ea8cc1c929\\核酸的结构与功能.pptx",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:17:12.807458+00:00"
+    },
+    {
+      "import_id": "f5911178-89f1-4d5f-826c-b3458a30843c",
+      "source_path": "C:\\Users\\33381\\Desktop\\维生素等6个文件 (1)\\酶(1).pptx",
+      "original_name": "酶(1).pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "7502fb152b76816e8466457a6be404b98def7c542c17991b6328f5eddab40d2b",
+      "document_id": "doc_7502fb152b76816e8466457a6be404b98def7c542c17991b6328f5eddab40d2b",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_7502fb152b76816e8466457a6be404b98def7c542c17991b6328f5eddab40d2b\\酶(1).pptx",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:17:12.934647+00:00"
+    },
+    {
+      "import_id": "700729d2-89ed-4250-a8f1-b8113fd88c63",
+      "source_path": "C:\\Users\\33381\\Desktop\\维生素等6个文件 (1)\\维生素.pptx",
+      "original_name": "维生素.pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "0f400e86aef81f68e81f58f921b9fd5da00b68b4887566f81d0d8a46fc0bef78",
+      "document_id": "doc_0f400e86aef81f68e81f58f921b9fd5da00b68b4887566f81d0d8a46fc0bef78",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_0f400e86aef81f68e81f58f921b9fd5da00b68b4887566f81d0d8a46fc0bef78\\维生素.pptx",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:17:12.981408+00:00"
+    },
+    {
+      "import_id": "7b2b128c-2e42-4f41-9ffc-6be9becc853d",
+      "source_path": "C:\\Users\\33381\\Documents\\xwechat_files\\wxid_oprfqgc8cezg22_e655\\msg\\file\\2026-10\\生物化学与分子生物学 (周春燕，药立波) (z-library.sk  1lib.sk  z-lib.sk).pdf",
+      "original_name": "生物化学与分子生物学 (周春燕，药立波) (z-library.sk  1lib.sk  z-lib.sk).pdf",
+      "media_type": "application/pdf",
+      "sha256": "2eb4432b6d8876c539d55875679d0f40998ee3bc92393ac9bede20a273874fe6",
+      "document_id": "doc_2eb4432b6d8876c539d55875679d0f40998ee3bc92393ac9bede20a273874fe6",
+      "stored_path": "G:\\智能体大赛\\a\\data\\library\\doc_2eb4432b6d8876c539d55875679d0f40998ee3bc92393ac9bede20a273874fe6\\生物化学与分子生物学 (周春燕，药立波) (z-library.sk  1lib.sk  z-lib.sk).pdf",
+      "status": "indexed",
+      "duplicate_of": null,
+      "error": null,
+      "created_at": "2026-10-08T05:17:11.961918+00:00",
+      "updated_at": "2026-10-08T05:18:12.435199+00:00"
+    }
+  ]
+}

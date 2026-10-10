@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_aa1a1cce2947483298fe094badb8394e",
+  "created_at": "2026-10-06T03:57:08.676584+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "clinical_exercise_muscle_fatigue_001",
+      "question": "骨骼肌剧烈运动后出现短暂无力，并在之后出现肌肉酸痛。请区分急性肌肉疲劳与延迟性肌肉酸痛，并从代谢和兴奋-收缩耦联角度解释。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.25,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 45.788,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "答案在允许的修订次数内未通过语义核验。",
+      "answer_text": "急性肌肉疲劳指剧烈运动当时或刚结束时出现的短暂无力，与骨骼肌在相对缺氧时主要依靠糖酵解供能，以及缺血缺氧、pH降低等使肌肉收缩能力减弱有关。现有证据未直接说明延迟性肌肉酸痛的发生机制，因此不能从代谢或兴奋-收缩耦联角度对其作出可靠解释。\n剧烈运动时骨骼肌处于相对缺氧状态，葡萄糖主要通过无氧酵解分解为乳酸，这种方式释放的能量远少于有氧氧化，因此肌肉可利用的能量供应受限。同时，缺血缺氧、pH降低和代谢降低等因素会直接削弱肌肉收缩能力，使收缩产生的张力下降、缩短速度减慢，表现为短暂无力。骨骼肌的正常收缩还依赖神经肌肉接头兴奋传递、兴奋-收缩耦联和横桥周期等环节的协调；在兴奋-收缩耦联中，胞质内Ca2+需经肌质网钙泵回摄至终池才能引起肌肉舒张，这一环节的异常也会影响收缩与舒张过程。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "candidates_only",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    }
+  ],
+  "metrics": {
+    "case_count": 1,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 0.0,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": null,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.25,
+    "answer_source_accuracy": 1.0,
+    "publication_decision_accuracy": 1.0,
+    "mean_duration_seconds": 45.788,
+    "skill_recall_case_count": 0
+  }
+}

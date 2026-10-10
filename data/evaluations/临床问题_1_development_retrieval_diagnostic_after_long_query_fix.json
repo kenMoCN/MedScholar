@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "run_id": "retrieval_eval_31996edb686e4e49a353392f8ea7d1ec",
+  "created_at": "2026-10-05T10:10:37.636991+00:00",
+  "top_k": 3,
+  "case_results": [
+    {
+      "case_id": "clinical_copd_controlled_oxygen_001",
+      "question": "某患者因慢性阻塞性肺疾病（COPD）导致长期II型呼吸衰竭（低氧伴高碳酸血症）。如果此时给予高浓度吸氧，可能会加重高碳酸血症甚至出现意识障碍。为什么这类患者需要控制氧疗，而不是不加监测地吸入高浓度氧？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2621,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_hypokalemia_excitability_001",
+      "question": "某患者因严重低钾血症出现四肢无力、腱反射减弱。从静息电位产生的离子机制角度，分析为什么低钾血症会导致骨骼肌兴奋性降低？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2531,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_cardiac_ap_arrhythmia_001",
+      "question": "某患者因急性心肌梗死出现室性心律失常。心肌动作电位平台期或动作电位时程异常为什么可能增加心律失常风险？回答时请区分折返与早期后除极。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2596,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_hemorrhage_baroreflex_001",
+      "question": "某患者因外伤大出血，出现血压下降、心率加快和皮肤湿冷。血压下降通过什么反射途径引起心率加快和外周血管收缩？如果失血持续增加，该代偿为何会失效？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2575,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_left_hf_pulmonary_edema_001",
+      "question": "某患者因左心衰竭导致肺静脉压和肺毛细血管压升高，出现呼吸困难、咳粉红色泡沫痰。从Starling力和淋巴回流角度解释肺水肿的形成。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2535,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_septic_vs_cardiogenic_shock_001",
+      "question": "一名患者出现发热、血压下降、心率增快和意识改变。还需补充哪些信息，才能区分感染性休克与心源性休克？两者典型的血流动力学特征有何不同？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2529,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_septic_shock_steroid_001",
+      "question": "感染性休克患者在什么情况下会考虑使用静脉糖皮质激素？其改善血流动力学的生理学基础与应激反应有什么关系？",
+      "evaluable": false,
+      "hit_at_k": null,
+      "first_matching_rank": null,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2496,
+      "error_categories": [
+        "missing_retrieval_ground_truth"
+      ]
+    },
+    {
+      "case_id": "clinical_dumping_syndrome_001",
+      "question": "某患者胃大部切除术后进食即出现心悸、出汗、腹痛和腹泻，之后又可能出现乏力或低血糖。从胃排空、渗透压和胃肠激素角度解释早期与晚期倾倒综合征。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2525,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_right_hf_edema_001",
+      "question": "某患者因右心衰竭出现颈静脉怒张、肝大和下肢水肿。从静脉回流、Starling力和肾脏体液调节角度解释体循环淤血和水肿。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2505,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_cirrhosis_portal_hypertension_001",
+      "question": "某患者因肝硬化出现门静脉高压、腹水和食管胃底静脉曲张。结合门静脉系统和Starling力解释这些表现的形成。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2594,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_hemostasis_coordination_001",
+      "question": "某患者血管破损后数分钟内出血停止。血管收缩、血小板止血栓形成和凝血三个环节如何相互配合完成生理性止血？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2654,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_exercise_muscle_fatigue_001",
+      "question": "骨骼肌剧烈运动后出现短暂无力，并在之后出现肌肉酸痛。请区分急性肌肉疲劳与延迟性肌肉酸痛，并从代谢和兴奋-收缩耦联角度解释。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2668,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_cardiogenic_vs_anaphylactic_shock_001",
+      "question": "一名患者急性心肌梗死后发生心源性休克，另一名患者发生过敏性休克。比较两者典型血流动力学机制，并说明紧急治疗原则为什么不同。",
+      "evaluable": false,
+      "hit_at_k": null,
+      "first_matching_rank": null,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2688,
+      "error_categories": [
+        "missing_retrieval_ground_truth"
+      ]
+    },
+    {
+      "case_id": "clinical_fev1_fvc_interpretation_001",
+      "question": "肺功能检查为什么要测量FEV1/FVC？该指标如何帮助识别阻塞性通气障碍，并且在诊断COPD时有哪些使用限制？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 1,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2619,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_atropine_toxicity_001",
+      "question": "阿托品使用过量时会出现哪些外周和中枢表现？其生理机制是什么？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2445,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_vomiting_diarrhea_acid_base_001",
+      "question": "为什么严重呕吐常导致代谢性碱中毒，而严重腹泻常导致代谢性酸中毒？请同时说明容量和电解质变化对酸碱紊乱的影响。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2506,
+      "error_categories": []
+    },
+    {
+      "case_id": "clinical_stretch_reflex_localization_001",
+      "question": "为什么腱反射检查有助于判断神经系统病变部位？腱反射减弱或消失与亢进分别提示哪些环节可能受损？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.2833,
+      "error_categories": []
+    }
+  ],
+  "metrics": {
+    "case_count": 17,
+    "evaluable_case_count": 15,
+    "hit_at_k_rate": 1.0,
+    "mean_duration_seconds": 0.2583529411764706
+  }
+}

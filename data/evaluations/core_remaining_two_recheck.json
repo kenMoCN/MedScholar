@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_2b487c302ac34d51b5e060ca5c7189e6",
+  "created_at": "2026-10-05T17:04:31.475995+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "clinical_left_hf_pulmonary_edema_001",
+      "question": "某患者因左心衰竭导致肺静脉压和肺毛细血管压升高，出现呼吸困难、咳粉红色泡沫痰。从Starling力和淋巴回流角度解释肺水肿的形成。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.4,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 18.9545,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "左心衰竭时左心房压和肺静脉压升高，肺毛细血管压随之升高，使肺毛细血管的Starling力平衡向滤过方向偏移，液体从肺毛细血管滤出增多并积聚在肺组织间隙和肺泡中，形成肺水肿。正常情况下肺毛细血管压很低、肺毛细血管全长都发生重吸收，且滤出的少量液体大部分被毛细淋巴管泵回循环，因此肺泡保持“干燥”；当毛细血管压升高使滤过超过重吸收和淋巴回流能力时，即出现肺水肿。\n\n肺循环是低阻力、低压力系统，正常肺毛细血管压很低，肺毛细血管全长都发生重吸收，没有滤过；仅有很少量液体滤出，且大部分被毛细淋巴管泵回循环，小部分进入肺泡用于湿润肺泡，因此肺泡保持“干燥”。组织液的生成取决于毛细血管血压、组织液静水压、血浆胶体渗透压和组织液胶体渗透压，其中毛细血管血压是促使液体滤过的力量，毛细血管血压升高会使组织液生成增多。左心衰竭时左心房压和肺静脉压升高，肺循环毛细血管压随之升高，使Starling力平衡向滤过方向偏移，液体从肺毛细血管滤出增多并积聚在肺组织间隙和肺泡中，形成肺水肿。正常情况下，毛细血管滤过增加、淋巴液生成增多时，淋巴液进入淋巴管增加，牵张淋巴管平滑肌引起淋巴管收缩，加速淋巴液回流，防止水肿形成；淋巴回流受阻时组织间隙内组织液积聚可导致组织水肿，说明淋巴回流在组织液生成和重吸收的平衡中起重要作用。当肺毛细血管压升高使滤过超过重吸收与淋巴回流能力时，即出现肺水肿。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 81（PDF第 88 页），第三节血管生理\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 97（PDF第 104 页），第五节器官循环\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 84（PDF第 91 页），第三节血管生理\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 85（PDF第 92 页），第三节血管生理\n- 《生理学》第三章 血液1.pdf：幻灯片 23，【血浆渗透压】\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 38（PDF第 45 页），第二节血细胞生理\n\n思考提示：\n- 为什么正常肺毛细血管全长都发生重吸收，而左心衰竭时却会出现液体滤出增多？\n- 淋巴回流在防止肺水肿形成中起什么作用？当滤过增多超过淋巴回流能力时会发生什么？\n\n局限：\n- 证据未提供肺毛细血管压升高时淋巴回流量或淋巴回流代偿能力的具体数值，无法定量判断滤过与淋巴回流的平衡点。\n- 证据未描述粉红色泡沫痰的具体形成机制。\n\n还需要进一步核实：\n- 肺毛细血管压升高时淋巴回流量或淋巴回流代偿能力的具体数值，以及滤过与淋巴回流平衡点的定量判断。\n- 粉红色泡沫痰的具体形成机制。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": null,
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_cirrhosis_portal_hypertension_001",
+      "question": "某患者因肝硬化出现门静脉高压、腹水和食管胃底静脉曲张。结合门静脉系统和Starling力解释这些表现的形成。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.5714285714285714,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 55.3705,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": "生成器判断官方指南证据不足。",
+      "answer_text": "现有证据仅能支持一般性Starling力机制：静脉回流受阻时毛细血管血压升高、组织液生成增加；淋巴回流受阻时组织液积聚可导致组织水肿；毛细血管血压升高和血浆胶体渗透压降低均可使组织液生成增多甚至水肿。但证据未直接描述肝硬化时门静脉高压、食管胃底静脉曲张及腹水的具体形成机制，因此无法将这些表现直接归因于门静脉系统与Starling力的具体病理连接。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 85（PDF第 92 页），第三节血管生理\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 83（PDF第 90 页），第三节血管生理\n\n思考提示：\n- 根据Starling力原理，肝硬化患者出现腹水时，毛细血管血压、血浆胶体渗透压和淋巴回流各自可能发生什么变化？\n- 门静脉高压时，为什么食管胃底静脉容易发生曲张而不是其他部位的静脉？\n\n还需要进一步核实：\n- 肝硬化时门静脉高压的具体形成机制（如肝内血管阻力增加、血流量变化等）缺乏直接证据。\n- 食管胃底静脉曲张的具体解剖路径和血流动力学变化缺乏直接证据。\n- 肝硬化腹水形成中Starling力各组分（毛细血管血压、血浆胶体渗透压、组织液胶体渗透压、淋巴回流）的具体变化缺乏直接证据。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "eligible_for_verified_external_answer",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    }
+  ],
+  "metrics": {
+    "case_count": 2,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 1.0,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.4857142857142857,
+    "answer_source_accuracy": 1.0,
+    "publication_decision_accuracy": 1.0,
+    "mean_duration_seconds": 37.1625,
+    "skill_recall_case_count": 0
+  }
+}

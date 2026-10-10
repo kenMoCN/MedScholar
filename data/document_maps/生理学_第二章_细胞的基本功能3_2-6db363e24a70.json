@@ -1,0 +1,559 @@
+{
+  "schema_version": "1.0",
+  "document_id": "doc_6db363e24a709d5e106685d4f98b59f6f0e63d14160ed13c7d4a7154980237ec",
+  "source_path": "C:\\Users\\33381\\Documents\\xwechat_files\\wxid_oprfqgc8cezg22_e655\\msg\\file\\2026-09\\《生理学》第二章 细胞的基本功能3(2).pdf",
+  "original_name": "《生理学》第二章 细胞的基本功能3(2).pdf",
+  "document_type": "course_deck",
+  "page_count": 58,
+  "metadata": {
+    "title": "PowerPoint 演示文稿",
+    "author": "张双阳",
+    "subject": null,
+    "creator": "Microsoft® PowerPoint® LTSC"
+  },
+  "outline_available": false,
+  "toc_pdf_pages": [
+    3
+  ],
+  "toc_entries": [
+    {
+      "title": "第一节 细胞膜的物质转运功能",
+      "printed_page": null,
+      "toc_pdf_page": 3
+    },
+    {
+      "title": "第二节 细胞的信号转导",
+      "printed_page": null,
+      "toc_pdf_page": 3
+    },
+    {
+      "title": "第三节 细胞的电活动",
+      "printed_page": null,
+      "toc_pdf_page": 3
+    },
+    {
+      "title": "第四节 肌细胞的收缩",
+      "printed_page": null,
+      "toc_pdf_page": 3
+    }
+  ],
+  "text_layer": "usable",
+  "sampled_text_page_ratio": 0.875,
+  "nodes": [
+    {
+      "level": 3,
+      "title": "细胞的基本功能",
+      "pdf_start": 1,
+      "pdf_end": 1,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "细胞",
+      "pdf_start": 2,
+      "pdf_end": 3,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "课堂联系生活",
+      "pdf_start": 4,
+      "pdf_end": 4,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "人体各种形式的运动主要是靠肌细胞（肌纤维）的收缩来完",
+      "pdf_start": 5,
+      "pdf_end": 5,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "骨骼肌 心肌 平滑肌",
+      "pdf_start": 6,
+      "pdf_end": 6,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "骨骼肌属于横纹肌、随意肌，其收缩须在中枢",
+      "pdf_start": 7,
+      "pdf_end": 7,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 8,
+      "pdf_end": 8,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 10,
+      "pdf_end": 10,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 11,
+      "pdf_end": 11,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 12,
+      "pdf_end": 12,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 13,
+      "pdf_end": 13,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 14,
+      "pdf_end": 14,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "一、骨骼肌神经肌肉接头处的兴奋传递",
+      "pdf_start": 15,
+      "pdf_end": 15,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "【筒箭毒碱】",
+      "pdf_start": 16,
+      "pdf_end": 16,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "【重症肌无力患者】",
+      "pdf_start": 17,
+      "pdf_end": 17,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "【有机磷中毒】",
+      "pdf_start": 18,
+      "pdf_end": 18,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "我们已经了解了神经肌肉接头处的电-化",
+      "pdf_start": 19,
+      "pdf_end": 19,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 20,
+      "pdf_end": 20,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 21,
+      "pdf_end": 21,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 22,
+      "pdf_end": 22,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 23,
+      "pdf_end": 23,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 24,
+      "pdf_end": 24,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 25,
+      "pdf_end": 25,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 26,
+      "pdf_end": 26,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 27,
+      "pdf_end": 27,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "二、横纹肌细胞的结构特征",
+      "pdf_start": 28,
+      "pdf_end": 28,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "三、横纹肌细胞的收缩机制",
+      "pdf_start": 29,
+      "pdf_end": 29,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "三、横纹肌细胞的收缩机制",
+      "pdf_start": 30,
+      "pdf_end": 30,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "三、横纹肌细胞的收缩机制",
+      "pdf_start": 31,
+      "pdf_end": 31,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "三、横纹肌细胞的收缩机制",
+      "pdf_start": 32,
+      "pdf_end": 32,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "骨骼肌的收缩过程",
+      "pdf_start": 33,
+      "pdf_end": 33,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "也了解了𝑪𝒂𝟐+在肌节中诱发的肌丝滑行",
+      "pdf_start": 34,
+      "pdf_end": 34,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "四、横纹肌细胞的兴奋-收缩耦联",
+      "pdf_start": 35,
+      "pdf_end": 35,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "四、横纹肌细胞的兴奋",
+      "pdf_start": 36,
+      "pdf_end": 36,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "肌管系统",
+      "pdf_start": 37,
+      "pdf_end": 37,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "四、横纹肌细胞的兴奋",
+      "pdf_start": 38,
+      "pdf_end": 38,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "四、横纹肌细胞的兴奋",
+      "pdf_start": 39,
+      "pdf_end": 39,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "四、横纹肌细胞的兴奋",
+      "pdf_start": 40,
+      "pdf_end": 40,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "骨骼肌收缩全过程",
+      "pdf_start": 41,
+      "pdf_end": 41,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "五、影响横纹肌收缩效能的因素",
+      "pdf_start": 42,
+      "pdf_end": 42,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "在有负荷的情况下，肌肉开始收缩时，首",
+      "pdf_start": 43,
+      "pdf_end": 43,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "◆ 等长收缩: 是指肌肉收缩时长度不变而张力增加",
+      "pdf_start": 44,
+      "pdf_end": 44,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "◆ 等张收缩: 是指肌肉收缩时长度缩短而张力不变",
+      "pdf_start": 45,
+      "pdf_end": 45,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "肌肉收缩效能：肌肉收缩时产生的张力大小、缩短程度，",
+      "pdf_start": 46,
+      "pdf_end": 46,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "1. 前负荷",
+      "pdf_start": 47,
+      "pdf_end": 47,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "1. 前负荷：肌肉在收缩前已承受的负荷，决定了肌肉收缩时的初长度",
+      "pdf_start": 48,
+      "pdf_end": 48,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "2. 后负荷",
+      "pdf_start": 49,
+      "pdf_end": 49,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "后负荷较小时，肌肉缩短速度较快，",
+      "pdf_start": 50,
+      "pdf_end": 50,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "肌肉收缩能力（contractility）：是指与负荷无关、能影响肌肉收缩效能",
+      "pdf_start": 51,
+      "pdf_end": 51,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "3. 肌肉收缩能力对肌肉收缩效能的影响——知识拓展",
+      "pdf_start": 52,
+      "pdf_end": 52,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "（1）多纤维总和：多根肌纤维同步收缩产",
+      "pdf_start": 53,
+      "pdf_end": 53,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "（2）频率总和：提高骨骼肌收缩频率而产生的叠加效应，是运动神经元通过改变",
+      "pdf_start": 54,
+      "pdf_end": 54,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "【不完全强直收缩】",
+      "pdf_start": 55,
+      "pdf_end": 55,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "小结：骨骼肌收缩全过程",
+      "pdf_start": 56,
+      "pdf_end": 56,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "课堂小结",
+      "pdf_start": 57,
+      "pdf_end": 57,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "三、骨骼肌的收缩形式",
+      "pdf_start": 58,
+      "pdf_end": 58,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    }
+  ],
+  "page_map_segments": [],
+  "warnings": []
+}

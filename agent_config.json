@@ -1,0 +1,57 @@
+{
+  "schema_version": "2.0",
+  "generated_by": "dynamic_model_settings",
+  "model_registry": {
+    "deepseek_default": {
+      "provider": "deepseek",
+      "model_name": "deepseek-flash",
+      "api_base": null,
+      "api_protocol": "openai_compatible",
+      "api_key_ref": "env:MODEL_KEY_DEEPSEEK_DEFAULT",
+      "capabilities": [
+        "reasoning",
+        "structured_output",
+        "text",
+        "vision"
+      ],
+      "enabled": true
+    },
+    "doubao_vision_default": {
+      "provider": "doubao",
+      "model_name": "doubao-seed-evolving",
+      "api_base": null,
+      "api_protocol": "vendor_or_openai_compatible",
+      "api_key_ref": "env:MODEL_KEY_DOUBAO_VISION_DEFAULT",
+      "capabilities": [
+        "ocr",
+        "structured_output",
+        "vision"
+      ],
+      "enabled": true
+    }
+  },
+  "model_routes": {
+    "reasoning": "deepseek_default",
+    "planning": "deepseek_default",
+    "verification": "deepseek_default",
+    "vision": "deepseek_default"
+  },
+  "user_defaults": {
+    "initial_proficiency_label": "beginner",
+    "interaction_style": "auto",
+    "answer_depth": "auto",
+    "socratic_mode": "auto"
+  },
+  "document_defaults": {
+    "has_documents": true,
+    "legacy_textbook_dir": "./textbook",
+    "citation_display": "detailed",
+    "evidence_capture": true
+  },
+  "permission_defaults": {
+    "require_file_operation_approval": true
+  },
+  "ui": {
+    "theme": "light"
+  }
+}

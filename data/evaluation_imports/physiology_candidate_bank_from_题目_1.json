@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "dataset_role": "development_evaluation_only_not_formal_blind_test_set",
+  "source_document": "题目(1).docx",
+  "review_status": "用户已于2026-10-03确认作为开发集继续评测；不得作为正式盲测成绩",
+  "cases": [
+    {
+      "case_id": "candidate_resting_potential_001",
+      "question": "关于静息电位的论述，不正确的是：A.细胞膜处于极化状态；B.静息电位主要是由K+内流形成的；C.静息状态下细胞膜对K+通透性增高；D.静息电位与膜两侧Na-K泵的活动有关；E.细胞在静息状态时处于外正内负的状态。",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": ["B", "K+外流"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["第二章", "静息电位", "单选题"],
+      "notes": "源文档第1页给出的标准答案为B。"
+    },
+    {
+      "case_id": "candidate_action_potential_001",
+      "question": "关于动作电位的描述，正确的是：A.刺激强度小于阈值时出现低幅度动作电位；B.动作电位一经产生便可沿细胞膜作电紧张性扩布；C.传导距离较长时动作电位的大小不发生改变；D.刺激强度达到阈值后再增加刺激强度能使动作电位幅度增大。",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": ["C", "不衰减"],
+      "expected_evidence": [{"original_name": "《生理学》第二章 细胞的基本功能2.pdf"}],
+      "tags": ["第二章", "动作电位", "单选题"],
+      "notes": "源文档第1页给出的标准答案为C。"
+    },
+    {
+      "case_id": "candidate_pacemaker_phase4_001",
+      "question": "关于窦房结P细胞4期自动去极化机制的叙述，错误的是：A.K+外流进行性衰减；B.Na+内流进行性增强；C.Cl-内流进行性衰减；D.Ca2+内流进行性增强。",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": ["C", "无Cl-内流参与|Cl-内流不参与|没有Cl-内流参与|未提及Cl-内流参与"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["心血管", "起搏细胞", "单选题"],
+      "notes": "源文档第1页给出的标准答案为C。"
+    },
+    {
+      "case_id": "candidate_skeletal_ltype_001",
+      "question": "骨骼肌细胞横管膜L型钙通道激活后的生理效应是：A.大量Ca2+内流导致肌肉舒张；B.大量Ca2+内流直接触发肌肉收缩；C.少量Ca2+内流触发终池释放Ca2+；D.无Ca2+跨细胞膜流动，通道变构使终池释放Ca2+。",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": ["D", "变构|构象变化", "终池释放Ca2+|终池的RyR开放和Ca2+释放|促使终池的RyR开放和Ca2+释放"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["骨骼肌", "兴奋-收缩耦联", "机制推理"],
+      "notes": "源文档第2页给出的标准答案为D。"
+    },
+    {
+      "case_id": "candidate_tachycardia_output_001",
+      "question": "心率过快时，心输出量减少的主要原因是：A.心房收缩期缩短；B.心室充盈期缩短；C.等容舒张期缩短；D.等容收缩期缩短；E.快速射血期缩短。",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": ["B", "心室充盈期缩短|心室舒张时间缩短", "每搏输出量|搏出量"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["心血管", "心输出量", "机制推理"],
+      "notes": "源文档第2页给出的标准答案为B。"
+    },
+    {
+      "case_id": "candidate_pernicious_anemia_001",
+      "question": "女，58岁，上腹不适、纳差3年，体重减轻、乏力半年。Hb 88 g/L，MCV 115 fL；胃镜示胃体皱襞稀疏、黏膜血管透见。发生贫血最可能的机制是：A.内因子缺乏；B.铁利用障碍；C.维生素C缺乏；D.慢性消化道失血；E.蛋白质吸收障碍。",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": ["A", "内因子缺乏", "维生素B12"],
+      "expected_evidence": [{"original_name": "《生理学》第三章 血液1.pdf"}],
+      "tags": ["第三章", "贫血", "病例题"],
+      "notes": "源文档第3页给出的标准答案为A。"
+    },
+    {
+      "case_id": "candidate_ap_amplitude_trap_001",
+      "question": "影响神经纤维动作电位幅度的主要因素是：A.刺激强度；B.刺激时间；C.阈电位水平；D.神经纤维的直径；E.细胞内、外Na+浓度差。",
+      "mode": "guided",
+      "expected_outcome": "answer",
+      "expected_terms": ["E", "Na+浓度差"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["第二章", "动作电位", "易错题"],
+      "notes": "源文档第3页将本题作为易错题，标准答案为E。"
+    },
+    {
+      "case_id": "candidate_positive_feedback_001",
+      "question": "存在正反馈调节的神经反射活动是：A.排尿反射；B.屈肌反射；C.肺牵张反射；D.压力感受性反射；E.甲状腺功能亢进时TSH分泌减少。",
+      "mode": "guided",
+      "expected_outcome": "answer",
+      "expected_terms": ["A", "排尿反射", "正反馈"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["第一章", "反馈调节", "易错题"],
+      "notes": "源文档第4页给出的标准答案为A。"
+    },
+    {
+      "case_id": "candidate_oxyhemoglobin_curve_001",
+      "question": "哪些因素会使氧解离曲线右移？右移对血红蛋白与氧的亲和力及组织供氧有什么意义？",
+      "mode": "guided",
+      "expected_outcome": "answer",
+      "expected_terms": ["PCO2升高", "pH降低", "2,3-DPG升高|2,3-DPG浓度升高", "温度升高", "亲和力降低", "氧释放|释放O2|向组织释放O2"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["呼吸", "氧解离曲线", "教材结合题"],
+      "notes": "源文档第4至5页提供教材图文依据。"
+    },
+    {
+      "case_id": "candidate_shock_cvp_001",
+      "question": "休克病人中心静脉压高、血压正常，处理原则应选哪项并说明理由：A.充分补液；B.补液试验；C.使用扩血管药；D.使用缩血管药；E.使用强心药。",
+      "mode": "research",
+      "expected_outcome": "answer",
+      "expected_terms": ["C", "扩血管", "容量血管"],
+      "expected_evidence": [{"original_name": "生理学（第五版）_9787030818492.pdf"}],
+      "tags": ["循环", "休克", "科研拓展", "RAAS"],
+      "notes": "源文档第6页提出本题，并建议从RAAS及ACEI/ARB药物研发方向拓展。研究拓展的时效性证据需另行核验。"
+    }
+  ]
+}

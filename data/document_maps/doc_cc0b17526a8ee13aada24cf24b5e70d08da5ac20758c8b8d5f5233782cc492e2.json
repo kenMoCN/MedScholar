@@ -1,0 +1,1873 @@
+{
+  "schema_version": "1.0",
+  "document_id": "doc_cc0b17526a8ee13aada24cf24b5e70d08da5ac20758c8b8d5f5233782cc492e2",
+  "source_path": "G:\\智能体大赛\\a\\data\\library\\doc_cc0b17526a8ee13aada24cf24b5e70d08da5ac20758c8b8d5f5233782cc492e2\\07 糖代谢(1).pptx",
+  "original_name": "07 糖代谢(1).pptx",
+  "document_type": "course_deck",
+  "page_count": 204,
+  "metadata": {
+    "title": "第 二 篇代谢及其调节"
+  },
+  "outline_available": false,
+  "toc_pdf_pages": [],
+  "toc_entries": [],
+  "text_layer": "full",
+  "sampled_text_page_ratio": 1.0,
+  "nodes": [
+    {
+      "level": 2,
+      "title": "第 二 篇代谢及其调节",
+      "pdf_start": 1,
+      "pdf_end": 1,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "多糖",
+      "pdf_start": 2,
+      "pdf_end": 2,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "物质代谢（metabolism)",
+      "pdf_start": 3,
+      "pdf_end": 3,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分解代谢",
+      "pdf_start": 4,
+      "pdf_end": 4,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一阶段： 从葡萄糖、脂肪酸、氨基酸到乙酰CoA",
+      "pdf_start": 5,
+      "pdf_end": 5,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "学习“物质代谢”的关键点",
+      "pdf_start": 6,
+      "pdf_end": 6,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "本篇内容概要",
+      "pdf_start": 7,
+      "pdf_end": 7,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第 七 章糖 代 谢",
+      "pdf_start": 8,
+      "pdf_end": 8,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "本章内容",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "要 求",
+      "pdf_start": 10,
+      "pdf_end": 10,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖(carbohydrates, saccharide , sugar )，也称碳水化合物，其化学本质为多羟醛或多羟酮类及其衍生物或多聚物。",
+      "pdf_start": 11,
+      "pdf_end": 11,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "葡萄糖(glucose)",
+      "pdf_start": 12,
+      "pdf_end": 12,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖的功能",
+      "pdf_start": 13,
+      "pdf_end": 13,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一节 糖的摄取和利用",
+      "pdf_start": 14,
+      "pdf_end": 14,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人类膳食中的常见糖类",
+      "pdf_start": 15,
+      "pdf_end": 15,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "淀粉 是植物中葡萄糖的储存形式",
+      "pdf_start": 16,
+      "pdf_end": 16,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原 是动物体内葡萄糖的储存形式",
+      "pdf_start": 17,
+      "pdf_end": 17,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "半缩醛或半缩酮的生成",
+      "pdf_start": 18,
+      "pdf_end": 18,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "葡萄糖成环",
+      "pdf_start": 19,
+      "pdf_end": 19,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、糖消化后以单体形式吸收",
+      "pdf_start": 20,
+      "pdf_end": 20,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人体无-糖苷酶而不能分解利用膳食纤维，但膳食纤维有多种功能，为健康所必需：",
+      "pdf_start": 21,
+      "pdf_end": 21,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "乳糖不耐受（lactose intolerance）",
+      "pdf_start": 22,
+      "pdf_end": 22,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 吸收部位：小肠上段",
+      "pdf_start": 23,
+      "pdf_end": 23,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "小肠中葡萄糖的吸收机制",
+      "pdf_start": 24,
+      "pdf_end": 24,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "4. 葡萄糖吸收进入组织细胞的途径",
+      "pdf_start": 25,
+      "pdf_end": 25,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "细胞摄取葡萄糖需要葡萄糖转运蛋白(GLUT)",
+      "pdf_start": 26,
+      "pdf_end": 26,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖 代 谢 概 况",
+      "pdf_start": 27,
+      "pdf_end": 27,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第二节 糖的无氧氧化",
+      "pdf_start": 28,
+      "pdf_end": 28,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖的无氧氧化(anaerobic oxidation)：指机体缺氧时，一分子葡萄糖氧化成两分子乳酸，并净生成2个ATP的过程，也称乳酸发酵（lactic acid fermentation)",
+      "pdf_start": 29,
+      "pdf_end": 29,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、糖无氧氧化的反应过程",
+      "pdf_start": 30,
+      "pdf_end": 30,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "乳酸",
+      "pdf_start": 31,
+      "pdf_end": 31,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑴ 葡萄糖磷酸化为葡萄糖-6-磷酸",
+      "pdf_start": 32,
+      "pdf_end": 32,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "细胞里的ATP、ADP通常总是与Mg2+结合",
+      "pdf_start": 33,
+      "pdf_end": 33,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "己糖激酶I、II、III",
+      "pdf_start": 34,
+      "pdf_end": 34,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑵ 葡萄糖-6-磷酸转变为果糖-6-磷酸",
+      "pdf_start": 35,
+      "pdf_end": 35,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑶果糖-6-磷酸转变为果糖-1,6-二磷酸",
+      "pdf_start": 36,
+      "pdf_end": 36,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "果糖-1,6-二磷酸",
+      "pdf_start": 37,
+      "pdf_end": 37,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑸ 磷酸丙糖的同分异构化",
+      "pdf_start": 38,
+      "pdf_end": 38,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑹甘油醛-3-磷酸氧化为甘油酸-1,3-二磷酸",
+      "pdf_start": 39,
+      "pdf_end": 39,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "NAD和NADP的氧化态及还原态写法",
+      "pdf_start": 40,
+      "pdf_end": 40,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑺甘油酸-1,3-二磷酸转变成甘油酸-3-磷酸",
+      "pdf_start": 41,
+      "pdf_end": 41,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "氧化磷酸化 Oxidative Phosphorylation:",
+      "pdf_start": 42,
+      "pdf_end": 42,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "红细胞内特有的代谢支路（Luebering–Rapoport pathway/shunt）， 以生成 2，3-BPG，调节血红蛋白的携氧。",
+      "pdf_start": 43,
+      "pdf_end": 43,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑻ 甘油酸-3-磷酸转变为甘油酸-2-磷酸",
+      "pdf_start": 44,
+      "pdf_end": 44,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑼ 甘油酸-2-磷酸转变为磷酸烯醇式丙酮酸",
+      "pdf_start": 45,
+      "pdf_end": 45,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "ADP",
+      "pdf_start": 46,
+      "pdf_end": 46,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第二阶段：丙酮酸转变成乳酸",
+      "pdf_start": 47,
+      "pdf_end": 47,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "自然界的糖无氧氧化有两种形式",
+      "pdf_start": 48,
+      "pdf_end": 48,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "酵母等微生物中的乙醇发酵",
+      "pdf_start": 49,
+      "pdf_end": 49,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "乳酸",
+      "pdf_start": 50,
+      "pdf_end": 50,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖酵解的要点",
+      "pdf_start": 51,
+      "pdf_end": 51,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "记忆糖酵解十步反应口诀",
+      "pdf_start": 52,
+      "pdf_end": 52,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "代谢方程和化学反应方程式不完全相同",
+      "pdf_start": 53,
+      "pdf_end": 53,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖酵解的意义",
+      "pdf_start": 54,
+      "pdf_end": 54,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "别构调节",
+      "pdf_start": 55,
+      "pdf_end": 55,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "F-6-P",
+      "pdf_start": 56,
+      "pdf_end": 56,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "ATP",
+      "pdf_start": 57,
+      "pdf_end": 57,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖酵解的调节在肝脏及肝外组织不同",
+      "pdf_start": 58,
+      "pdf_end": 58,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "不利用氧迅速供量（比有氧氧化供能快得多）",
+      "pdf_start": 59,
+      "pdf_end": 59,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖的无氧氧化小结",
+      "pdf_start": 60,
+      "pdf_end": 60,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "终产物乳酸的去路",
+      "pdf_start": 61,
+      "pdf_end": 61,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "延迟性肌肉酸痛原因：肌肉纤维的微小撕裂、破损、局部炎症反应…",
+      "pdf_start": 62,
+      "pdf_end": 62,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 63,
+      "pdf_end": 63,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "磷酸果糖激酶-1的最强别构激活剂是",
+      "pdf_start": 64,
+      "pdf_end": 64,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "果糖激酶（肝细胞）",
+      "pdf_start": 65,
+      "pdf_end": 65,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "若早期诊断，避免果糖，蔗糖，山梨糖醇等摄入，可不发病",
+      "pdf_start": 66,
+      "pdf_end": 66,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "半乳糖血症（galactosemia）由缺乏半乳糖代谢酶类所致的遗传病 ：",
+      "pdf_start": 67,
+      "pdf_end": 67,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "病例B 患者摄入牛奶后出现呕吐、腹泻。 他的血液中葡萄糖浓度较低，但有远高于正常浓度的还原糖。 尿液半乳糖检测呈阳性。 为什么血液中还原糖浓度高？ 为什么尿液中会出现半乳糖？",
+      "pdf_start": 68,
+      "pdf_end": 68,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第三节 糖的有氧氧化",
+      "pdf_start": 69,
+      "pdf_end": 69,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖的有氧氧化(aerobic oxidation)指在机体氧供充足时，葡萄糖彻底氧化成H2O和CO2，并释放出能量的过程。是机体主要供能方式。",
+      "pdf_start": 70,
+      "pdf_end": 70,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一次脱氢",
+      "pdf_start": 71,
+      "pdf_end": 71,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、丙酮酸进入线粒体氧化脱羧生成乙酰CoA",
+      "pdf_start": 72,
+      "pdf_end": 72,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "丙酮酸脱氢酶复合体的组成",
+      "pdf_start": 73,
+      "pdf_end": 73,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "硫辛酸(lipoic acid)与E2的一个赖氨酸残基侧链共同形成“柔性长臂”",
+      "pdf_start": 74,
+      "pdf_end": 74,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "CO2",
+      "pdf_start": 75,
+      "pdf_end": 75,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "砒霜的主要成分是三氧化二砷（arsenic trioxide)或亚砷酸，可与酶的-SH结合。",
+      "pdf_start": 76,
+      "pdf_end": 76,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "乙酰CoA是糖、脂类、蛋白质代谢的共同中间产物",
+      "pdf_start": 77,
+      "pdf_end": 77,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、三羧酸循环将乙酰CoA彻底氧化",
+      "pdf_start": 78,
+      "pdf_end": 78,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Hans Adolf Krebs",
+      "pdf_start": 79,
+      "pdf_end": 79,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "CoASH",
+      "pdf_start": 80,
+      "pdf_end": 80,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "总反应方程式",
+      "pdf_start": 81,
+      "pdf_end": 81,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一次底物水平磷酸化（1分子GTP）",
+      "pdf_start": 82,
+      "pdf_end": 82,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "打油诗一首 《七言绝句之TCA循环》",
+      "pdf_start": 83,
+      "pdf_end": 83,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "③ 三羧酸循环的中间产物",
+      "pdf_start": 84,
+      "pdf_end": 84,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "苹果酸",
+      "pdf_start": 85,
+      "pdf_end": 85,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 86",
+      "pdf_start": 86,
+      "pdf_end": 86,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "③三羧酸循环的中间产物",
+      "pdf_start": 87,
+      "pdf_end": 87,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "答（a）琥珀酸",
+      "pdf_start": 88,
+      "pdf_end": 88,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "尽管O2没有直接参与柠檬酸循环，但没有O2的存在，柠檬酸循环就不能进行，为什么？",
+      "pdf_start": 89,
+      "pdf_end": 89,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "为保证三羧酸循环的正常运转，失去的中间产物必须及时补充，其中最重要的是草酰乙酸的添补！",
+      "pdf_start": 90,
+      "pdf_end": 90,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 91",
+      "pdf_start": 91,
+      "pdf_end": 91,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "* 乙酰CoA的来源",
+      "pdf_start": 92,
+      "pdf_end": 92,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "膳食中三大营养素含量对三羧酸循环的影响",
+      "pdf_start": 93,
+      "pdf_end": 93,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三羧酸循环的生理意义",
+      "pdf_start": 94,
+      "pdf_end": 94,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血红素",
+      "pdf_start": 95,
+      "pdf_end": 95,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "脂酸的氧化",
+      "pdf_start": 96,
+      "pdf_end": 96,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三、有氧氧化是糖分解供能的主要方式",
+      "pdf_start": 97,
+      "pdf_end": 97,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "有氧氧化生成的ATP",
+      "pdf_start": 98,
+      "pdf_end": 98,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "TCA cycle",
+      "pdf_start": 99,
+      "pdf_end": 99,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "苹果酸",
+      "pdf_start": 100,
+      "pdf_end": 100,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "α-ketoglutarate oxaloacetate(草酰乙酸）",
+      "pdf_start": 101,
+      "pdf_end": 101,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "四、糖的有氧氧化主要受能量供需调节",
+      "pdf_start": 102,
+      "pdf_end": 102,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1.丙酮酸脱氢酶复合体调节乙酰CoA生成的速率",
+      "pdf_start": 103,
+      "pdf_end": 103,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "乙酰CoA",
+      "pdf_start": 104,
+      "pdf_end": 104,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "3.糖的有氧氧化各阶段相互协调",
+      "pdf_start": 105,
+      "pdf_end": 105,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "五、糖氧化产能方式有组织偏好性",
+      "pdf_start": 106,
+      "pdf_end": 106,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "巴斯德效应（Pasteur Effect)",
+      "pdf_start": 107,
+      "pdf_end": 107,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "瓦尔堡效应（Warburg Effect)",
+      "pdf_start": 108,
+      "pdf_end": 108,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "瓦尔堡效应在临床检测PET/CT技术中的应用",
+      "pdf_start": 109,
+      "pdf_end": 109,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖的有氧氧化与糖无氧氧化的区别",
+      "pdf_start": 110,
+      "pdf_end": 110,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第四节 戊糖磷酸途径",
+      "pdf_start": 111,
+      "pdf_end": 111,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* 细胞定位：胞 质",
+      "pdf_start": 112,
+      "pdf_end": 112,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "6-磷酸葡萄糖酸",
+      "pdf_start": 113,
+      "pdf_end": 113,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "5-磷酸核酮糖(C5) ×3",
+      "pdf_start": 114,
+      "pdf_end": 114,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "戊糖磷酸途径",
+      "pdf_start": 115,
+      "pdf_end": 115,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "总反应式",
+      "pdf_start": 116,
+      "pdf_end": 116,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、戊糖磷酸途径的生理意义",
+      "pdf_start": 117,
+      "pdf_end": 117,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（1）NADPH参与合成多种物质",
+      "pdf_start": 118,
+      "pdf_end": 118,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "最常见的遗传性溶血性疾病。红细胞葡萄糖-6-磷酸脱氢酶(G6PD)缺陷的疾病。",
+      "pdf_start": 119,
+      "pdf_end": 119,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "“本组有4例具同样遗传缺陷的患者亲属在同食蚕豆后并不发病, 故认为,与个体对蚕豆的消化、吸收、排泄、过敏和解毒能力以及体内其他酶系统状态及食物中其他物质(维生素C)有关.",
+      "pdf_start": 120,
+      "pdf_end": 120,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "相关病例",
+      "pdf_start": 121,
+      "pdf_end": 121,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "G6PD缺陷为什么常见？",
+      "pdf_start": 122,
+      "pdf_end": 122,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 123",
+      "pdf_start": 123,
+      "pdf_end": 123,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 糖无氧氧化的概念、细胞定位、基本反应过程、关键酶、ATP生成及生理意义；",
+      "pdf_start": 124,
+      "pdf_end": 124,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "向三羧酸循环的反应中加入草酰乙酸、乙酰CoA和丙二酸，可导致哪种产物的堆积",
+      "pdf_start": 125,
+      "pdf_end": 125,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第五节 糖原的合成与分解",
+      "pdf_start": 126,
+      "pdf_end": 126,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "是人体内糖的储存形式，是机体能迅速动用的能量储备。",
+      "pdf_start": 127,
+      "pdf_end": 127,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "UDPG焦磷酸化酶",
+      "pdf_start": 128,
+      "pdf_end": 128,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 129",
+      "pdf_start": 129,
+      "pdf_end": 129,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "糖原蛋白是糖原引物",
+      "pdf_start": 130,
+      "pdf_end": 130,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原分枝的形成",
+      "pdf_start": 131,
+      "pdf_end": 131,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原的结构",
+      "pdf_start": 132,
+      "pdf_end": 132,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "电镜下肝细胞中的糖原颗粒",
+      "pdf_start": 133,
+      "pdf_end": 133,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原合成反应的特点",
+      "pdf_start": 134,
+      "pdf_end": 134,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "葡萄糖",
+      "pdf_start": 135,
+      "pdf_end": 135,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "脱枝酶",
+      "pdf_start": 136,
+      "pdf_end": 136,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原的合成与分解总图",
+      "pdf_start": 137,
+      "pdf_end": 137,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Generation of glucose from glucose 6-phosphate.",
+      "pdf_start": 138,
+      "pdf_end": 138,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三、糖原合成与分解的调节",
+      "pdf_start": 139,
+      "pdf_end": 139,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原磷酸化酶的共价修饰调节",
+      "pdf_start": 140,
+      "pdf_end": 140,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "腺苷环化酶",
+      "pdf_start": 141,
+      "pdf_end": 141,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "磷酸化/去磷酸化修饰调节存在级联放大效应。",
+      "pdf_start": 142,
+      "pdf_end": 142,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "别构调节",
+      "pdf_start": 143,
+      "pdf_end": 143,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "肌糖原和肝糖原代谢调节的差异",
+      "pdf_start": 144,
+      "pdf_end": 144,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原合成与分解的调节---小结",
+      "pdf_start": 145,
+      "pdf_end": 145,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "四、糖原累积症",
+      "pdf_start": 146,
+      "pdf_end": 146,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 147",
+      "pdf_start": 147,
+      "pdf_end": 147,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "病例A 患者主诉进行剧烈体育锻炼时肌肉痉挛疼痛，但没有其他症状。 肌肉活检显示肌糖原浓度远高于正常水平。 为什么糖原会积累？",
+      "pdf_start": 148,
+      "pdf_end": 148,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第六节 糖 异 生",
+      "pdf_start": 149,
+      "pdf_end": 149,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖异生(gluconeogenesis)是指从非糖化合物（乳酸、甘油、生糖氨基酸等）转变为葡萄糖 或糖原的过程。",
+      "pdf_start": 150,
+      "pdf_end": 150,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、糖异生不完全是糖酵解的逆反应",
+      "pdf_start": 151,
+      "pdf_end": 151,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "丙酮酸（pyruvate)",
+      "pdf_start": 152,
+      "pdf_end": 152,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "丙酮酸",
+      "pdf_start": 153,
+      "pdf_end": 153,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "果糖-1,6-二磷酸",
+      "pdf_start": 154,
+      "pdf_end": 154,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "丙酮酸激酶",
+      "pdf_start": 155,
+      "pdf_end": 155,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "乳酸",
+      "pdf_start": 156,
+      "pdf_end": 156,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、糖异生的调节",
+      "pdf_start": 157,
+      "pdf_end": 157,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "果糖-6-磷酸",
+      "pdf_start": 158,
+      "pdf_end": 158,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2. 磷酸烯醇式丙酮酸与丙酮酸之间",
+      "pdf_start": 159,
+      "pdf_end": 159,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 160",
+      "pdf_start": 160,
+      "pdf_end": 160,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "三、糖异生的主要生理意义是维持血糖恒定",
+      "pdf_start": 161,
+      "pdf_end": 161,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "饥饿",
+      "pdf_start": 162,
+      "pdf_end": 162,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "四、乳酸循环（Cori cycle）",
+      "pdf_start": 163,
+      "pdf_end": 163,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "科研路上的和谐伉俪---Cori夫妇",
+      "pdf_start": 164,
+      "pdf_end": 164,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "3. 生理意义",
+      "pdf_start": 165,
+      "pdf_end": 165,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第 七 节 葡萄糖的其他代谢途径",
+      "pdf_start": 166,
+      "pdf_end": 166,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、糖醛酸途径生成葡萄糖醛酸",
+      "pdf_start": 167,
+      "pdf_end": 167,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "多元醇途径可生成木糖醇、山梨醇",
+      "pdf_start": 168,
+      "pdf_end": 168,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第八节 血糖及其调节",
+      "pdf_start": 169,
+      "pdf_end": 169,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "掌握：",
+      "pdf_start": 170,
+      "pdf_end": 170,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、血糖的来源和去路",
+      "pdf_start": 171,
+      "pdf_end": 171,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 172",
+      "pdf_start": 172,
+      "pdf_end": 172,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "食 物 糖",
+      "pdf_start": 173,
+      "pdf_end": 173,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖异生",
+      "pdf_start": 174,
+      "pdf_end": 174,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "血糖水平恒定的生理意义",
+      "pdf_start": 175,
+      "pdf_end": 175,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、血糖稳态主要受激素调节",
+      "pdf_start": 176,
+      "pdf_end": 176,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "主要调节激素",
+      "pdf_start": 177,
+      "pdf_end": 177,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "(一)胰岛素(insulin)： 体内唯一降低血糖的激素",
+      "pdf_start": 178,
+      "pdf_end": 178,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "受胰岛素影响的部分酶及代谢效应",
+      "pdf_start": 179,
+      "pdf_end": 179,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 180",
+      "pdf_start": 180,
+      "pdf_end": 180,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "胰岛素分泌的调节",
+      "pdf_start": 181,
+      "pdf_end": 181,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "胰腺β细胞释放胰岛素的机制",
+      "pdf_start": 182,
+      "pdf_end": 182,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "口服葡萄糖比静脉注射等量葡萄糖引起更多的胰岛素分泌，其原因是",
+      "pdf_start": 183,
+      "pdf_end": 183,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "(二)胰高血糖素(glucagon): 升高血糖的最重要激素",
+      "pdf_start": 184,
+      "pdf_end": 184,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 185",
+      "pdf_start": 185,
+      "pdf_end": 185,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "强力升血糖激素，参与“fight or flight response”,",
+      "pdf_start": 186,
+      "pdf_end": 186,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Physiological and Metabolic Effects of Epinephrine: Preparation for Action",
+      "pdf_start": 187,
+      "pdf_end": 187,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "(四)糖皮质激素——升高血糖，增加肝糖原",
+      "pdf_start": 188,
+      "pdf_end": 188,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（一）糖耐量试验(glucose tolerance test, GTT)",
+      "pdf_start": 189,
+      "pdf_end": 189,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖耐量曲线",
+      "pdf_start": 190,
+      "pdf_end": 190,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "正常人： 空腹血糖浓度正常，服糖后1/2~1h达到高峰，但不会超过肾糖阈，然后逐渐降低， 一般2h左右恢复正常值。",
+      "pdf_start": 191,
+      "pdf_end": 191,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（二）低血糖(hypoglycemia)",
+      "pdf_start": 192,
+      "pdf_end": 192,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "低血糖临床症状",
+      "pdf_start": 193,
+      "pdf_end": 193,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "低血糖病因",
+      "pdf_start": 194,
+      "pdf_end": 194,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "酒精诱导的低血糖",
+      "pdf_start": 195,
+      "pdf_end": 195,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（三）高血糖是指空腹血糖高于7mmol/L",
+      "pdf_start": 196,
+      "pdf_end": 196,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "表现：持续性高血糖(hyperglycemia)和糖尿",
+      "pdf_start": 197,
+      "pdf_end": 197,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "重度高血糖的典型症状：“三多一少”",
+      "pdf_start": 198,
+      "pdf_end": 198,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "病 例",
+      "pdf_start": 199,
+      "pdf_end": 199,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖尿病非典型症状",
+      "pdf_start": 200,
+      "pdf_end": 200,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "①AGE 与体内多种蛋白质发生广泛的共价交联，对肾、视网膜、心血管等造成损伤。",
+      "pdf_start": 201,
+      "pdf_end": 201,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "the profile of an individual with a normal level of HbA1c (5.9%)",
+      "pdf_start": 202,
+      "pdf_end": 202,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "糖原合成",
+      "pdf_start": 203,
+      "pdf_end": 203,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "草酰乙酸、乙酰CoA在线粒体内膜上没有转运载体，不能直接出线粒体。",
+      "pdf_start": 204,
+      "pdf_end": 204,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    }
+  ],
+  "page_map_segments": [],
+  "warnings": [],
+  "subject_ids": [
+    "biochemistry"
+  ],
+  "source_format": "pptx",
+  "visual_indexed_pages": [
+    91,
+    129,
+    147,
+    160,
+    172,
+    180,
+    185
+  ],
+  "visual_review_pages": [],
+  "visual_failed_pages": [],
+  "visual_indexed_at": "2026-10-08T11:40:37.325703+00:00",
+  "visual_failure_reasons": {}
+}

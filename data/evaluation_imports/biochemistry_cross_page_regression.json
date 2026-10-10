@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "instructions": {
+    "purpose": "生物化学多选题跨页检索回归集；与直接模型进行匿名对照时同时记录完整选项集合、耗时和人工评分。",
+    "expected_options": "必须与标准答案集合完全一致，不能只命中部分选项。"
+  },
+  "cases": [
+    {
+      "case_id": "biochem_beta_oxidation_cofactors_cross_page_001",
+      "question": "[多选题] 参与脂肪酸β-氧化的有： A. FAD B. NAD+ C. NADP+ D. CoA-SH",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_answer_source": "course",
+      "expected_options": ["A", "B", "D"],
+      "expected_terms": ["FAD", "NAD+", "CoA-SH", "NADP+"],
+      "expected_evidence": [
+        {
+          "document_id": "doc_2eb4432b6d8876c539d55875679d0f40998ee3bc92393ac9bede20a273874fe6",
+          "pdf_page": 176,
+          "printed_page": 147
+        },
+        {
+          "document_id": "doc_2eb4432b6d8876c539d55875679d0f40998ee3bc92393ac9bede20a273874fe6",
+          "pdf_page": 177,
+          "printed_page": 148
+        }
+      ],
+      "tags": ["生物化学", "脂肪酸β-氧化", "多选题", "跨页证据", "希腊字母"],
+      "notes": "标准答案 A、B、D；第176页覆盖FAD和NAD+，第177页覆盖CoA-SH。"
+    },
+    {
+      "case_id": "biochem_purine_ring_carbon_sources_001",
+      "question": "[多选题] 嘌呤环中的碳原子来自于（ ） A. CO2 B. 甘氨酸 C. 天冬氨酸 D. 谷氨酰胺 E. 一碳单位",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_answer_source": "course",
+      "expected_options": ["A", "B", "E"],
+      "expected_terms": ["CO₂|CO2", "甘氨酸", "一碳单位|甲酰基", "天冬氨酸", "氮"],
+      "expected_evidence": [
+        {
+          "document_id": "doc_2eb4432b6d8876c539d55875679d0f40998ee3bc92393ac9bede20a273874fe6",
+          "pdf_page": 248,
+          "printed_page": 219
+        }
+      ],
+      "tags": ["生物化学", "嘌呤从头合成", "多选题", "图示证据", "元素来源", "用户纠错回归"],
+      "notes": "开发集，非正式性能结果。图11-2标注碳来自CO2、甘氨酸和甲酰基；天冬氨酸提供N1，不提供环碳。"
+    }
+  ]
+}

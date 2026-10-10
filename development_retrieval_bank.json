@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "dataset_role": "development_diagnostic_only_not_formal_test_set",
+  "cases": [
+    {
+      "case_id": "dev_intro_001",
+      "question": "内环境稳态",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [],
+      "expected_evidence": [
+        {"original_name": "《生理学》第一章 绪论.pdf"}
+      ],
+      "tags": ["第一章", "检索诊断"],
+      "notes": "开发集，不得作为正式比赛性能结论"
+    },
+    {
+      "case_id": "dev_transport_001",
+      "question": "细胞膜物质转运",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [],
+      "expected_evidence": [
+        {"original_name": "《生理学》第二章 细胞的基本功能1.pdf"}
+      ],
+      "tags": ["第二章", "检索诊断"],
+      "notes": "开发集，不得作为正式比赛性能结论"
+    },
+    {
+      "case_id": "dev_resting_001",
+      "question": "静息电位",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [],
+      "expected_evidence": [
+        {"original_name": "《生理学》第二章 细胞的基本功能2.pdf"}
+      ],
+      "tags": ["第二章", "检索诊断"],
+      "notes": "开发集，不得作为正式比赛性能结论"
+    },
+    {
+      "case_id": "dev_action_001",
+      "question": "动作电位",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [],
+      "expected_evidence": [
+        {"original_name": "《生理学》第二章 细胞的基本功能2.pdf"}
+      ],
+      "tags": ["第二章", "检索诊断"],
+      "notes": "开发集，不得作为正式比赛性能结论"
+    },
+    {
+      "case_id": "dev_rbc_001",
+      "question": "红细胞生成",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [],
+      "expected_evidence": [
+        {"original_name": "《生理学》第三章 血液1.pdf"}
+      ],
+      "tags": ["第三章", "检索诊断"],
+      "notes": "教材和课件均可能命中，Top-3中出现目标课件即通过"
+    },
+    {
+      "case_id": "dev_coagulation_001",
+      "question": "血液凝固",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [],
+      "expected_evidence": [
+        {"original_name": "《生理学》第三章 血液2(1).pdf"}
+      ],
+      "tags": ["第三章", "检索诊断"],
+      "notes": "开发集，不得作为正式比赛性能结论"
+    }
+  ]
+}

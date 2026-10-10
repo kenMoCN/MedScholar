@@ -1,0 +1,1231 @@
+{
+  "schema_version": "1.0",
+  "document_id": "doc_4ce0ed6a014107883f21065d54e6735d86a7dfca5cae162ece8a4df3cd35e1a9",
+  "source_path": "G:\\智能体大赛\\a\\data\\library\\doc_4ce0ed6a014107883f21065d54e6735d86a7dfca5cae162ece8a4df3cd35e1a9\\蛋白质结构与功能1.pptx",
+  "original_name": "蛋白质结构与功能1.pptx",
+  "document_type": "course_deck",
+  "page_count": 133,
+  "metadata": {
+    "title": "彭翼飞 yvettegz@163.com"
+  },
+  "outline_available": false,
+  "toc_pdf_pages": [],
+  "toc_entries": [],
+  "text_layer": "full",
+  "sampled_text_page_ratio": 1.0,
+  "nodes": [
+    {
+      "level": 2,
+      "title": "彭翼飞 yvettegz@163.com",
+      "pdf_start": 1,
+      "pdf_end": 1,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "爱课平台课程",
+      "pdf_start": 2,
+      "pdf_end": 2,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一篇 生物分子结构与功能",
+      "pdf_start": 3,
+      "pdf_end": 3,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一章",
+      "pdf_start": 4,
+      "pdf_end": 4,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "什么是蛋白质?",
+      "pdf_start": 5,
+      "pdf_end": 5,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质是生命活动的物质基础",
+      "pdf_start": 6,
+      "pdf_end": 6,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "目前已知的人类蛋白编码基因、假基因及非编码基因数量。",
+      "pdf_start": 7,
+      "pdf_end": 7,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1）作为生物催化剂: 酶",
+      "pdf_start": 8,
+      "pdf_end": 8,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "本章基本内容",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一节 蛋白质的分子组成",
+      "pdf_start": 10,
+      "pdf_end": 10,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一、 蛋白质的元素组成",
+      "pdf_start": 11,
+      "pdf_end": 11,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "各种蛋白质含氮量平均为16％",
+      "pdf_start": 12,
+      "pdf_end": 12,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2008年“中国奶制品污染事件”",
+      "pdf_start": 13,
+      "pdf_end": 13,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、L-α-氨基酸是蛋白质的基本结构单位",
+      "pdf_start": 14,
+      "pdf_end": 14,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "构成蛋白质的氨基酸都是L构型",
+      "pdf_start": 15,
+      "pdf_end": 15,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "为什么蛋白质只选择L型氨基酸作为组成成分？",
+      "pdf_start": 16,
+      "pdf_end": 16,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "非极性脂肪族氨基酸 (7种)",
+      "pdf_start": 17,
+      "pdf_end": 17,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 非极性脂肪族氨基酸",
+      "pdf_start": 18,
+      "pdf_end": 18,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2. 极性中性氨基酸",
+      "pdf_start": 19,
+      "pdf_end": 19,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "3. 芳香族氨基酸",
+      "pdf_start": 20,
+      "pdf_end": 20,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "4. 酸性氨基酸",
+      "pdf_start": 21,
+      "pdf_end": 21,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "5. 碱性氨基酸",
+      "pdf_start": 22,
+      "pdf_end": 22,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "氨基酸C原子编号有两种方式",
+      "pdf_start": 23,
+      "pdf_end": 23,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "参与合成蛋白质的二十种氨基酸",
+      "pdf_start": 24,
+      "pdf_end": 24,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "氨基酸按侧链极性分类的意义",
+      "pdf_start": 25,
+      "pdf_end": 25,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "含硫氨基酸： 甲硫氨酸、半胱氨酸",
+      "pdf_start": 26,
+      "pdf_end": 26,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "唯一亚氨基酸：",
+      "pdf_start": 27,
+      "pdf_end": 27,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 不参与构成蛋白质，以游离形式存在",
+      "pdf_start": 28,
+      "pdf_end": 28,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "胱氨酸",
+      "pdf_start": 29,
+      "pdf_end": 29,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 30",
+      "pdf_start": 30,
+      "pdf_end": 30,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "Amino Acid Song",
+      "pdf_start": 31,
+      "pdf_end": 31,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "原视频见：https://www.bilibili.com/video/BV1LJ411675R?p=3",
+      "pdf_start": 32,
+      "pdf_end": 32,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "极少数蛋白中含有硒半胱氨酸，可由相应的tRNA携带直接掺入正在延伸中的多肽链。",
+      "pdf_start": 33,
+      "pdf_end": 33,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "特例：吡咯赖氨酸（Pyl,O)",
+      "pdf_start": 34,
+      "pdf_end": 34,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 35,
+      "pdf_end": 35,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 两性解离",
+      "pdf_start": 36,
+      "pdf_end": 36,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "pH=pI",
+      "pdf_start": 37,
+      "pdf_end": 37,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "不同pH时氨基酸的解离状态",
+      "pdf_start": 38,
+      "pdf_end": 38,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "溶液中的氨基酸通常呈解离状态，非解离态的极少",
+      "pdf_start": 39,
+      "pdf_end": 39,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "氨基酸等电点（pI）的计算",
+      "pdf_start": 40,
+      "pdf_end": 40,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "+H+",
+      "pdf_start": 41,
+      "pdf_end": 41,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "+H+",
+      "pdf_start": 42,
+      "pdf_end": 42,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "K1",
+      "pdf_start": 43,
+      "pdf_end": 43,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1. 电泳分离氨基酸",
+      "pdf_start": 44,
+      "pdf_end": 44,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2. 紫外吸收",
+      "pdf_start": 45,
+      "pdf_end": 45,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "3. 茚三酮反应",
+      "pdf_start": 46,
+      "pdf_end": 46,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "五、生物活性肽具有生理活性及多样性",
+      "pdf_start": 47,
+      "pdf_end": 47,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "-HOH",
+      "pdf_start": 48,
+      "pdf_end": 48,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "肽是由氨基酸通过肽键缩合而形成的化合物。",
+      "pdf_start": 49,
+      "pdf_end": 49,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "书写： Ser-Gly-Tyr-Ala-Leu 氨基端在左侧",
+      "pdf_start": 50,
+      "pdf_end": 50,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "* 多肽链中的氨基酸分子因为脱水缩合而基团不全，被称为氨基酸残基(residue)。",
+      "pdf_start": 51,
+      "pdf_end": 51,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "N端",
+      "pdf_start": 52,
+      "pdf_end": 52,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质和多肽两词没有严格的界限，它们都是氨基酸的多聚物，许多场合常常混为一谈。",
+      "pdf_start": 53,
+      "pdf_end": 53,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "氨基酸残基的平均分子量=110",
+      "pdf_start": 54,
+      "pdf_end": 54,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（二） 部分重要的生物活性肽",
+      "pdf_start": 55,
+      "pdf_end": 55,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "GSH过氧化物酶",
+      "pdf_start": 56,
+      "pdf_end": 56,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "谷胱甘肽（GSH）的功能",
+      "pdf_start": 57,
+      "pdf_end": 57,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 58,
+      "pdf_end": 58,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "体内许多激素属寡肽或多肽",
+      "pdf_start": 59,
+      "pdf_end": 59,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "阿斯巴甜（天冬氨酰苯丙氨酸甲酯）",
+      "pdf_start": 60,
+      "pdf_end": 60,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "小 结",
+      "pdf_start": 61,
+      "pdf_end": 61,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 62",
+      "pdf_start": 62,
+      "pdf_end": 62,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "第二节 蛋白质的分子结构",
+      "pdf_start": 63,
+      "pdf_end": 63,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "一级结构(primary structure)",
+      "pdf_start": 64,
+      "pdf_end": 64,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "构象（conformation): 即空间构象、立体结构、三维结构。构象的改变不涉及共价键的改变（只有非共价键的变化），也没有光学活性的改变。",
+      "pdf_start": 65,
+      "pdf_end": 65,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "肽键",
+      "pdf_start": 66,
+      "pdf_end": 66,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "稳定蛋白质构象的化学键",
+      "pdf_start": 67,
+      "pdf_end": 67,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "常 见 氢 键",
+      "pdf_start": 68,
+      "pdf_end": 68,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "疏水键(Hydrophobic interaction)",
+      "pdf_start": 69,
+      "pdf_end": 69,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "关于蛋白质结构的共识",
+      "pdf_start": 70,
+      "pdf_end": 70,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "定义: 指多肽链中氨基酸从N端至C端的排列顺序。",
+      "pdf_start": 71,
+      "pdf_end": 71,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1953年Sanger阐明牛胰岛素一级结构",
+      "pdf_start": 72,
+      "pdf_end": 72,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人胰岛素与牛胰岛素结构类似",
+      "pdf_start": 73,
+      "pdf_end": 73,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "部分蛋白质的大小",
+      "pdf_start": 74,
+      "pdf_end": 74,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "UniProt: Universal Protein Resource 全球最大的蛋白质序列数据库，提供详细的蛋白质序列信息和注释。",
+      "pdf_start": 75,
+      "pdf_end": 75,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二、蛋白质的二级结构",
+      "pdf_start": 76,
+      "pdf_end": 76,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质二级结构主要类型",
+      "pdf_start": 77,
+      "pdf_end": 77,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（一）肽单元是形成二级结构的基础",
+      "pdf_start": 78,
+      "pdf_end": 78,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "1、肽键中的N-C键具有部分双键性质，不能自由旋转。",
+      "pdf_start": 79,
+      "pdf_end": 79,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "肽键平面是肽链盘曲折叠的基本单位。",
+      "pdf_start": 80,
+      "pdf_end": 80,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "-螺旋：多肽链的主链原子围绕中心轴，做有规律的螺旋上升所形成的右手螺旋结构。",
+      "pdf_start": 81,
+      "pdf_end": 81,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Linus Pauling",
+      "pdf_start": 82,
+      "pdf_end": 82,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "α-螺旋的特点",
+      "pdf_start": 83,
+      "pdf_end": 83,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 84",
+      "pdf_start": 84,
+      "pdf_end": 84,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "勘误",
+      "pdf_start": 85,
+      "pdf_end": 85,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "α- 螺旋常具有亲水面和/或疏水面",
+      "pdf_start": 86,
+      "pdf_end": 86,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "α -角蛋白含大量 -螺旋",
+      "pdf_start": 87,
+      "pdf_end": 87,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "卷发的生化原理",
+      "pdf_start": 88,
+      "pdf_end": 88,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "人体每年头发生长长度约为15~20cm, 假如α-keratin 合成的速度决定了头发生长的速度，试计算每秒需合成多长的肽链（即每秒形成的肽键的数量，或每秒掺入的氨基酸残基的数量）？",
+      "pdf_start": 89,
+      "pdf_end": 89,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "胶原蛋白(collagen)",
+      "pdf_start": 90,
+      "pdf_end": 90,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（三）-折叠（-pleated sheet ）",
+      "pdf_start": 91,
+      "pdf_end": 91,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "⑴多肽链充分伸展，肽键平面折叠成锯齿状（折纸状），R基交错位于齿状结构上下方",
+      "pdf_start": 92,
+      "pdf_end": 92,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "同向排列的b-折叠",
+      "pdf_start": 93,
+      "pdf_end": 93,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "丝心蛋白/丝素蛋白(fibroin)是蚕丝和蜘蛛丝中的主要蛋白质，一种 β角蛋白。",
+      "pdf_start": 94,
+      "pdf_end": 94,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "α-螺旋和-折叠结构比较",
+      "pdf_start": 95,
+      "pdf_end": 95,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "α-螺旋和-折叠结构比较",
+      "pdf_start": 96,
+      "pdf_end": 96,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "多肽链180°回折部分所形成的一种二级结构。 通常涉及四个氨基酸残基，第一个氨基酸残基和第四个之间生成氢键。",
+      "pdf_start": 97,
+      "pdf_end": 97,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（五） Ω环",
+      "pdf_start": 98,
+      "pdf_end": 98,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（六）氨基酸残基侧链影响二级结构的形成",
+      "pdf_start": 99,
+      "pdf_end": 99,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2、影响β-折叠形成的因素",
+      "pdf_start": 100,
+      "pdf_end": 100,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "（七）超二级结构（模体）",
+      "pdf_start": 101,
+      "pdf_end": 101,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "模体的种类远不及蛋白质的种类",
+      "pdf_start": 102,
+      "pdf_end": 102,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "小模体可以组装成更大的模体",
+      "pdf_start": 103,
+      "pdf_end": 103,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "钙结合蛋白中结合钙离子的模体",
+      "pdf_start": 104,
+      "pdf_end": 104,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "锌指结构",
+      "pdf_start": 105,
+      "pdf_end": 105,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "转录因子 AP-1与DNA结合",
+      "pdf_start": 106,
+      "pdf_end": 106,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "结合Ca2+的EF手单元EF-hand motif",
+      "pdf_start": 107,
+      "pdf_end": 107,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "三、蛋白质的三级结构(tertiary structure)",
+      "pdf_start": 108,
+      "pdf_end": 108,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Myoglobin, Mb",
+      "pdf_start": 109,
+      "pdf_end": 109,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "肌红蛋白",
+      "pdf_start": 110,
+      "pdf_end": 110,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "疏 水 键：数量最多",
+      "pdf_start": 111,
+      "pdf_end": 111,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "二硫键",
+      "pdf_start": 112,
+      "pdf_end": 112,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分子量较大的蛋白质常可折叠成多个结构较为紧密且稳定的区域，并各行其功能，称为结构域， 通常是一条肽链中形成的若干相对独立的球状折叠区域。短的肽链可能只形成一个结构域，比如肌红蛋白。",
+      "pdf_start": 113,
+      "pdf_end": 113,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "纤连蛋白分子每条肽链各形成6个结构域",
+      "pdf_start": 114,
+      "pdf_end": 114,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "SH2结构域（SH2 domain)",
+      "pdf_start": 115,
+      "pdf_end": 115,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "模体与结构域的区别",
+      "pdf_start": 116,
+      "pdf_end": 116,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 117",
+      "pdf_start": 117,
+      "pdf_end": 117,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "四、蛋白质的四级结构",
+      "pdf_start": 118,
+      "pdf_end": 118,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Hb是寡聚体、异四聚体，也可看成是同二聚体（两个相同αβ的组合）",
+      "pdf_start": 119,
+      "pdf_end": 119,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "有四级结构的蛋白质，单独的亚基一般没有生物学功能，只有完整的四级结构才有生物学功能。",
+      "pdf_start": 120,
+      "pdf_end": 120,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "“for their studies of the structures of globular proteins”",
+      "pdf_start": 121,
+      "pdf_end": 121,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "Protein Data Bank(PDB)：蛋白质结构数据库",
+      "pdf_start": 122,
+      "pdf_end": 122,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "https://alphafold.ebi.ac.uk/",
+      "pdf_start": 123,
+      "pdf_end": 123,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "2024年诺贝尔化学奖获得者",
+      "pdf_start": 124,
+      "pdf_end": 124,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质结构要点小结",
+      "pdf_start": 125,
+      "pdf_end": 125,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "五、蛋白质的分类",
+      "pdf_start": 126,
+      "pdf_end": 126,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "内在无序蛋白（intrinsically disordered protein，IDP)",
+      "pdf_start": 127,
+      "pdf_end": 127,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "球状蛋白质三维结构特征",
+      "pdf_start": 128,
+      "pdf_end": 128,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "图中除了胶原蛋白原胶原和作为大小对比的DNA（灰色显示），其它都是球状蛋白。",
+      "pdf_start": 129,
+      "pdf_end": 129,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "分类",
+      "pdf_start": 130,
+      "pdf_end": 130,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "蛋白质家族与蛋白质超家族",
+      "pdf_start": 131,
+      "pdf_end": 131,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "幻灯片 132",
+      "pdf_start": 132,
+      "pdf_end": 132,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "课堂练习",
+      "pdf_start": 133,
+      "pdf_end": 133,
+      "printed_start": null,
+      "source": "slide_title",
+      "title_verified": true
+    }
+  ],
+  "page_map_segments": [],
+  "warnings": [],
+  "subject_ids": [
+    "biochemistry"
+  ],
+  "source_format": "pptx",
+  "visual_indexed_pages": [
+    30,
+    62,
+    117,
+    132
+  ],
+  "visual_review_pages": [],
+  "visual_failed_pages": [],
+  "visual_indexed_at": "2026-10-08T11:29:16.049170+00:00",
+  "visual_failure_reasons": {}
+}

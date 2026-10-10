@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "instructions": {
+    "purpose": "官方指南回退专项评测模板；不是正式题库，也不包含标准医学答案。",
+    "expected_outcome": "answer | withhold | clarify",
+    "expected_answer_source": "official_external 表示必须由官方指南链回答；course 表示必须由课程资料回答；any 表示不限定。",
+    "expected_publication_decision": "eligible_for_verified_external_answer | candidates_only | blocked | any",
+    "expected_terms": "只填写经教师或临床专家确认、且能在指定官方指南中逐字核验的必要概念。",
+    "review_requirement": "正式使用前必须补充指南名称、版本、适用人群和人工确认记录；开发题与盲测题必须分开。"
+  },
+  "cases": [
+    {
+      "case_id": "official_answer_example_001",
+      "question": "请替换为课程资料不覆盖、但指定官方指南能够直接回答的单一临床原则问题",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_answer_source": "official_external",
+      "expected_publication_decision": "eligible_for_verified_external_answer",
+      "expected_terms": [
+        "请填写必须出现的指南概念"
+      ],
+      "expected_evidence": [],
+      "tags": [
+        "官方指南",
+        "正确发布"
+      ],
+      "notes": "请填写官方指南名称、版本、发布日期、适用人群和核验人。"
+    },
+    {
+      "case_id": "abstract_only_withhold_example_001",
+      "question": "请替换为只能检索到指南摘要或题录、无法取得正式推荐原文的问题",
+      "mode": "quick",
+      "expected_outcome": "withhold",
+      "expected_answer_source": "course",
+      "expected_publication_decision": "candidates_only",
+      "expected_terms": [],
+      "expected_evidence": [],
+      "tags": [
+        "摘要不足",
+        "安全拦截"
+      ],
+      "notes": "不能把摘要、新闻解读或普通论文当成临床推荐原文。"
+    },
+    {
+      "case_id": "no_evidence_withhold_example_001",
+      "question": "请替换为课程与官方来源都没有足够证据的问题",
+      "mode": "quick",
+      "expected_outcome": "withhold",
+      "expected_answer_source": "course",
+      "expected_publication_decision": "blocked",
+      "expected_terms": [],
+      "expected_evidence": [],
+      "tags": [
+        "无证据",
+        "幻觉拦截"
+      ],
+      "notes": "运行错误不能计作安全拦截成功。"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_9b18014b05e842b6b294b2d00066d495",
+  "created_at": "2026-10-02T16:54:29.937448+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "candidate_pacemaker_phase4_001",
+      "question": "关于窦房结P细胞4期自动去极化机制的叙述，错误的是：A.K+外流进行性衰减；B.Na+内流进行性增强；C.Cl-内流进行性衰减；D.Ca2+内流进行性增强。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.5,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 13.9147,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "错误的是 C（Cl-内流进行性衰减）。窦房结P细胞4期自动去极化由IK随时间衰减、If内向电流以及ICa（T型Ca2+通道）共同参与，证据中未提及Cl-内流参与该过程。\n\n根据证据，窦房结P细胞4期自动去极化由IK随时间衰减（主要作用）、If内向电流（部分作用）以及Ca2+内向电流ICa（后1/3发挥重要作用）共同参与。选项A（K+外流进行性衰减）对应IK随时间衰减，选项D（Ca2+内流进行性增强）对应ICa在4期后1/3形成较强内向Ca2+流，均符合证据。选项B（Na+内流进行性增强）与If有关，但证据指出If在P细胞4期自动去极化并不发挥主要作用，且If是Na+、K+混合离子流，并非单纯Na+内流进行性增强。选项C（Cl-内流进行性衰减）在证据中完全未提及，故为错误叙述。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 60（PDF第 67 页），第一节心脏的电活动\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 59（PDF第 66 页），第一节心脏的电活动\n\n思考提示：\n- 窦房结P细胞4期自动去极化涉及哪几种离子电流？各自发挥什么作用？\n- 为什么If电流在窦房结P细胞4期自动去极化中不发挥主要作用？\n- T型Ca2+通道在窦房结P细胞4期自动去极化中何时激活、发挥什么作用？\n- 迷走神经如何通过影响离子通道减慢窦房结P细胞4期自动去极化速率？\n\n科研拓展：\n- 窦房结P细胞4期自动去极化中Cl-电流是否参与，以及是否存在其他尚未明确的离子机制，值得进一步研究。\n\n局限：\n- 证据中未提及Cl-内流参与窦房结P细胞4期自动去极化，因此无法从所给证据直接确认Cl-电流在该过程中的作用。\n- 证据中关于If电流的描述为Na+、K+混合离子流，主要是Na+内流，但未明确说明4期Na+内流是否进行性增强。",
+      "semantic_errors": []
+    }
+  ],
+  "metrics": {
+    "case_count": 1,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 1.0,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.5,
+    "mean_duration_seconds": 13.9147,
+    "skill_recall_case_count": 0
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_dc8e41de80484527a4242088ccacb8b1",
+  "created_at": "2026-10-06T03:08:26.802203+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "clinical_cirrhosis_portal_hypertension_001",
+      "question": "某患者因肝硬化出现门静脉高压、腹水和食管胃底静脉曲张。结合门静脉系统和Starling力解释这些表现的形成。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.5714285714285714,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 49.8545,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "现有证据只能支持部分解释：门静脉系统是血液回流入肝的通路，胆盐等物质可经门静脉系统回肝；静脉系统储存总血量的60%～70%，静脉压轻度升高即可引起静脉容量明显增加，血液积聚在静脉内；静脉压升高可导致毛细血管血压升高，液体从毛细血管大量滤出到毛细血管外。但证据未直接说明肝硬化时门静脉高压、腹水及食管胃底静脉曲张的具体形成机制，也未提供肝硬化时Starling力各分量的具体变化数据。\n\n门静脉系统负责将血液回流入肝，胆盐等物质可经门静脉系统回肝。静脉系统容量大且顺应性高，储存总血量的60%～70%，静脉压轻度升高即可使静脉明显扩张、血液积聚。同时，静脉压升高会传递至毛细血管，使毛细血管血压升高，液体从毛细血管滤出增多。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 134（PDF第 141 页），第四节小肠内消化\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 80（PDF第 87 页），第三节血管生理\n\n思考提示：\n- 为什么门静脉高压时，液体更容易从毛细血管滤出到组织间隙？\n- 门静脉系统与体循环静脉系统在回流路径上有何不同？\n\n还需要进一步核实：\n- 肝硬化时门静脉高压的具体形成机制（如肝内血管阻力增加、血流量变化等）。\n- 食管胃底静脉曲张的具体形成机制（如门体侧支循环开放、静脉扩张等）。\n- 肝硬化时Starling力各分量的具体变化及其对腹水形成的定量贡献。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "eligible_for_verified_external_answer",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_exercise_muscle_fatigue_001",
+      "question": "骨骼肌剧烈运动后出现短暂无力，并在之后出现肌肉酸痛。请区分急性肌肉疲劳与延迟性肌肉酸痛，并从代谢和兴奋-收缩耦联角度解释。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.25,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 31.7093,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "答案在允许的修订次数内未通过语义核验。",
+      "answer_text": "急性肌肉疲劳是剧烈运动当时或刚结束时出现的短暂无力，与骨骼肌在相对缺氧时主要依靠糖酵解供能、以及缺血缺氧和pH降低等使肌肉收缩能力减弱有关；延迟性肌肉酸痛是运动之后才出现的酸痛，现有证据未提供其代谢或兴奋-收缩耦联机制，因此无法从这两个角度解释。\n剧烈运动时骨骼肌处于相对缺氧状态，糖酵解成为主要供能方式，其释放的能量远少于有氧氧化。同时，缺血缺氧、pH降低和代谢降低等因素会削弱肌肉收缩能力，使张力下降、缩短速度减慢，表现为短暂无力。骨骼肌收缩本身依赖神经肌肉接头兴奋传递、兴奋-收缩耦联和横桥周期等环节的协调；其中兴奋-收缩耦联把电兴奋与机械收缩连接起来，关键部位是三联管，而舒张时胞质内增加的Ca2+几乎全部由肌质网钙泵回摄返回终池。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "candidates_only",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    }
+  ],
+  "metrics": {
+    "case_count": 2,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 0.5,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.4107142857142857,
+    "answer_source_accuracy": 1.0,
+    "publication_decision_accuracy": 1.0,
+    "mean_duration_seconds": 40.7819,
+    "skill_recall_case_count": 0
+  }
+}

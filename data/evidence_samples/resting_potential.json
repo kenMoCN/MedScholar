@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "bundle_f46a3835b75a4e02a470265de7b17ae8",
+  "query": "静息电位是如何形成的",
+  "route_mode": "structure_first",
+  "created_at": "2026-09-30T14:35:39.908288+00:00",
+  "evidence": [
+    {
+      "evidence_id": "ev_f9c40fcc5a724d7bb378bf2bdeb0f554",
+      "document_id": "doc_1e91061282acd0c75114f0493c710cdedb04591f90a46ce34d88e33171786cc8",
+      "original_name": "《生理学》第二章 细胞的基本功能2.pdf",
+      "document_type": "course_deck",
+      "pdf_page": 23,
+      "printed_page": null,
+      "locator": "幻灯片 23",
+      "section_title": "（2）少量的背景Na+内流也参与了静息电位形成",
+      "evidence_text": "（2）少量的背景Na+内流也参与了静息电位形成\n部分抵消了K+外流形成的膜内负电位\nVm = 61.5 × lg PK K o + PNa Na o\nPK K i + PNa Na i\n（mV）\n𝑃𝑘和𝑃Na分别为K+和Na+相对通透率，其他项\n与能斯特方程相同。\n细胞膜中的钠漏通道和钠泵（钠-钾泵）参与静息电位形\n成的示意图\n戈德曼方程：\n（3）钠-钾泵的生电作用——增大细胞内的负值\n• 直接作用：生电性活动引起膜超极化，参与\n静息电位形成，但贡献不大（＜5%）\n• 间接作用：维持膜两侧离子浓度差\n（三）影响静息电位水平的三个因素",
+      "span_start": 0,
+      "span_end": 269,
+      "page_text_sha256": "9dea39034f2ce785221f83fd9459e8fb1fff9f7617a8e41161d0f6123970a268",
+      "matched_terms": [
+        "静息电位形成",
+        "息电位形",
+        "电位形成",
+        "静息电位",
+        "位形成",
+        "息电位",
+        "电位形",
+        "静息电"
+      ],
+      "retrieval_score": 19.4594,
+      "context_pdf_pages": [
+        22,
+        23,
+        24
+      ],
+      "access_level": "local_full_text"
+    },
+    {
+      "evidence_id": "ev_939117211be84e78b1ce35269b5e9ec7",
+      "document_id": "doc_1e91061282acd0c75114f0493c710cdedb04591f90a46ce34d88e33171786cc8",
+      "original_name": "《生理学》第二章 细胞的基本功能2.pdf",
+      "document_type": "course_deck",
+      "pdf_page": 63,
+      "printed_page": null,
+      "locator": "幻灯片 63",
+      "section_title": "静息电位",
+      "evidence_text": "静息电位\n1.定义：是指细胞在安静状态下，存在于细胞膜两侧的电位差，是一切生物电现象产生的基础。\n2.基本术语。\n极化：静息电位时，膜两侧保持的内负外正的状态。\n去极化：膜内负电位减小的过程。\n反极化：膜内电位由零变为正值的过程。\n复极化：膜电位恢复到极化的过程。\n超极化：膜内负电位超过静息电位的过程。\n3.静息电位形成原理\n（1）产生的条件：\n①细胞内外离子分布不同：膜内高K+ ，膜外高Na+\n②细胞膜对离子的通透性不同：安静时K+通透性远大于Na+ （50～100倍）\n课堂小结",
+      "span_start": 0,
+      "span_end": 243,
+      "page_text_sha256": "15bf5d5f65f9166804b6adaffbf909f0e4a441d5949a2c4b55405fdeec97e913",
+      "matched_terms": [
+        "静息电位形成",
+        "息电位形",
+        "电位形成",
+        "静息电位",
+        "位形成",
+        "息电位",
+        "电位形",
+        "静息电"
+      ],
+      "retrieval_score": 18.5431,
+      "context_pdf_pages": [
+        62,
+        63,
+        64
+      ],
+      "access_level": "local_full_text"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "run_id": "retrieval_eval_b2f6bd06da274734a2dc4d0ff78e6729",
+  "created_at": "2026-10-02T16:41:20.792093+00:00",
+  "top_k": 3,
+  "case_results": [
+    {
+      "case_id": "candidate_resting_potential_001",
+      "question": "关于静息电位的论述，不正确的是：A.细胞膜处于极化状态；B.静息电位主要是由K+内流形成的；C.静息状态下细胞膜对K+通透性增高；D.静息电位与膜两侧Na-K泵的活动有关；E.细胞在静息状态时处于外正内负的状态。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 2,
+      "duration_seconds": 0.2838,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_action_potential_001",
+      "question": "关于动作电位的描述，正确的是：A.刺激强度小于阈值时出现低幅度动作电位；B.动作电位一经产生便可沿细胞膜作电紧张性扩布；C.传导距离较长时动作电位的大小不发生改变；D.刺激强度达到阈值后再增加刺激强度能使动作电位幅度增大。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 2,
+      "duration_seconds": 0.2856,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_pacemaker_phase4_001",
+      "question": "关于窦房结P细胞4期自动去极化机制的叙述，错误的是：A.K+外流进行性衰减；B.Na+内流进行性增强；C.Cl-内流进行性衰减；D.Ca2+内流进行性增强。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.3324,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_skeletal_ltype_001",
+      "question": "骨骼肌细胞横管膜L型钙通道激活后的生理效应是：A.大量Ca2+内流导致肌肉舒张；B.大量Ca2+内流直接触发肌肉收缩；C.少量Ca2+内流触发终池释放Ca2+；D.无Ca2+跨细胞膜流动，通道变构使终池释放Ca2+。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.3366,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_tachycardia_output_001",
+      "question": "心率过快时，心输出量减少的主要原因是：A.心房收缩期缩短；B.心室充盈期缩短；C.等容舒张期缩短；D.等容收缩期缩短；E.快速射血期缩短。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.3299,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_pernicious_anemia_001",
+      "question": "女，58岁，上腹不适、纳差3年，体重减轻、乏力半年。Hb 88 g/L，MCV 115 fL；胃镜示胃体皱襞稀疏、黏膜血管透见。发生贫血最可能的机制是：A.内因子缺乏；B.铁利用障碍；C.维生素C缺乏；D.慢性消化道失血；E.蛋白质吸收障碍。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 1,
+      "routed_document_count": 7,
+      "duration_seconds": 0.3472,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_ap_amplitude_trap_001",
+      "question": "影响神经纤维动作电位幅度的主要因素是：A.刺激强度；B.刺激时间；C.阈电位水平；D.神经纤维的直径；E.细胞内、外Na+浓度差。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 2,
+      "duration_seconds": 0.2815,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_positive_feedback_001",
+      "question": "存在正反馈调节的神经反射活动是：A.排尿反射；B.屈肌反射；C.肺牵张反射；D.压力感受性反射；E.甲状腺功能亢进时TSH分泌减少。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 1,
+      "duration_seconds": 0.021,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_oxyhemoglobin_curve_001",
+      "question": "哪些因素会使氧解离曲线右移？右移对血红蛋白与氧的亲和力及组织供氧有什么意义？",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.1727,
+      "error_categories": []
+    },
+    {
+      "case_id": "candidate_shock_cvp_001",
+      "question": "休克病人中心静脉压高、血压正常，处理原则应选哪项并说明理由：A.充分补液；B.补液试验；C.使用扩血管药；D.使用缩血管药；E.使用强心药。",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 7,
+      "duration_seconds": 0.3318,
+      "error_categories": []
+    }
+  ],
+  "metrics": {
+    "case_count": 10,
+    "evaluable_case_count": 10,
+    "hit_at_k_rate": 1.0,
+    "mean_duration_seconds": 0.27225
+  }
+}

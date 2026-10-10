@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_57bd36ce488c428eaab2c9f82eca63ff",
+  "created_at": "2026-10-06T01:59:34.359497+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "clinical_hypokalemia_excitability_001",
+      "question": "某患者因严重低钾血症出现四肢无力、腱反射减弱。从静息电位产生的离子机制角度，分析为什么低钾血症会导致骨骼肌兴奋性降低？",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.5,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 38.6614,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "从静息电位的离子机制看，骨骼肌静息电位主要由膜内高K⁺、膜外高Na⁺的分布以及安静时膜对K⁺通透性远大于Na⁺所决定，K⁺外流形成的K⁺平衡电位是静息电位的主要成分。严重低钾血症时细胞外K⁺浓度降低，K⁺的平衡电位变得更负，理论上可使骨骼肌静息电位增大（超极化），使膜电位远离阈电位，从而降低骨骼肌的兴奋性，表现为无力、腱反射减弱。\n\n骨骼肌细胞膜内K⁺浓度高、膜外K⁺浓度低，安静时膜对K⁺的通透性远大于Na⁺，因此K⁺顺浓度差外流，形成以K⁺平衡电位为主要成分的静息电位。K⁺平衡电位的大小由细胞内外K⁺浓度比决定：细胞外K⁺浓度降低时，该比值增大，K⁺平衡电位向更负的方向移动，静息电位随之增大，即发生超极化。超极化使膜电位与阈电位之间的距离加大，刺激需要更强的去极化才能达到阈电位并产生动作电位，因此骨骼肌兴奋性降低，临床上表现为肌无力和腱反射减弱。\n\n依据：\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 13，（二）静息电位的产生机制\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 63，静息电位\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 17（PDF第 24 页），第三节生物电现象和兴奋性\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 19，（二）静息电位的产生机制\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 20，（二）静息电位的产生机制\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 21（PDF第 28 页），第三节生物电现象和兴奋性\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 58（PDF第 65 页），第一节心脏的电活动\n\n思考提示：\n- 如果细胞外K⁺浓度降低，K⁺平衡电位会向哪个方向移动？这与静息电位的变化方向是什么关系？\n- 为什么静息电位超极化后，同样强度的刺激更不容易引起骨骼肌产生动作电位？\n\n还需要进一步核实：\n- 严重低钾血症时骨骼肌静息电位实际变化幅度的直接电生理测量证据。\n- 低钾血症导致骨骼肌兴奋性降低过程中，除静息电位超极化外是否还有其他离子机制（如Na⁺通透性改变、钠泵功能变化）参与的直接证据。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "candidates_only",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_cardiac_ap_arrhythmia_001",
+      "question": "某患者因急性心肌梗死出现室性心律失常。心肌动作电位平台期或动作电位时程异常为什么可能增加心律失常风险？回答时请区分折返与早期后除极。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": false,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 0.8,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 75.4131,
+      "error_categories": [
+        "answer_concept_partial"
+      ],
+      "error": null,
+      "answer_text": "现有证据仅能说明：心室肌细胞2期（平台期）膜内电位基本停滞于0 mV左右，持续100～150 ms，是心肌细胞动作电位持续时间长的主要原因；心肌细胞因平台期而使有效不应期特别长，一直延续到机械反应的舒张期开始之后；K+外流可使平台期缩短，期前兴奋的时程较短，其不应期也较短。因此，平台期缩短可导致动作电位时程和不应期缩短。但现有证据未直接说明平台期或动作电位时程异常与折返或早期后除极之间的因果关系，也未涉及急性心肌梗死这一临床背景。\n\n由于平台期的存在，心肌细胞的有效不应期特别长，一直延续到机械反应的舒张期开始之后。当K+外流增加时，平台期缩短，期前兴奋的时程变短，其不应期也相应缩短。现有证据仅支持平台期与动作电位时程、不应期之间的关系，未直接说明平台期或动作电位时程异常与折返或早期后除极之间的因果关系，也未涉及急性心肌梗死背景。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 57（PDF第 64 页），第一节心脏的电活动\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 62（PDF第 69 页），第一节心脏的电活动\n\n思考提示：\n- 如果心室肌细胞平台期缩短，动作电位时程和不应期会如何变化？\n- 早期后除极发生在动作电位的哪个时相？它与平台期缩短之间可能存在怎样的关系？\n\n还需要进一步核实：\n- 平台期或动作电位时程异常通过何种具体机制引发折返，现有证据未提供。\n- 平台期或动作电位时程异常通过何种具体机制引发早期后除极，现有证据未提供。\n- 急性心肌梗死背景下平台期或动作电位时程异常与室性心律失常风险之间的直接证据，现有证据未提供。\n- 折返与早期后除极在急性心肌梗死室性心律失常中的相对作用及鉴别要点，现有证据未提供。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "eligible_for_verified_external_answer",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_left_hf_pulmonary_edema_001",
+      "question": "某患者因左心衰竭导致肺静脉压和肺毛细血管压升高，出现呼吸困难、咳粉红色泡沫痰。从Starling力和淋巴回流角度解释肺水肿的形成。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.2,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 78.7345,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "生成器判断官方指南证据不足。",
+      "answer_text": "左心衰竭时左心房压和肺静脉压升高，肺循环毛细血管压随之升高，使液体从肺毛细血管滤出增多，积聚在肺组织间隙和肺泡中，形成肺水肿。正常情况下肺毛细血管压很低，肺毛细血管全长都发生重吸收，只有很少量液体滤出；这些滤出液大部分由毛细淋巴管泵回循环系统，小部分进入肺泡用于湿润肺泡。当毛细血管压升高使滤过增多、超过淋巴回流的代偿能力时，即出现肺水肿。\n正常情况下，肺循环是低阻力、低压力系统，肺毛细血管血压平均约7 mmHg，肺毛细血管全长都发生重吸收，只有很少量液体滤出；这些滤出液大部分被毛细淋巴管泵回循环系统，小部分进入肺泡用于湿润肺泡，从而维持肺泡的“干燥”。左心衰竭时，左心房压和肺静脉压升高，肺循环毛细血管压随之升高，毛细血管血压升高使有效滤过压增大，液体从肺毛细血管滤出增多，积聚在肺组织间隙和肺泡中，形成肺水肿。与此同时，当毛细血管滤过增加、淋巴液生成增多时，淋巴管平滑肌受牵张而收缩，可加速淋巴液回流以防止水肿形成；但若滤出液超过淋巴回流的代偿能力，或淋巴回流受阻，组织间隙内组织液积聚，即可导致组织水肿。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "eligible_for_verified_external_answer",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    },
+    {
+      "case_id": "clinical_dumping_syndrome_001",
+      "question": "某患者胃大部切除术后进食即出现心悸、出汗、腹痛和腹泻，之后又可能出现乏力或低血糖。从胃排空、渗透压和胃肠激素角度解释早期与晚期倾倒综合征。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.14285714285714285,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 75.6866,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "生成器判断官方指南证据不足。",
+      "answer_text": "现有证据只能支持部分解释：胃大部切除术后，胃内食糜排空与十二指肠内消化吸收速度之间的协调被打乱，而胃排空本身受肠抑胃素等胃肠激素的抑制性调节；同时，抑胃肽等胃肠激素参与对胰岛素分泌的前馈性调节。因此，从胃排空和胃肠激素角度可以部分说明倾倒综合征的机制，但关于渗透压变化如何直接引发心悸、出汗、腹痛、腹泻以及晚期低血糖，现有证据未提供直接描述。\n正常情况下，胃排空并非一泻而出，而是受十二指肠内反馈调控：食糜进入十二指肠后，通过肠胃反射和肠抑胃素（促胰液素、抑胃肽、缩胆囊素等）抑制胃运动，使排空暂停；待食糜被消化吸收、胃酸被中和后，抑制解除，胃再推送少量食糜进入十二指肠。如此反复，使胃排空速度与十二指肠消化吸收速度相匹配。同时，抑胃肽等胃肠激素在正常情况下参与“肠-胰岛轴”的前馈性调节，使胰岛素分泌提前准备以应对即将吸收的营养成分。但现有证据未直接描述胃大部切除术后该协调机制被打乱、胃肠激素调节变化、渗透压变化如何引发心悸、出汗、腹痛、腹泻以及晚期低血糖。",
+      "semantic_errors": [],
+      "actual_answer_source": "course",
+      "actual_publication_decision": "eligible_for_verified_external_answer",
+      "answer_source_correct": true,
+      "publication_decision_correct": true
+    }
+  ],
+  "metrics": {
+    "case_count": 4,
+    "pass_rate": 0.0,
+    "outcome_accuracy": 0.5,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.4107142857142857,
+    "answer_source_accuracy": 1.0,
+    "publication_decision_accuracy": 1.0,
+    "mean_duration_seconds": 67.12389999999999,
+    "skill_recall_case_count": 0
+  }
+}

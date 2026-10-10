@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "privacy": "local_session_images_no_secrets_no_hidden_reasoning",
+  "sessions": [
+    {
+      "session_id": "5a0a71b4a6f94a9ca865793d3096041b",
+      "title": "新对话",
+      "created_at": "2026-10-10T18:04:57.211057+00:00",
+      "updated_at": "2026-10-10T18:04:57.211057+00:00",
+      "messages": []
+    }
+  ]
+}

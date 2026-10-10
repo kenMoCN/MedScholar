@@ -1,0 +1,1368 @@
+{
+  "schema_version": "1.0",
+  "document_id": "doc_c8e22bc3f3f64c32e65dadef7d1eb7bbaba78743530927a14bb87e3cbf61d9b4",
+  "source_path": "C:\\Users\\33381\\Desktop\\生理学（第五版）_9787030818492.pdf",
+  "original_name": "生理学（第五版）_9787030818492.pdf",
+  "document_type": "textbook",
+  "page_count": 298,
+  "metadata": {
+    "title": "生理学（第五版）_9787030818492.pdf",
+    "author": "Unknown",
+    "subject": null,
+    "creator": null
+  },
+  "outline_available": true,
+  "toc_pdf_pages": [
+    6,
+    7
+  ],
+  "toc_entries": [
+    {
+      "title": "第一节 生理学的研究对象",
+      "printed_page": 1,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第二节 内环境及其稳态",
+      "printed_page": 2,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第三节 生命活动的基本特征",
+      "printed_page": 2,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第四节 人体功能的调节",
+      "printed_page": 3,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第五节 人体的控制系统",
+      "printed_page": 3,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第一节 细胞膜的基本结构和物质转运功能",
+      "printed_page": 6,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第二节 细胞的信号转导",
+      "printed_page": 12,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第三节 生物电现象和兴奋性",
+      "printed_page": 17,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第四节 肌细胞的收缩",
+      "printed_page": 24,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第一节 血液的组成和理化特性",
+      "printed_page": 36,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第二节 血细胞生理",
+      "printed_page": 38,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第三节 生理性止血",
+      "printed_page": 46,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第四节 血型与输血",
+      "printed_page": 52,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第一节 心脏的电活动",
+      "printed_page": 57,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第二节 心脏的泵血功能",
+      "printed_page": 66,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第三节 血管生理",
+      "printed_page": 73,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第四节 心血管活动的调节",
+      "printed_page": 86,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第五节 器官循环",
+      "printed_page": 94,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第一节 肺通气",
+      "printed_page": 101,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第二节 呼吸气体的交换",
+      "printed_page": 108,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第三节 气体在血液中的运输",
+      "printed_page": 111,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第四节 节律性呼吸的调控",
+      "printed_page": 114,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第一节 概述",
+      "printed_page": 120,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第二节 口腔内消化",
+      "printed_page": 124,
+      "toc_pdf_page": 6
+    },
+    {
+      "title": "第三节 胃内消化",
+      "printed_page": 126,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第四节 小肠内消化",
+      "printed_page": 132,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第五节 大肠内消化",
+      "printed_page": 135,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第六节 吸收",
+      "printed_page": 136,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第一节 能量代谢",
+      "printed_page": 141,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第二节 体温及其调节",
+      "printed_page": 146,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第一节 肾脏的结构与血液循环特点",
+      "printed_page": 153,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第二节 尿的生成过程",
+      "printed_page": 156,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第三节 尿液的浓缩和稀释",
+      "printed_page": 162,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第四节 肾脏泌尿功能的调节",
+      "printed_page": 164,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第五节 血浆清除率",
+      "printed_page": 167,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第六节 尿的排出",
+      "printed_page": 169,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第一节 概述",
+      "printed_page": 171,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第二节 视觉器官",
+      "printed_page": 174,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第三节 听觉器官",
+      "printed_page": 184,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第四节 前庭器官",
+      "printed_page": 190,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第五节 嗅觉与味觉",
+      "printed_page": 193,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第六节 皮肤感觉",
+      "printed_page": 194,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第一节 神经元与神经胶质细胞",
+      "printed_page": 197,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第二节 神经元间的信息传递",
+      "printed_page": 202,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第三节 神经系统的感觉功能",
+      "printed_page": 219,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第四节 神经系统对躯体运动的调节",
+      "printed_page": 226,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第五节 神经系统对内脏活动的调节",
+      "printed_page": 237,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第六节 脑的高级功能",
+      "printed_page": 241,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第一节 概论",
+      "printed_page": 253,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第二节 下丘脑和垂体的内分泌功能",
+      "printed_page": 258,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第三节 甲状腺的内分泌",
+      "printed_page": 263,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第四节 甲状旁腺、甲状腺 Ｃ 细胞的内分泌及维",
+      "printed_page": null,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第五节 胰腺的内分泌",
+      "printed_page": 272,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第六节 肾上腺的内分泌功能",
+      "printed_page": 274,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第七节 其他器官的内分泌功能及激素",
+      "printed_page": 279,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第一节 男性生殖",
+      "printed_page": 281,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第二节 女性生殖",
+      "printed_page": 283,
+      "toc_pdf_page": 7
+    },
+    {
+      "title": "第三节 妊娠",
+      "printed_page": 287,
+      "toc_pdf_page": 7
+    }
+  ],
+  "text_layer": "usable",
+  "sampled_text_page_ratio": 0.938,
+  "nodes": [
+    {
+      "level": 1,
+      "title": "目录",
+      "pdf_start": 6,
+      "pdf_end": 7,
+      "printed_start": null,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第一章绪论",
+      "pdf_start": 8,
+      "pdf_end": 11,
+      "printed_start": 1,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节生理学的研究对象",
+      "pdf_start": 8,
+      "pdf_end": 8,
+      "printed_start": 1,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节内环境及其稳态",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": 2,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节生命活动的基本特征",
+      "pdf_start": 9,
+      "pdf_end": 9,
+      "printed_start": 2,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节人体功能的调节",
+      "pdf_start": 10,
+      "pdf_end": 11,
+      "printed_start": 3,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第五节人体的控制系统",
+      "pdf_start": 10,
+      "pdf_end": 11,
+      "printed_start": 3,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "第二章细胞的基本功能",
+      "pdf_start": 12,
+      "pdf_end": 41,
+      "printed_start": 5,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节细胞膜的基本结构和物质转运功能",
+      "pdf_start": 13,
+      "pdf_end": 18,
+      "printed_start": 6,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节细胞的信号转导",
+      "pdf_start": 19,
+      "pdf_end": 23,
+      "printed_start": 12,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节生物电现象和兴奋性",
+      "pdf_start": 24,
+      "pdf_end": 30,
+      "printed_start": 17,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节肌细胞的收缩",
+      "pdf_start": 31,
+      "pdf_end": 41,
+      "printed_start": 24,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第三章血液",
+      "pdf_start": 42,
+      "pdf_end": 62,
+      "printed_start": 35,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节血液的组成和理化特性",
+      "pdf_start": 43,
+      "pdf_end": 44,
+      "printed_start": 36,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节血细胞生理",
+      "pdf_start": 45,
+      "pdf_end": 52,
+      "printed_start": 38,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节生理性止血",
+      "pdf_start": 53,
+      "pdf_end": 58,
+      "printed_start": 46,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节血型与输血",
+      "pdf_start": 59,
+      "pdf_end": 62,
+      "printed_start": 52,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第四章血液循环",
+      "pdf_start": 63,
+      "pdf_end": 106,
+      "printed_start": 56,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节心脏的电活动",
+      "pdf_start": 64,
+      "pdf_end": 72,
+      "printed_start": 57,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节心脏的泵血功能",
+      "pdf_start": 73,
+      "pdf_end": 79,
+      "printed_start": 66,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节血管生理",
+      "pdf_start": 80,
+      "pdf_end": 92,
+      "printed_start": 73,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节心血管活动的调节",
+      "pdf_start": 93,
+      "pdf_end": 100,
+      "printed_start": 86,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第五节器官循环",
+      "pdf_start": 101,
+      "pdf_end": 106,
+      "printed_start": 94,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "第五章呼吸生理",
+      "pdf_start": 107,
+      "pdf_end": 126,
+      "printed_start": 100,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节肺通气",
+      "pdf_start": 108,
+      "pdf_end": 114,
+      "printed_start": 101,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节呼吸气体的交换",
+      "pdf_start": 115,
+      "pdf_end": 117,
+      "printed_start": 108,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节气体在血液中的运输",
+      "pdf_start": 118,
+      "pdf_end": 120,
+      "printed_start": 111,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节节律性呼吸的调控",
+      "pdf_start": 121,
+      "pdf_end": 126,
+      "printed_start": 114,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第六章消化与吸收",
+      "pdf_start": 127,
+      "pdf_end": 147,
+      "printed_start": 120,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节概述",
+      "pdf_start": 127,
+      "pdf_end": 130,
+      "printed_start": 120,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节口腔内消化",
+      "pdf_start": 131,
+      "pdf_end": 132,
+      "printed_start": 124,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第三节胃内消化",
+      "pdf_start": 133,
+      "pdf_end": 138,
+      "printed_start": 126,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节小肠内消化",
+      "pdf_start": 139,
+      "pdf_end": 141,
+      "printed_start": 132,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第五节大肠内消化",
+      "pdf_start": 142,
+      "pdf_end": 142,
+      "printed_start": 135,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第六节吸收",
+      "pdf_start": 143,
+      "pdf_end": 147,
+      "printed_start": 136,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第七章能量代谢和体温",
+      "pdf_start": 148,
+      "pdf_end": 158,
+      "printed_start": 141,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节能量代谢",
+      "pdf_start": 148,
+      "pdf_end": 152,
+      "printed_start": 141,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节体温及其调节",
+      "pdf_start": 153,
+      "pdf_end": 158,
+      "printed_start": 146,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第八章尿的生成和排出",
+      "pdf_start": 159,
+      "pdf_end": 177,
+      "printed_start": 152,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节肾脏的结构与血液循环特点",
+      "pdf_start": 160,
+      "pdf_end": 162,
+      "printed_start": 153,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节尿的生成过程",
+      "pdf_start": 163,
+      "pdf_end": 168,
+      "printed_start": 156,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节尿液的浓缩和稀释",
+      "pdf_start": 169,
+      "pdf_end": 170,
+      "printed_start": 162,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节肾脏泌尿功能的调节",
+      "pdf_start": 171,
+      "pdf_end": 173,
+      "printed_start": 164,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第五节血浆清除率",
+      "pdf_start": 174,
+      "pdf_end": 175,
+      "printed_start": 167,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第六节尿的排出",
+      "pdf_start": 176,
+      "pdf_end": 177,
+      "printed_start": 169,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第九章感觉器官",
+      "pdf_start": 178,
+      "pdf_end": 203,
+      "printed_start": 171,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节概述",
+      "pdf_start": 178,
+      "pdf_end": 180,
+      "printed_start": 120,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节视觉器官",
+      "pdf_start": 181,
+      "pdf_end": 190,
+      "printed_start": 174,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节听觉器官",
+      "pdf_start": 191,
+      "pdf_end": 196,
+      "printed_start": 184,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节前庭器官",
+      "pdf_start": 197,
+      "pdf_end": 199,
+      "printed_start": 190,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第五节嗅觉与味觉",
+      "pdf_start": 200,
+      "pdf_end": 200,
+      "printed_start": 193,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第六节皮肤感觉",
+      "pdf_start": 201,
+      "pdf_end": 203,
+      "printed_start": 194,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "第十章神经系统",
+      "pdf_start": 204,
+      "pdf_end": 259,
+      "printed_start": 197,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节神经元与神经胶质细胞",
+      "pdf_start": 204,
+      "pdf_end": 208,
+      "printed_start": 197,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节神经元间的信息传递",
+      "pdf_start": 209,
+      "pdf_end": 225,
+      "printed_start": 202,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第三节神经系统的感觉功能",
+      "pdf_start": 226,
+      "pdf_end": 232,
+      "printed_start": 219,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节神经系统对躯体运动的调节",
+      "pdf_start": 233,
+      "pdf_end": 243,
+      "printed_start": 226,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第五节神经系统对内脏活动的调节",
+      "pdf_start": 244,
+      "pdf_end": 247,
+      "printed_start": 237,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第六节脑的高级功能",
+      "pdf_start": 248,
+      "pdf_end": 259,
+      "printed_start": 241,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 2,
+      "title": "第十一章内分泌系统",
+      "pdf_start": 260,
+      "pdf_end": 287,
+      "printed_start": 253,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节概论",
+      "pdf_start": 260,
+      "pdf_end": 264,
+      "printed_start": 253,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节下丘脑和垂体的内分泌功能",
+      "pdf_start": 265,
+      "pdf_end": 269,
+      "printed_start": 258,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第三节甲状腺的内分泌",
+      "pdf_start": 270,
+      "pdf_end": 275,
+      "printed_start": 263,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第四节甲状旁腺、甲状腺C细胞的内分泌及维生素D<sub>3</sub>",
+      "pdf_start": 276,
+      "pdf_end": 278,
+      "printed_start": 269,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第五节胰腺的内分泌",
+      "pdf_start": 279,
+      "pdf_end": 280,
+      "printed_start": 272,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第六节肾上腺的内分泌功能",
+      "pdf_start": 281,
+      "pdf_end": 285,
+      "printed_start": 274,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第七节其他器官的内分泌功能及激素",
+      "pdf_start": 286,
+      "pdf_end": 287,
+      "printed_start": 279,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "第十二章生殖",
+      "pdf_start": 288,
+      "pdf_end": 296,
+      "printed_start": 281,
+      "source": "outline",
+      "title_verified": false
+    },
+    {
+      "level": 3,
+      "title": "第一节男性生殖",
+      "pdf_start": 288,
+      "pdf_end": 289,
+      "printed_start": 281,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第二节女性生殖",
+      "pdf_start": 290,
+      "pdf_end": 293,
+      "printed_start": 283,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 3,
+      "title": "第三节妊娠",
+      "pdf_start": 294,
+      "pdf_end": 296,
+      "printed_start": 287,
+      "source": "outline",
+      "title_verified": true
+    },
+    {
+      "level": 2,
+      "title": "主要参考文献",
+      "pdf_start": 297,
+      "pdf_end": 298,
+      "printed_start": 290,
+      "source": "outline",
+      "title_verified": false
+    }
+  ],
+  "page_map_segments": [
+    {
+      "printed_start": 1,
+      "printed_end": 291,
+      "pdf_start": 8,
+      "pdf_end": 298,
+      "offset": 7,
+      "confidence": 0.968,
+      "anchors": [
+        {
+          "title": "第一节生理学的研究对象",
+          "printed_page": 1,
+          "pdf_page": 8,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节内环境及其稳态",
+          "printed_page": 2,
+          "pdf_page": 9,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节生命活动的基本特征",
+          "printed_page": 2,
+          "pdf_page": 9,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节人体功能的调节",
+          "printed_page": 3,
+          "pdf_page": 10,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第五节人体的控制系统",
+          "printed_page": 3,
+          "pdf_page": 10,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第一节细胞膜的基本结构和物质转运功能",
+          "printed_page": 6,
+          "pdf_page": 13,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节细胞的信号转导",
+          "printed_page": 12,
+          "pdf_page": 19,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节生物电现象和兴奋性",
+          "printed_page": 17,
+          "pdf_page": 24,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节肌细胞的收缩",
+          "printed_page": 24,
+          "pdf_page": 31,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第一节血液的组成和理化特性",
+          "printed_page": 36,
+          "pdf_page": 43,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节血细胞生理",
+          "printed_page": 38,
+          "pdf_page": 45,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节生理性止血",
+          "printed_page": 46,
+          "pdf_page": 53,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节血型与输血",
+          "printed_page": 52,
+          "pdf_page": 59,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第一节心脏的电活动",
+          "printed_page": 57,
+          "pdf_page": 64,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节心脏的泵血功能",
+          "printed_page": 66,
+          "pdf_page": 73,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节血管生理",
+          "printed_page": 73,
+          "pdf_page": 80,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节心血管活动的调节",
+          "printed_page": 86,
+          "pdf_page": 93,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第五节器官循环",
+          "printed_page": 94,
+          "pdf_page": 101,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第一节肺通气",
+          "printed_page": 101,
+          "pdf_page": 108,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节呼吸气体的交换",
+          "printed_page": 108,
+          "pdf_page": 115,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节气体在血液中的运输",
+          "printed_page": 111,
+          "pdf_page": 118,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节节律性呼吸的调控",
+          "printed_page": 114,
+          "pdf_page": 121,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第一节概述",
+          "printed_page": 120,
+          "pdf_page": 127,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节口腔内消化",
+          "printed_page": 124,
+          "pdf_page": 131,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第三节胃内消化",
+          "printed_page": 126,
+          "pdf_page": 133,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节小肠内消化",
+          "printed_page": 132,
+          "pdf_page": 139,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第五节大肠内消化",
+          "printed_page": 135,
+          "pdf_page": 142,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第六节吸收",
+          "printed_page": 136,
+          "pdf_page": 143,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第一节能量代谢",
+          "printed_page": 141,
+          "pdf_page": 148,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节体温及其调节",
+          "printed_page": 146,
+          "pdf_page": 153,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第一节肾脏的结构与血液循环特点",
+          "printed_page": 153,
+          "pdf_page": 160,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节尿的生成过程",
+          "printed_page": 156,
+          "pdf_page": 163,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节尿液的浓缩和稀释",
+          "printed_page": 162,
+          "pdf_page": 169,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节肾脏泌尿功能的调节",
+          "printed_page": 164,
+          "pdf_page": 171,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第五节血浆清除率",
+          "printed_page": 167,
+          "pdf_page": 174,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第六节尿的排出",
+          "printed_page": 169,
+          "pdf_page": 176,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节视觉器官",
+          "printed_page": 174,
+          "pdf_page": 181,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节听觉器官",
+          "printed_page": 184,
+          "pdf_page": 191,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节前庭器官",
+          "printed_page": 190,
+          "pdf_page": 197,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第五节嗅觉与味觉",
+          "printed_page": 193,
+          "pdf_page": 200,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第六节皮肤感觉",
+          "printed_page": 194,
+          "pdf_page": 201,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第一节神经元与神经胶质细胞",
+          "printed_page": 197,
+          "pdf_page": 204,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节神经元间的信息传递",
+          "printed_page": 202,
+          "pdf_page": 209,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第三节神经系统的感觉功能",
+          "printed_page": 219,
+          "pdf_page": 226,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第四节神经系统对躯体运动的调节",
+          "printed_page": 226,
+          "pdf_page": 233,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第五节神经系统对内脏活动的调节",
+          "printed_page": 237,
+          "pdf_page": 244,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第六节脑的高级功能",
+          "printed_page": 241,
+          "pdf_page": 248,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第一节概论",
+          "printed_page": 253,
+          "pdf_page": 260,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节下丘脑和垂体的内分泌功能",
+          "printed_page": 258,
+          "pdf_page": 265,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第三节甲状腺的内分泌",
+          "printed_page": 263,
+          "pdf_page": 270,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第五节胰腺的内分泌",
+          "printed_page": 272,
+          "pdf_page": 279,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第六节肾上腺的内分泌功能",
+          "printed_page": 274,
+          "pdf_page": 281,
+          "offset": 7,
+          "title_verified": false
+        },
+        {
+          "title": "第七节其他器官的内分泌功能及激素",
+          "printed_page": 279,
+          "pdf_page": 286,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第一节男性生殖",
+          "printed_page": 281,
+          "pdf_page": 288,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第二节女性生殖",
+          "printed_page": 283,
+          "pdf_page": 290,
+          "offset": 7,
+          "title_verified": true
+        },
+        {
+          "title": "第三节妊娠",
+          "printed_page": 287,
+          "pdf_page": 294,
+          "offset": 7,
+          "title_verified": true
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "run_id": "eval_1ca871cb4cae423a82c6d7df37f7a1bb",
+  "created_at": "2026-10-02T16:42:10.232315+00:00",
+  "use_skills": false,
+  "case_results": [
+    {
+      "case_id": "candidate_pacemaker_phase4_001",
+      "question": "关于窦房结P细胞4期自动去极化机制的叙述，错误的是：A.K+外流进行性衰减；B.Na+内流进行性增强；C.Cl-内流进行性衰减；D.Ca2+内流进行性增强。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 0.5,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 5.2117,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld",
+        "answer_concept_partial"
+      ],
+      "error": "没有足够课程证据确定答案。",
+      "answer_text": "根据所给证据，无法确定四个选项中哪一项是错误的。证据仅支持窦房结P细胞4期自动去极化与If（主要为Na+内流）增强及K+外流衰减有关，未提供关于Cl-内流进行性衰减或Ca2+内流进行性增强的明确描述，因此不能判定错误选项。\n证据显示窦房结P细胞4期自动去极化与If（主要为Na+内流）增强及K+外流衰减有关；但未提供Cl-内流进行性衰减或Ca2+内流进行性增强的明确描述，因此无法确定四个选项中哪一项是错误的。",
+      "semantic_errors": []
+    },
+    {
+      "case_id": "candidate_tachycardia_output_001",
+      "question": "心率过快时，心输出量减少的主要原因是：A.心房收缩期缩短；B.心室充盈期缩短；C.等容舒张期缩短；D.等容收缩期缩短；E.快速射血期缩短。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": true,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 1.0,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 6.7583,
+      "error_categories": [],
+      "error": null,
+      "answer_text": "B. 心室充盈期缩短。\n\n心率过快时，心室舒张时间缩短，心室充盈量减少，搏出量因此减少；当心率增加过快超过每分钟170～180次时，心室充盈时间明显缩短，充盈量减少，搏出量可减少到仅有正常时的一半左右，心输出量亦开始下降。由于心输出量等于搏出量与心率的乘积，搏出量减少导致心输出量减少。因此主要原因是心室充盈期缩短，对应选项B。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 73（PDF第 80 页），第三节血管生理\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 72（PDF第 79 页），第二节心脏的泵血功能\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 68（PDF第 75 页），第二节心脏的泵血功能\n\n思考提示：\n- 为什么心率过快时搏出量会减少？\n- 心输出量与搏出量和心率之间是什么关系？\n- 心率超过每分钟170～180次时，搏出量和心输出量分别发生什么变化？\n\n科研拓展：\n- 不同训练水平人群在心率过快时搏出量下降程度是否存在差异？\n\n局限：\n- 所给证据未直接比较各选项所述时相缩短对心输出量减少的相对贡献，结论基于证据中关于心室充盈期缩短导致搏出量减少的表述。",
+      "semantic_errors": []
+    },
+    {
+      "case_id": "candidate_ap_amplitude_trap_001",
+      "question": "影响神经纤维动作电位幅度的主要因素是：A.刺激强度；B.刺激时间；C.阈电位水平；D.神经纤维的直径；E.细胞内、外Na+浓度差。",
+      "expected_outcome": "answer",
+      "actual_status": "completed",
+      "passed": true,
+      "outcome_correct": true,
+      "retrieval_hit": true,
+      "term_coverage": 1.0,
+      "citation_verified": true,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 15.9783,
+      "error_categories": [],
+      "error": null,
+      "answer_text": "E. 细胞内、外Na+浓度差。动作电位主要是由Na+内流产生的，其幅度理论上相当于Na+的平衡电位，取决于细胞内、外Na+浓度差；而刺激强度、刺激时间、阈电位水平只决定能否引发动作电位，不改变其幅度。\n\n动作电位主要是由Na+的内流而产生的（claim_1）。去极相时电压门控钠通道开放，膜对Na+通透性增高，加之细胞外Na+浓度高于细胞内、静息时细胞内为负电位，Na+顺浓度梯度和电位梯度迅速内流（claim_2）。当膜内正电位足以阻止Na+内流时净通量等于零，此时膜内电位理论上相当于Na+的平衡电位（claim_3），且与实际测定的超射值基本相同，故动作电位是Na+的平衡电位（claim_4）。实验也显示，用蔗糖、葡萄糖和氯化胆碱溶液代替含Na+的海水溶液时，动作电位幅度降低，且降低幅度与Na+被代替程度成比例（claim_5）；钠泵活动减弱时Na+内流减少，动作电位幅度也减小（claim_6）。因此，动作电位的幅度取决于细胞内、外Na+浓度差。而刺激强度方面，阈刺激和阈上刺激在单细胞上引起同样幅值的动作电位，刺激强度达到阈值后进一步增大不会使兴奋程度增加（claim_7、claim_8）；动作电位传导时幅度不随传导距离增大而减小（claim_9）；阈电位是使膜对Na+通透性突然增大而爆发动作电位的临界膜电位值（claim_10），它决定能否引发动作电位，而非改变其幅度。\n\n依据：\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 19（PDF第 26 页），第三节生物电现象和兴奋性\n- 生理学（第五版）_9787030818492.pdf：教材印刷页 21（PDF第 28 页），第三节生物电现象和兴奋性\n- 《生理学》第二章 细胞的基本功能2.pdf：幻灯片 66，动作电位\n\n思考提示：\n- 为什么动作电位的幅度理论上相当于Na+的平衡电位？\n- 用蔗糖、葡萄糖和氯化胆碱溶液代替含Na+的海水溶液后，动作电位幅度如何变化？这一现象说明了什么？\n- 为什么刺激强度超过阈值后继续增大，动作电位的幅度不再增大？\n- 钠泵活动减弱为什么会使动作电位的幅度减小？\n\n科研拓展：\n- 霍奇金和赫胥黎在枪乌贼巨轴突实验中证实，用蔗糖、葡萄糖和氯化胆碱溶液代替含有Na+的海水溶液时，动作电位的幅度降低，且降低幅度与Na+被代替程度成比例。\n\n局限：\n- 所给证据未直接说明神经纤维直径对动作电位幅度的影响，也未直接说明刺激时间对动作电位幅度的影响。\n- 所给证据未直接说明阈电位水平对动作电位幅度的影响，仅说明阈电位是引发动作电位的临界膜电位值。",
+      "semantic_errors": []
+    },
+    {
+      "case_id": "candidate_positive_feedback_001",
+      "question": "存在正反馈调节的神经反射活动是：A.排尿反射；B.屈肌反射；C.肺牵张反射；D.压力感受性反射；E.甲状腺功能亢进时TSH分泌减少。",
+      "expected_outcome": "answer",
+      "actual_status": "review_required",
+      "passed": false,
+      "outcome_correct": false,
+      "retrieval_hit": true,
+      "term_coverage": 1.0,
+      "citation_verified": null,
+      "hallucination_blocked": null,
+      "recalled_skill_count": 0,
+      "duration_seconds": 5.0526,
+      "error_categories": [
+        "outcome_mismatch",
+        "answer_withheld"
+      ],
+      "error": "没有足够课程证据确定答案。",
+      "answer_text": "根据所给证据，无法确定本题答案。所给证据仅涉及屈肌反射、对侧伸肌反射、腱器官反射、脊休克、自主神经紧张性支配及下丘脑功能等内容，未提供关于排尿反射、肺牵张反射、压力感受性反射或TSH分泌调节是否属于正反馈调节的任何信息。\n所给证据中，屈肌反射被描述为多突触反射（claim_2），但未说明其是否为正反馈调节；腱器官反射被明确描述为对肌张力的负反馈调节（claim_3）；压力感受器传入冲动被描述为维持心迷走中枢紧张性活动（claim_5），但未说明压力感受性反射是否为正反馈调节；脊休克后脊动物可维持一定反射性排尿能力（claim_4），但未说明排尿反射是否为正反馈调节。证据中未涉及肺牵张反射和甲状腺功能亢进时TSH分泌减少的内容。因此，无法依据所给证据判断本题选项中哪一项属于正反馈调节的神经反射活动。",
+      "semantic_errors": []
+    }
+  ],
+  "metrics": {
+    "case_count": 4,
+    "pass_rate": 0.5,
+    "outcome_accuracy": 0.5,
+    "retrieval_hit_rate": 1.0,
+    "citation_verification_rate": 1.0,
+    "hallucination_block_rate": null,
+    "mean_term_coverage": 0.875,
+    "mean_duration_seconds": 8.250225,
+    "skill_recall_case_count": 0
+  }
+}

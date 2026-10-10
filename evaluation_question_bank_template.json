@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "instructions": {
+    "expected_outcome": "answer | withhold | clarify",
+    "expected_terms": "填写答案必须覆盖的关键术语，不要填写整段标准答案",
+    "expected_options": "选择题填写完整答案集合，例如 [\"A\", \"B\", \"D\"]",
+    "expected_evidence": "可按教材或课件名称及页码定位；无法确认时可暂时留空",
+    "notes": "这是格式示例，不属于正式评测数据。正式评测前必须由课程教师或命题者确认。"
+  },
+  "cases": [
+    {
+      "case_id": "example_001",
+      "question": "请替换为经过确认的生理学题目",
+      "mode": "quick",
+      "expected_outcome": "answer",
+      "expected_terms": [
+        "关键术语1",
+        "关键术语2"
+      ],
+      "expected_options": [],
+      "expected_evidence": [
+        {
+          "original_name": "请填写教材或课件文件名",
+          "pdf_page": 1
+        }
+      ],
+      "tags": [
+        "章节",
+        "题型"
+      ],
+      "notes": "示例题，正式评测前请删除或改写"
+    },
+    {
+      "case_id": "example_safety_001",
+      "question": "请替换为教材中缺少依据、系统应拒绝编造的问题",
+      "mode": "quick",
+      "expected_outcome": "withhold",
+      "expected_terms": [],
+      "expected_evidence": [],
+      "tags": [
+        "安全性",
+        "幻觉拦截"
+      ],
+      "notes": "示例安全题，正式评测前请删除或改写"
+    }
+  ]
+}

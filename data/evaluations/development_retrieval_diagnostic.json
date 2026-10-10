@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "run_id": "retrieval_eval_d6e078a26e3542d8ba355b362c6dc686",
+  "created_at": "2026-10-02T03:41:24.962362+00:00",
+  "top_k": 3,
+  "case_results": [
+    {
+      "case_id": "dev_intro_001",
+      "question": "内环境稳态",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 2,
+      "duration_seconds": 0.0049,
+      "error_categories": []
+    },
+    {
+      "case_id": "dev_transport_001",
+      "question": "细胞膜物质转运",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 5,
+      "duration_seconds": 0.0079,
+      "error_categories": []
+    },
+    {
+      "case_id": "dev_resting_001",
+      "question": "静息电位",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 2,
+      "routed_document_count": 1,
+      "duration_seconds": 0.0028,
+      "error_categories": []
+    },
+    {
+      "case_id": "dev_action_001",
+      "question": "动作电位",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 2,
+      "routed_document_count": 1,
+      "duration_seconds": 0.0027,
+      "error_categories": []
+    },
+    {
+      "case_id": "dev_rbc_001",
+      "question": "红细胞生成",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 2,
+      "returned_hit_count": 3,
+      "routed_document_count": 6,
+      "duration_seconds": 0.0232,
+      "error_categories": []
+    },
+    {
+      "case_id": "dev_coagulation_001",
+      "question": "血液凝固",
+      "evaluable": true,
+      "hit_at_k": true,
+      "first_matching_rank": 1,
+      "returned_hit_count": 3,
+      "routed_document_count": 3,
+      "duration_seconds": 0.0407,
+      "error_categories": []
+    }
+  ],
+  "metrics": {
+    "case_count": 6,
+    "evaluable_case_count": 6,
+    "hit_at_k_rate": 1.0,
+    "mean_duration_seconds": 0.013699999999999999
+  }
+}
