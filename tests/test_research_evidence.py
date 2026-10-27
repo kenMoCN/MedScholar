@@ -1,7 +1,7 @@
 import unittest
 
-from external_retrievers import ExternalResource
-from research_evidence import (
+from evidence.external_retrievers import ExternalResource
+from evidence.research_evidence import (
     HybridResearchRetriever,
     ResearchPaper,
     ResearchPacket,
@@ -330,7 +330,7 @@ class SynthesisTests(unittest.TestCase):
         )])
 
     def test_render_never_publishes_unverified_free_form_overview(self):
-        from research_evidence import ResearchClaim, ResearchSynthesis
+        from evidence.research_evidence import ResearchClaim, ResearchSynthesis
 
         synthesis = ResearchSynthesis(
             "pass",

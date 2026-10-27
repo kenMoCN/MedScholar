@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from conversation_store import ConversationStore, conversation_context_for_session
+from core.conversation_store import ConversationStore, conversation_context_for_session
 
 
 class ConversationStoreTests(unittest.TestCase):

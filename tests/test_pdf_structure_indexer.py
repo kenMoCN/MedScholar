@@ -4,7 +4,7 @@ from pathlib import Path
 
 from pypdf import PdfWriter
 
-from pdf_structure_indexer import (
+from retrieval.pdf_structure_indexer import (
     PageAnchor,
     PdfStructureIndexer,
     _has_toc_heading,

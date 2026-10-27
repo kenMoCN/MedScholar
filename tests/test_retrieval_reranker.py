@@ -1,7 +1,7 @@
 import unittest
 
-from retrieval_reranker import RetrievalReranker
-from structure_retriever import RetrievalHit, RetrievalResult
+from retrieval.retrieval_reranker import RetrievalReranker
+from retrieval.structure_retriever import RetrievalHit, RetrievalResult
 
 
 class FakeClient:

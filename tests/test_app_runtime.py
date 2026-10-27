@@ -4,26 +4,26 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace
 
-from agent_orchestrator import AgentRunResult, ExecutionPlan
-from app_runtime import (
+from core.agent_orchestrator import AgentRunResult, ExecutionPlan
+from core.app_runtime import (
     ApprovalRequest,
     ProgressUpdate,
     RuntimePaths,
     TutorApplicationService,
     inspect_runtime,
 )
-from evidence_fallback import FallbackOutcome, FallbackResource
-from execution_control import RunCancelled, RunTimedOut
-from official_evidence import OfficialEvidenceItem
-from interaction_modes import InteractionMode, mode_options, normalize_mode
-from research_evidence import (
+from evidence.evidence_fallback import FallbackOutcome, FallbackResource
+from core.execution_control import RunCancelled, RunTimedOut
+from evidence.official_evidence import OfficialEvidenceItem
+from core.interaction_modes import InteractionMode, mode_options, normalize_mode
+from evidence.research_evidence import (
     ResearchIntroduction,
     ResearchPaper,
     ResearchPacket,
     ResearchSearchPlan,
     ResearchSynthesis,
 )
-from skill_memory import SkillKind, SkillStore
+from core.skill_memory import SkillKind, SkillStore
 
 
 class RecordingOrchestrator:
@@ -33,7 +33,7 @@ class RecordingOrchestrator:
     def run(self, request, *, progress_callback=None):
         self.requests.append(request)
         if progress_callback:
-            from agent_orchestrator import ExecutionEvent
+            from core.agent_orchestrator import ExecutionEvent
             progress_callback(ExecutionEvent("planned", "ok", "测试规划完成"))
         return AgentRunResult(
             status="completed",

@@ -5,7 +5,7 @@ import unittest
 import zipfile
 from pathlib import Path
 
-from knowledge_base import KnowledgeBaseService
+from retrieval.knowledge_base import KnowledgeBaseService
 
 
 PNG_1X1 = base64.b64decode(

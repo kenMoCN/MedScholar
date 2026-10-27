@@ -3,10 +3,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from evidence_bundle import EvidenceBundleBuilder
-from evidence_verify import ClaimDraft, EvidenceVerifier
-from page_text_index import PageTextIndex, PageTextRecord, save_page_text_index
-from structure_retriever import StructureAwareRetriever
+from evidence.evidence_bundle import EvidenceBundleBuilder
+from evidence.evidence_verify import ClaimDraft, EvidenceVerifier
+from retrieval.page_text_index import PageTextIndex, PageTextRecord, save_page_text_index
+from retrieval.structure_retriever import StructureAwareRetriever
 
 
 class EvidenceVerificationTests(unittest.TestCase):

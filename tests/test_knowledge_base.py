@@ -6,7 +6,7 @@ from pathlib import Path
 
 from pypdf import PdfWriter
 
-from knowledge_base import KnowledgeBaseService
+from retrieval.knowledge_base import KnowledgeBaseService
 
 
 def make_pdf(path: Path, pages: int = 2):

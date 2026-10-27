@@ -7,8 +7,8 @@ os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 from PySide6.QtWidgets import QApplication
 
-from skill_memory import SkillStatus
-from skill_review_dialog import SkillReviewDialog
+from core.skill_memory import SkillStatus
+from ui.skill_review_dialog import SkillReviewDialog
 
 
 class SkillReviewDialogTests(unittest.TestCase):

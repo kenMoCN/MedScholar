@@ -1,0 +1,77 @@
+"""Tests for global transitions, smooth inertial scrolling, and Python window animations."""
+
+import unittest
+from pathlib import Path
+from PySide6.QtCore import QPropertyAnimation
+from PySide6.QtWidgets import QApplication
+
+PREVIEW = Path(__file__).resolve().parents[1] / "ui" / "preview.html"
+TUTOR_WINDOW = Path(__file__).resolve().parents[1] / "ui" / "tutor_window.py"
+
+
+class UiTransitionsAndAnimationsTests(unittest.TestCase):
+    def test_css_smooth_scroll_and_button_transitions(self):
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn("scroll-behavior: smooth;", html)
+        self.assertIn("transition: background-color 0.2s ease, opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease;", html)
+
+    def test_window_control_buttons_have_hover_transitions(self):
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn(".window-control-btn {", html)
+        self.assertIn("transition: all 0.2s ease-in-out !important;", html)
+        self.assertIn(".window-close-btn {", html)
+        self.assertIn("background-color: #E81123 !important;", html)
+        self.assertIn("color: #FFFFFF !important;", html)
+        self.assertIn('className="w-[46px] h-full flex items-center justify-center text-[#3F3F46] window-control-btn cursor-default"', html)
+        self.assertIn('className="w-[46px] h-full flex items-center justify-center text-[#3F3F46] window-close-btn cursor-default"', html)
+
+    def test_dropdown_panels_have_pop_in_and_exit_transitions(self):
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn(".dropdown-panel {", html)
+        self.assertIn("opacity: 0;", html)
+        self.assertIn("transform: translateY(-10px);", html)
+        self.assertIn("transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;", html)
+        self.assertIn(".dropdown-panel.show {", html)
+        self.assertIn("transform: translateY(0);", html)
+        self.assertIn("opacity: 1;", html)
+        # Check all 3 dropdowns use the class
+        self.assertIn("openMenu === 'workbench' ? 'show' : ''", html)
+        self.assertIn("openMenu === 'custom' ? 'show' : ''", html)
+        self.assertIn("openMenu === 'more' ? 'show' : ''", html)
+
+    def test_inertial_scroll_intercepts_wheel_with_scrollable_child_guard(self):
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn("container.addEventListener('wheel', onWheel, { passive: false });", html)
+        self.assertIn("isScrollableChild(e.target, e.deltaY, e.deltaX)", html)
+        self.assertIn("requestAnimationFrame(smoothStep)", html)
+        self.assertIn("targetScrollTop - current", html)
+
+    def test_python_frameless_window_animations(self):
+        shell = TUTOR_WINDOW.read_text(encoding="utf-8")
+        self.assertIn("def maximizeOrRestore(self)", shell)
+        self.assertIn("def toggle_maximize(self)", shell)
+        self.assertIn("ctypes.windll.user32.ShowWindow(hwnd, 9)", shell)
+        self.assertIn("ctypes.windll.user32.ShowWindow(hwnd, 3)", shell)
+        self.assertIn("self.showMaximized()", shell)
+        self.assertIn("self.showNormal()", shell)
+        self.assertIn("def minimize_window(self)", shell)
+        self.assertIn("ctypes.windll.user32.ShowWindow(hwnd, 6)", shell)
+        self.assertIn("def close_with_animation(self)", shell)
+        self.assertIn('self._close_anim = QPropertyAnimation(self, b"windowOpacity")', shell)
+        self.assertIn("def _setup_windows_frameless(self)", shell)
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn("window.windowControl =", html)
+
+    def test_frontend_visual_deception_transition_styles(self):
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn("#app {", html)
+        self.assertIn("transition: transform 0.15s ease-out, opacity 0.15s ease-out;", html)
+        self.assertIn("transform-origin: center center;", html)
+        self.assertIn(".app-fading {", html)
+        self.assertIn("opacity: 0.3", html)
+        self.assertIn("transform: scale(0.98)", html)
+        self.assertIn("triggerWithFading", html)
+
+
+if __name__ == "__main__":
+    unittest.main()

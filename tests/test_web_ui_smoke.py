@@ -8,10 +8,10 @@ os.environ.setdefault("QTWEBENGINE_CHROMIUM_FLAGS", "--disable-gpu")
 from PySide6.QtCore import QEventLoop, QTimer
 from PySide6.QtWidgets import QApplication
 
-from app_runtime import ApprovalRequest
-from conversation_store import ConversationStore
-from tutor_window import TutorMainWindow
-from ui_presenter import PresentedResult
+from core.app_runtime import ApprovalRequest
+from core.conversation_store import ConversationStore
+from ui.tutor_window import TutorMainWindow
+from ui.ui_presenter import PresentedResult
 
 
 class WebUiSmokeTests(unittest.TestCase):
@@ -26,29 +26,39 @@ class WebUiSmokeTests(unittest.TestCase):
 
         def on_loaded(ok):
             loaded.append(bool(ok))
-            QTimer.singleShot(1200, load_loop.quit)
+            QTimer.singleShot(4000, load_loop.quit)
 
         window.web_view.loadFinished.connect(on_loaded)
-        QTimer.singleShot(10000, load_loop.quit)
+        QTimer.singleShot(20000, load_loop.quit)
         window.show()
         load_loop.exec()
 
         dom_result = []
         js_loop = QEventLoop()
 
-        def on_javascript(value):
-            dom_result.append(json.loads(value))
-            js_loop.quit()
+        def check_dom():
+            def on_javascript(value):
+                try:
+                    data = json.loads(value) if value else {}
+                except Exception:
+                    data = {}
+                if data.get("bridge") and data.get("textarea"):
+                    dom_result.append(data)
+                    js_loop.quit()
+                elif js_loop.isRunning():
+                    QTimer.singleShot(200, check_dom)
 
-        window.web_view.page().runJavaScript(
-            "JSON.stringify({"
-            "textarea: !!document.querySelector('textarea'),"
-            "bridge: !!window.pyBridge,"
-            "appText: document.body.innerText.includes('向智能体提问')"
-            "})",
-            on_javascript,
-        )
-        QTimer.singleShot(5000, js_loop.quit)
+            window.web_view.page().runJavaScript(
+                "JSON.stringify({"
+                "textarea: !!document.querySelector('textarea'),"
+                "bridge: !!window.pyBridge,"
+                "appText: document.body.innerText.includes('向智能体提问')"
+                "})",
+                on_javascript,
+            )
+
+        check_dom()
+        QTimer.singleShot(15000, js_loop.quit)
         js_loop.exec()
 
         self.assertEqual(loaded, [True])

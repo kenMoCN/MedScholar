@@ -1,6 +1,6 @@
 import unittest
 
-from page_mapping import trusted_printed_page
+from retrieval.page_mapping import trusted_printed_page
 
 
 class PageMappingTests(unittest.TestCase):

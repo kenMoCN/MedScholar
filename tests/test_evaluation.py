@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from evaluation import (
+from evaluation.evaluation import (
     EvaluationCase,
     EvaluationRunner,
     EvidenceExpectation,
@@ -163,7 +163,7 @@ class EvaluationTests(unittest.TestCase):
                 load_question_bank(path)
 
     def test_official_guideline_template_loads_source_and_gate_expectations(self):
-        path = Path(__file__).resolve().parents[1] / "official_guideline_evaluation_template.json"
+        path = Path(__file__).resolve().parents[1] / "evaluation" / "official_guideline_evaluation_template.json"
         cases = load_question_bank(path)
         self.assertEqual(len(cases), 3)
         self.assertEqual(cases[0].expected_answer_source, "official_external")

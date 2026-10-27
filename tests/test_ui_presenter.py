@@ -1,7 +1,7 @@
 import unittest
 
-from agent_orchestrator import AgentRunResult, RunStatus
-from ui_presenter import present_agent_result
+from core.agent_orchestrator import AgentRunResult, RunStatus
+from ui.ui_presenter import present_agent_result
 
 
 def make_result(status, **changes):

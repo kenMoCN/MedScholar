@@ -1,8 +1,8 @@
 import json
 import unittest
 
-from model_router import ModelRegistry, ModelRole
-from provider_adapters import (
+from core.model_router import ModelRegistry, ModelRole
+from core.provider_adapters import (
     DoubaoVisionAdapter,
     HttpResponse,
     OpenAICompatibleJsonClient,

@@ -3,15 +3,15 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace
 
-from agent_orchestrator import AgentRunResult, ExecutionPlan
-from answer_challenge import (
+from core.agent_orchestrator import AgentRunResult, ExecutionPlan
+from evidence.answer_challenge import (
     disputed_option_terms,
     final_choice_set,
     is_answer_challenge,
     is_question_format_correction,
 )
-from app_runtime import TutorApplicationService
-from ui_presenter import present_agent_result
+from core.app_runtime import TutorApplicationService
+from ui.ui_presenter import present_agent_result
 
 
 QUESTION = (

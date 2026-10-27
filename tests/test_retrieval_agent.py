@@ -1,13 +1,13 @@
 import unittest
 
-from external_retrievers import (
+from evidence.external_retrievers import (
     OpenAlexRetriever,
     PmcOpenAccessRetriever,
     PubMedRetriever,
     WikipediaRetriever,
 )
-from retrieval_agent import LayeredRetrievalAgent, RetrievalPlanner
-from structure_retriever import RetrievalResult
+from retrieval.retrieval_agent import LayeredRetrievalAgent, RetrievalPlanner
+from retrieval.structure_retriever import RetrievalResult
 
 
 class FakeTransport:

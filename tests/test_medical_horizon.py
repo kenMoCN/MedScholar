@@ -1,6 +1,6 @@
 import unittest
 
-from medical_horizon import (
+from core.medical_horizon import (
     MedicalHorizonPolicy,
     medical_horizon_policy_options,
     normalize_medical_horizon_policy,

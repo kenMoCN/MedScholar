@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from skill_memory import (
+from core.skill_memory import (
     SkillEvidenceAnchor,
     SkillKind,
     SkillStatus,

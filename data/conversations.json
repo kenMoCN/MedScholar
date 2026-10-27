@@ -4,10 +4,91 @@
   "sessions": [
     {
       "session_id": "5a0a71b4a6f94a9ca865793d3096041b",
-      "title": "新对话",
+      "title": "请结合当前学科的基础教材概念，深入浅出地讲解核心…",
       "created_at": "2026-10-10T18:04:57.211057+00:00",
-      "updated_at": "2026-10-10T18:04:57.211057+00:00",
-      "messages": []
+      "updated_at": "2026-10-27T12:04:40.627275+00:00",
+      "messages": [
+        {
+          "role": "user",
+          "title": "你",
+          "body": "请结合当前学科的基础教材概念，深入浅出地讲解核心机制，因材施教引导我理解。",
+          "tone": "user",
+          "created_at": "2026-10-26T16:06:59.739995+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "assistant",
+          "title": "运行失败",
+          "body": "模型服务认证失败，请检查API Key",
+          "tone": "error",
+          "created_at": "2026-10-26T16:07:01.645662+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "user",
+          "title": "你",
+          "body": "sdf",
+          "tone": "user",
+          "created_at": "2026-10-26T16:43:20.462745+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "assistant",
+          "title": "需要补充信息",
+          "body": "• 你想了解哪个具体医学概念、机制或题目？",
+          "tone": "clarification",
+          "created_at": "2026-10-26T16:43:20.844030+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "user",
+          "title": "你",
+          "body": "请结合当前学科的基础教材概念，深入浅出地讲解核心机制，因材施教引导我理解。",
+          "tone": "user",
+          "created_at": "2026-10-27T11:49:48.209141+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "assistant",
+          "title": "运行失败",
+          "body": "模型服务认证失败，请检查API Key",
+          "tone": "error",
+          "created_at": "2026-10-27T11:49:49.559824+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "user",
+          "title": "你",
+          "body": "请结合当前学科的基础教材概念，深入浅出地讲解核心机制，因材施教引导我理解。",
+          "tone": "user",
+          "created_at": "2026-10-27T12:04:39.274848+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "assistant",
+          "title": "运行失败",
+          "body": "模型服务认证失败，请检查API Key",
+          "tone": "error",
+          "created_at": "2026-10-27T12:04:40.627275+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        }
+      ]
     }
   ]
 }

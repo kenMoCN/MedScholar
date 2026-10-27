@@ -9,15 +9,15 @@ os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 from PySide6.QtWidgets import QApplication, QMessageBox
 
-from agent_orchestrator import AgentRunResult
-from app_runtime import ProgressUpdate, TutorApplicationService
-from app_runtime import ApprovalRequest
-from conversation_store import ConversationStore
-from dynamic_config import load_dynamic_config, save_dynamic_config
+from core.agent_orchestrator import AgentRunResult
+from core.app_runtime import ProgressUpdate, TutorApplicationService
+from core.app_runtime import ApprovalRequest
+from core.conversation_store import ConversationStore
+from core.dynamic_config import load_dynamic_config, save_dynamic_config
 from main import ApplicationController
-from model_settings_dialog import ModelSettingsDialog
-from tutor_window import AgentWorker, DeepSeekTextEdit, TutorMainWindow, WebBridge
-from ui_presenter import PresentedResult
+from ui.model_settings_dialog import ModelSettingsDialog
+from ui.tutor_window import AgentWorker, DeepSeekTextEdit, TutorMainWindow, WebBridge
+from ui.ui_presenter import PresentedResult
 
 
 class FakeOrchestrator:
@@ -439,6 +439,17 @@ class DesktopBootstrapTests(unittest.TestCase):
             finally:
                 controller.wizard.close()
 
+    def test_show_tutor_opens_window_maximized(self):
+        with tempfile.TemporaryDirectory() as temp:
+            controller = ApplicationController(self.app, Path(temp))
+            controller._show_tutor()
+            try:
+                self.assertIsNotNone(controller.window)
+                self.assertTrue(controller.window.isMaximized())
+            finally:
+                if controller.window is not None:
+                    controller.window.close()
+
     def test_new_conversation_is_added_to_sidebar(self):
         store = ConversationStore()
         window = TutorMainWindow(
@@ -528,6 +539,21 @@ class DesktopBootstrapTests(unittest.TestCase):
             finally:
                 window.close()
 
+    def test_sidebar_toggle_does_not_clamp_main_window_maximum_width(self):
+        service = TutorApplicationService(FakeOrchestrator())
+        window = TutorMainWindow(service, conversation_store=ConversationStore())
+        try:
+            initial_max_w = window.maximumWidth()
+            window._toggle_sidebar()
+            window._on_sidebar_anim_finished()
+            self.assertEqual(window.maximumWidth(), initial_max_w)
+            window._toggle_sidebar()
+            window._on_sidebar_anim_finished()
+            self.assertEqual(window.maximumWidth(), initial_max_w)
+        finally:
+            window.close()
+
 
 if __name__ == "__main__":
     unittest.main()
+

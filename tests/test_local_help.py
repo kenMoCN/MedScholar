@@ -2,7 +2,7 @@
 
 import unittest
 
-from local_help import local_help_response
+from core.local_help import local_help_response
 
 
 class LocalHelpTests(unittest.TestCase):

@@ -3,13 +3,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from page_text_index import (
+from retrieval.page_text_index import (
     PageTextIndex,
     PageTextRecord,
     load_page_text_index,
     save_page_text_index,
 )
-from structure_retriever import StructureAwareRetriever
+from retrieval.structure_retriever import StructureAwareRetriever
 
 
 class FigureTranscriptionTests(unittest.TestCase):

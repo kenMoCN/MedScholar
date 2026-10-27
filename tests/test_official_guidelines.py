@@ -1,6 +1,6 @@
 import unittest
 
-from official_guidelines import (
+from evidence.official_guidelines import (
     CdcHypoglycemiaGuidanceRetriever,
     OfficialGuidelineRetriever,
     PdfDocumentTextRetriever,

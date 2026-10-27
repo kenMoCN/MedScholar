@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 
-PREVIEW = Path(__file__).resolve().parents[1] / "preview.html"
+PREVIEW = Path(__file__).resolve().parents[1] / "ui" / "preview.html"
 
 
 class TopToolbarStyleTests(unittest.TestCase):
@@ -13,7 +13,7 @@ class TopToolbarStyleTests(unittest.TestCase):
         toolbar = html.split("2. 顶部工具条", 1)[1].split("Expandable Parameters Drawer", 1)[0]
         subheader = html.split("Top Subheader", 1)[1].split("Message History Area", 1)[0]
 
-        self.assertIn('className="h-12 bg-white border-b', toolbar)
+        self.assertIn('h-[38px] bg-white border-b', toolbar)
         self.assertNotIn("backdrop-blur", toolbar)
         self.assertNotIn("hover:scale", toolbar)
         self.assertNotIn("active:scale", toolbar)

@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from config_loader import ConfigLoadError, load_legacy_config, parse_env_text
+from core.config_loader import ConfigLoadError, load_legacy_config, parse_env_text
 
 
 class ConfigLoaderTests(unittest.TestCase):

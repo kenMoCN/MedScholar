@@ -3,8 +3,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from config_loader import ConfigLoadError
-from dynamic_config import (
+from core.config_loader import ConfigLoadError
+from core.dynamic_config import (
     CONFIG_FILENAME,
     SECRETS_FILENAME,
     editable_models,

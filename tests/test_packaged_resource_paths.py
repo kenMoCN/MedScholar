@@ -3,7 +3,7 @@
 import unittest
 from pathlib import Path
 
-from tutor_window import _logo_path_for_module
+from ui.tutor_window import _logo_path_for_module
 
 
 class PackagedResourcePathTests(unittest.TestCase):

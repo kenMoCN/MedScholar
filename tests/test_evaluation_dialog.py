@@ -7,13 +7,13 @@ os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 from PySide6.QtWidgets import QApplication
 
-from evaluation import (
+from evaluation.evaluation import (
     CaseEvaluation,
     EvaluationReport,
     RetrievalCaseEvaluation,
     RetrievalDiagnosticReport,
 )
-from evaluation_dialog import EvaluationDialog
+from ui.evaluation_dialog import EvaluationDialog
 
 
 class FakeService:

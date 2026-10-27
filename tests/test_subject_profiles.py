@@ -1,6 +1,6 @@
 import unittest
 
-from subject_profiles import (
+from core.subject_profiles import (
     infer_document_subjects,
     infer_query_subjects,
     normalize_subject,

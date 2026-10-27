@@ -1,8 +1,8 @@
 import hashlib
 import unittest
 
-from official_evidence import OfficialEvidenceBundleBuilder
-from official_guidelines import OfficialGuidelineRecord
+from evidence.official_evidence import OfficialEvidenceBundleBuilder
+from evidence.official_guidelines import OfficialGuidelineRecord
 
 
 def record(text):

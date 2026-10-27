@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from evaluation import EvaluationCase
-from learning_experience_evaluation import run_blind_comparison
+from evaluation.evaluation import EvaluationCase
+from evaluation.learning_experience_evaluation import run_blind_comparison
 
 
 class FakeService:

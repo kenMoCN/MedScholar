@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller / Build artifacts
+*.manifest
+*.spec
+
+# Installers and Binaries
+*.exe
+*.msi
+*.app
+
+# Local environment & secrets
+model_secrets.env
+*.env.local
+
+# IDE & editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary & test scratch
+scratch/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

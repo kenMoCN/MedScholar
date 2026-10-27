@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 
 APP_DIR = Path(__file__).resolve().parents[1]
-HTML = APP_DIR / "preview_wizard.html"
+HTML = APP_DIR / "ui" / "preview_wizard.html"
 TUTORIAL_DIR = APP_DIR / "Process"
 
 
@@ -78,18 +78,18 @@ class SetupTutorialTests(unittest.TestCase):
         self.assertIn("max-w-full break-all text-left text-xs", html)
 
     def test_python_bridge_scans_both_tutorials_and_has_fixed_destinations(self):
-        from setup import AgentSetupWizard, WizardBridge
+        from ui.setup import AgentSetupWizard, WizardBridge
 
         self.assertEqual(len(AgentSetupWizard._tutorial_images("ds")), 7)
         self.assertEqual(len(AgentSetupWizard._tutorial_images("db")), 11)
         self.assertEqual(AgentSetupWizard._tutorial_images("db")[-1], "Process/db/11.png")
-        source = (APP_DIR / "setup.py").read_text(encoding="utf-8")
+        source = (APP_DIR / "ui" / "setup.py").read_text(encoding="utf-8")
         self.assertIn("QDesktopServices.openUrl(QUrl(urls[provider]))", source)
         self.assertIn("https://www.deepseek.com/", source)
         self.assertIn("https://ark.volcengine.com/region:cn-beijing/model?view=DEFAULT_VIEW&groupType=ModelGroups", source)
 
         bridge = WizardBridge(None)
-        with patch("setup.QDesktopServices.openUrl") as open_url:
+        with patch("ui.setup.QDesktopServices.openUrl") as open_url:
             bridge.openProviderSite("deepseek")
             bridge.openProviderSite("doubao")
             bridge.openProviderSite("unknown")

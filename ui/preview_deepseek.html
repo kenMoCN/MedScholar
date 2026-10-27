@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedScholar - AI 智能学习伙伴</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Markdown Parser & XSS Sanitizer CDN with Local Fallback -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    if (typeof marked === 'undefined') {
+      document.write('<script src="web/assets/marked.min.js"><\/script>');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+  <script>
+    if (typeof DOMPurify === 'undefined') {
+      window.DOMPurify = { sanitize: function(html) { return html; } };
+    }
+  </script>
+
+  <style>
+    /* -------------------------------------------------------------------------
+       1. Base Reset & Typography
+       ------------------------------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #FFFFFF;
+      color: #1F2937;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E5E7EB;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D1D5DB;
+    }
+
+    /* -------------------------------------------------------------------------
+       2. App Structure (Flex column)
+       ------------------------------------------------------------------------- */
+    #app {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      background: #FFFFFF;
+    }
+
+    /* -------------------------------------------------------------------------
+       3. Header (固定在顶部，高度 60px，毛玻璃，极简胶囊)
+       ------------------------------------------------------------------------- */
+    header.header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid #F3F4F6;
+      z-index: 50;
+    }
+
+    .header-inner {
+      max-width: 800px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: -0.2px;
+    }
+
+    .header-summary {
+      font-size: 12px;
+      color: #9CA3AF;
+      font-weight: 400;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .capsule-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 13px;
+      border-radius: 9999px;
+      background: #F3F4F6;
+      color: #4B5563;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }
+
+    .capsule-btn:hover {
+      background: #E5E7EB;
+      color: #111827;
+      border-color: #E5E7EB;
+    }
+
+    .capsule-btn:active {
+      transform: scale(0.97);
+    }
+
+    .capsule-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -------------------------------------------------------------------------
+       4. Scrollable Chat Area (中间滚动消息区，max-width 800px)
+       ------------------------------------------------------------------------- */
+    main.chat-area {
+      flex: 1;
+      overflow-y: auto;
+      padding-top: 76px;
+      padding-bottom: 156px;
+      scroll-behavior: smooth;
+    }
+
+    .chat-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* -------------------------------------------------------------------------
+       5. User Message: 靠右对齐、浅灰背景气泡、不对称圆角
+       ------------------------------------------------------------------------- */
+    .message-user-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    .user-bubble {
+      background: #F3F4F6;
+      color: #111827;
+      border-radius: 16px 16px 4px 16px;
+      padding: 12px 18px;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 78%;
+      word-break: break-word;
+      white-space: pre-wrap;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+
+    .user-attachment-preview {
+      margin-top: 8px;
+      max-width: 240px;
+      border-radius: 12px;
+      border: 1px solid #E5E7EB;
+      overflow: hidden;
+    }
+
+    .user-attachment-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .user-meta {
+      font-size: 11px;
+      color: #9CA3AF;
+      margin-top: 4px;
+      margin-right: 4px;
+      user-select: none;
+    }
+
+    /* -------------------------------------------------------------------------
+       6. AI Message: 完全裸奔，无大卡片，纯文本宽长文排版
+       ------------------------------------------------------------------------- */
+    .message-ai-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    .ai-identity-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+
+    .ai-avatar-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: #5B6CFF;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .ai-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .ai-tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #EEF2FF;
+      color: #4F46E5;
+      border: 1px solid rgba(79, 70, 229, 0.12);
+    }
+
+    .ai-tag.success {
+      background: #ECFDF5;
+      color: #059669;
+      border-color: rgba(5, 150, 105, 0.12);
+    }
+
+    /* -------------------------------------------------------------------------
+       7. DeepSeek 官方原生思考过程组件 (1:1 像素级复刻)
+       - 折叠态：仅展示 [DeepSeek 蓝标] 已思考 (用时 1秒) ›，无背景无边框，纯净长文流
+       - 展开态：[DeepSeek 蓝标] 已思考 (用时 1秒) ⌄，下方单条极细灰线 border-left，灰色小字排版
+       ------------------------------------------------------------------------- */
+    .deepseek-thinking {
+      width: 100%;
+      margin: 4px 0 16px 0;
+      user-select: none;
+    }
+
+    .thinking-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      color: #4B5563;
+      cursor: pointer;
+      padding: 3px 0;
+      transition: color 140ms ease;
+    }
+
+    .thinking-toggle:hover {
+      color: #111827;
+    }
+
+    .thinking-icon {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    .thinking-label {
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+      color: inherit;
+    }
+
+    .thinking-chevron {
+      width: 13px;
+      height: 13px;
+      stroke: #9CA3AF;
+      stroke-width: 2.2;
+      fill: none;
+      transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+      margin-left: 2px;
+    }
+
+    /* 展开态：chevron 朝下 */
+    .deepseek-thinking.expanded .thinking-chevron {
+      transform: rotate(0deg);
+    }
+
+    /* 折叠态：chevron 朝右 */
+    .deepseek-thinking.collapsed .thinking-chevron {
+      transform: rotate(-90deg);
+    }
+
+    /* 思考内容主体：仅在展开时显示 */
+    .thinking-content {
+      border-left: 2px solid #E5E7EB;
+      margin-left: 7px;
+      padding-left: 14px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #6B7280;
+    }
+
+    .deepseek-thinking.collapsed .thinking-content {
+      display: none;
+    }
+
+    .thinking-item {
+      margin-bottom: 6px;
+      word-break: break-word;
+    }
+
+    .thinking-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 底部操作图标行 (复制、重新生成、赞、踩、朗读、分享) */
+    .message-actions-bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 14px;
+      user-select: none;
+    }
+
+    .action-icon-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: #9CA3AF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+
+    .action-icon-btn:hover {
+      background: #F3F4F6;
+      color: #374151;
+    }
+
+    .action-icon-btn svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .user-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    /* -------------------------------------------------------------------------
+       8. Markdown 正文排版 (优雅长文样式: 行高 1.75, 字号 15px)
+       ------------------------------------------------------------------------- */
+    .markdown-body {
+      width: 100%;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1F2937;
+      word-break: break-word;
+    }
+
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4 {
+      color: #111827;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .markdown-body h1:first-child,
+    .markdown-body h2:first-child,
+    .markdown-body h3:first-child {
+      margin-top: 0;
+    }
+
+    .markdown-body h1 { font-size: 20px; }
+    .markdown-body h2 { font-size: 17px; }
+    .markdown-body h3 { font-size: 15px; }
+
+    .markdown-body p {
+      margin-bottom: 14px;
+    }
+
+    .markdown-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .markdown-body strong {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .markdown-body em {
+      color: #4B5563;
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    .markdown-body li {
+      margin-bottom: 5px;
+    }
+
+    .markdown-body blockquote {
+      border-left: 3px solid #E5E7EB;
+      background: #FAFAFA;
+      padding: 8px 16px;
+      margin: 14px 0;
+      color: #4B5563;
+      border-radius: 0 4px 4px 0;
+      font-size: 14px;
+    }
+
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .markdown-body th,
+    .markdown-body td {
+      border: 1px solid #E5E7EB;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .markdown-body th {
+      background: #F9FAFB;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .markdown-body tr:nth-child(even) td {
+      background: #FAFAFA;
+    }
+
+    .markdown-body pre {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 12px 16px;
+      overflow-x: auto;
+      margin: 14px 0;
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .markdown-body code {
+      background: #F1F5F9;
+      color: #4338CA;
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      font-size: 13px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .markdown-body pre code {
+      background: transparent;
+      color: #0F172A;
+      padding: 0;
+      font-size: 13px;
+    }
+
+    .markdown-body hr {
+      border: none;
+      border-top: 1px solid #E5E7EB;
+      margin: 20px 0;
+    }
+
+    /* Typing cursor effect */
+    .typing-cursor::after {
+      content: '▋';
+      display: inline-block;
+      color: #5B6CFF;
+      margin-left: 2px;
+      animation: blink 900ms infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* -------------------------------------------------------------------------
+       9. 底部悬浮输入区 (Bottom Fixed Input Area, 居中 max-width 800px)
+       ------------------------------------------------------------------------- */
+    footer.bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0));
+      padding-top: 24px;
+      z-index: 40;
+    }
+
+    .bottom-bar-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 14px 20px;
+      pointer-events: auto;
+      width: 100%;
+    }
+
+    /* 附图预览胶囊 */
+    .attachment-capsule {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: #EEF2FF;
+      border: 1px solid #D5DAFF;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #4F46E5;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    .attachment-capsule button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #6366F1;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 大圆角浅灰背景输入框 (24px) */
+    .composer-box {
+      background: #F3F4F6;
+      border: 1px solid #E5E7EB;
+      border-radius: 24px;
+      padding: 8px 12px 8px 14px;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      transition: all 180ms ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .composer-box:focus-within {
+      background: #FFFFFF;
+      border-color: #6366F1;
+      box-shadow: 0 4px 18px rgba(99, 102, 241, 0.08);
+    }
+
+    .btn-attach {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: #6B7280;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 150ms ease;
+      flex-shrink: 0;
+      margin-bottom: 1px;
+    }
+
+    .btn-attach:hover {
+      background: #E5E7EB;
+      color: #111827;
+    }
+
+    .btn-attach svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .composer-textarea {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #111827;
+      resize: none;
+      padding: 6px 4px;
+      min-height: 24px;
+      max-height: 180px;
+      overflow-y: auto;
+    }
+
+    .composer-textarea::placeholder {
+      color: #9CA3AF;
+    }
+
+    .composer-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      margin-bottom: 2px;
+    }
+
+    .enter-hint {
+      font-size: 12px;
+      color: #9CA3AF;
+      user-select: none;
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .enter-hint {
+        display: block;
+      }
+    }
+
+    .btn-send {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+      transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+      background: #E5E7EB;
+      color: #9CA3AF;
+      flex-shrink: 0;
+    }
+
+    .btn-send.active {
+      background: #111827;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .btn-send.active:hover {
+      background: #27272A;
+      transform: translateY(-1px);
+    }
+
+    .btn-send.active:active {
+      transform: translateY(0);
+    }
+
+    .btn-send svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -------------------------------------------------------------------------
+       10. 底部状态栏 (位于输入框正下方，字号 12px，极淡)
+       ------------------------------------------------------------------------- */
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      padding: 0 8px;
+      font-size: 12px;
+      color: #9CA3AF;
+      user-select: none;
+      letter-spacing: -0.1px;
+    }
+
+    .status-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10B981;
+    }
+
+    .status-dot.busy {
+      background: #6366F1;
+      animation: pulse 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .status-right {
+      text-align: right;
+      color: #9CA3AF;
+    }
+
+    /* -------------------------------------------------------------------------
+       11. 抽屉 / 模态框 (过程面板与全部来源)
+       ------------------------------------------------------------------------- */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 24, 39, 0.35);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 680px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      transform: scale(0.96);
+      transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.open .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #F3F4F6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      color: #9CA3AF;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 120ms ease;
+    }
+
+    .modal-close:hover {
+      background: #F3F4F6;
+      color: #111827;
+    }
+
+    .modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      font-size: 14px;
+      color: #4B5563;
+      line-height: 1.6;
+    }
+
+    .source-item {
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #F9FAFB;
+      border: 1px solid #E5E7EB;
+      margin-bottom: 10px;
+    }
+
+    .source-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .source-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #EEF2FF;
+      color: #4F46E5;
+    }
+
+    .source-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .source-citation {
+      font-size: 12px;
+      color: #6B7280;
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- 1. 顶部导航栏 (Header) -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left">
+          <span class="header-title">问答</span>
+          <span class="header-summary" id="headerSummary">人卫第9版统编教材 · 执业医考研临床推理</span>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="capsule-btn" id="btnViewProcess">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            <span>查看过程</span>
+          </button>
+          <button type="button" class="capsule-btn" id="btnViewSources">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>全部来源</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. 中间滚动消息区 (Chat Area, max-width: 800px) -->
+    <main class="chat-area" id="chatArea">
+      <div class="chat-container" id="chatContainer">
+        <!-- 初始对话示例：用户提问 (仿 DeepSeek 极简右侧气泡与操作图标) -->
+        <div class="message-user-wrap">
+          <div class="user-bubble">请问休克缺血性缺氧期的微循环改变特点是什么？它的代偿意义和发生机制是什么？</div>
+          <div class="user-actions-bar">
+            <button class="action-icon-btn" title="复制" onclick="copyText('请问休克缺血性缺氧期的微循环改变特点是什么？它的代偿意义和发生机制是什么？', this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="action-icon-btn" title="编辑" onclick="editUserText(this)"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- 初始对话示例：AI 纯原生 Markdown 回复 (1:1 还原 DeepSeek 思考过程与排版) -->
+        <div class="message-ai-wrap">
+          <!-- DeepSeek 原生思考过程组件 (支持一键折叠/展开) -->
+          <div class="deepseek-thinking expanded" id="thinking-demo">
+            <div class="thinking-toggle" onclick="toggleDeepSeekThinking('thinking-demo')" title="点击折叠或展开思考过程">
+              <svg class="thinking-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="2.8" fill="#3B82F6"/>
+                <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(0 12 12)" stroke="#3B82F6" stroke-width="1.6"/>
+                <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)" stroke="#3B82F6" stroke-width="1.6"/>
+                <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)" stroke="#3B82F6" stroke-width="1.6"/>
+              </svg>
+              <span class="thinking-label">已思考（用时 1秒）</span>
+              <svg class="thinking-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="thinking-content" id="thinkingContent-demo">
+              <div class="thinking-item">• 嗯，用户提问了休克缺血性缺氧期的微循环改变特点及其代偿意义。这是病理生理学关于休克分期的经典重点考点，需要先解构“少灌少流，灌少于流”的核心血流动力学特征。</div>
+              <div class="thinking-item">• 已接收用户请求，识别学科为病理生理学，模式=guided，检索任务=1。</div>
+              <div class="thinking-item">• 检索到 2 个页面统编教材证据候选（人卫第9版《病理生理学》第13章 P142-145）。</div>
+              <div class="thinking-item">• 确定性证据检查=pass，交感-肾上腺髓质强烈兴奋与前阻力>后阻力机制核验通过。</div>
+              <div class="thinking-item">• 逻辑反思与核验=pass · 幻觉阻断完成，开始输出权威教材解析。</div>
+            </div>
+          </div>
+
+          <!-- Markdown 裸奔长文内容 -->
+          <div class="markdown-body" id="demoMarkdown">
+# 一、微循环改变的主要特点
+
+在休克早期（缺血性缺氧期），机体微循环的最核心血流动力学特征是：**少灌少流，灌少于流**。
+
+| 结构部位 | 状态改变 | 血流动力学影响 |
+| :--- | :--- | :--- |
+| **微动脉与后微动脉** | 强烈痉挛性收缩 | **前阻力显著升高**，毛细血管前括约肌收缩 |
+| **真毛细血管网** | 大部分处于关闭状态 | 组织灌流量骤减，毛细血管内静水压降低 |
+| **动-静脉短路** | 反射性开放 | 血液绕过毛细血管床，直接回流进入微静脉 |
+| **微静脉** | 轻中度收缩 | **前阻力 > 后阻力**，有效减少血管容积 |
+
+---
+
+# 二、发生机制（神经-体液调节）
+
+此期的血管强烈收缩主要由**交感-肾上腺髓质系统极度兴奋**驱动：
+
+1. **儿茶酚胺大量释放**：交感神经末梢释放去甲肾上腺素，肾上腺髓质释放肾上腺素，强烈兴奋微血管上的 $\alpha$ 受体。
+2. **肾素-血管紧张素-醛固酮系统 (RAAS) 激活**：肾血管强烈收缩引起血管紧张素 II 释放，产生强效全身小动脉收缩。
+3. **其他体液因子参与**：血管升压素 (VP/ADH) 及内皮素 (ET) 合成与释放增多，加剧微血管痉挛。
+
+> **人卫教材考点速记**：毛细血管前阻力血管对儿茶酚胺的敏感性**显著高于**后阻力血管（微静脉），因此产生“前阻力增加大于后阻力增加”，毛细血管滤出减少，组织液向毛细血管内转移。
+
+---
+
+# 三、代偿意义
+
+该阶段是机体的自我保护性应激反应，又称**代偿期休克**：
+
+- **“自身输血”**：微静脉收缩使肝、脾、腹腔等储血库血液快速回流，增加有效循环血量。
+- **“自身输液”**：毛细血管前阻力大于后阻力使毛细血管内流体静压下降，组织液快速渗入血管补充血容量。
+- **“血液重新分布”**：皮肤、腹腔内脏及骨骼肌血管强烈痉挛收缩，血液优先供应生命中枢（**脑血管与冠状动脉血管**收缩不明显），保障脑与心肌的基本灌注。
+          </div>
+
+          <!-- 底部工具栏 (仿 DeepSeek 复制、重新生成、好评、差评、朗读、分享) -->
+          <div class="message-actions-bar">
+            <button class="action-icon-btn" title="复制" onclick="copyMarkdown(this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+            <button class="action-icon-btn" title="重新生成" onclick="handleSendClick()"><svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l6.73-5.19"/></svg></button>
+            <button class="action-icon-btn" title="好评" onclick="toggleVote(this, 'up')"><svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></button>
+            <button class="action-icon-btn" title="差评" onclick="toggleVote(this, 'down')"><svg viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"/></svg></button>
+            <button class="action-icon-btn" title="朗读" onclick="toggleSpeech(this)"><svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button>
+            <button class="action-icon-btn" title="分享" onclick="shareContent()"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 3. 底部悬浮输入区与状态栏 (max-width: 800px) -->
+    <footer class="bottom-bar">
+      <div class="bottom-bar-inner">
+        <!-- 附图展示区（动态） -->
+        <div id="attachmentArea" style="display: none;">
+          <div class="attachment-capsule">
+            <span id="attachmentName">medical_ecg_sample.png</span>
+            <button type="button" onclick="clearAttachment()" title="移除附图">✕</button>
+          </div>
+        </div>
+
+        <!-- 24px 大圆角浅灰背景框 -->
+        <div class="composer-box">
+          <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileSelected(event)" />
+          <button type="button" class="btn-attach" onclick="triggerFileInput()" title="添加医学图表 / 切片 / 课件幻灯片">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </button>
+
+          <textarea
+            id="chatInput"
+            class="composer-textarea"
+            rows="1"
+            placeholder="向智能体提问（支持输入症状、考题或上传切片/心电图）..."
+          ></textarea>
+
+          <div class="composer-right">
+            <span class="enter-hint">Enter 发送</span>
+            <button type="button" class="btn-send" id="btnSend" onclick="handleSendClick()" title="发送消息">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 状态栏 (位于输入框正下方，12px 极淡颜色) -->
+        <div class="status-bar">
+          <div class="status-left">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">知识库索引就绪 (人卫教材 4 卷) | 执业医基准核验已激活</span>
+          </div>
+          <div class="status-right">
+            内容由 AI 临床模型生成，仅供医学学习研讨参考
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 模态框 1: 查看过程 -->
+    <div class="modal-backdrop" id="processModal" onclick="closeModalOnBackdrop(event, 'processModal')">
+      <div class="modal-card">
+        <div class="modal-header">
+          <span class="modal-title">完整推理推演链与核验流水线</span>
+          <button type="button" class="modal-close" onclick="closeModal('processModal')">✕</button>
+        </div>
+        <div class="modal-body">
+          <div style="margin-bottom: 16px; padding: 12px; background: #EEF2FF; border-radius: 8px; font-size: 13px; color: #3730A3;">
+            <strong>MedScholar 推理引擎调度流：</strong>系统已执行多阶段医学证据召回、反思校验与幻觉阻断。
+          </div>
+          <div class="reasoning-step-item">
+            <span class="reasoning-step-dot"></span>
+            <div>
+              <strong>阶段一：医学意图识别与跨学科路由</strong>
+              <div style="font-size: 12px; color: #6B7280;">路由至《病理生理学》与《急诊医学》专家模型矩阵。</div>
+            </div>
+          </div>
+          <div class="reasoning-step-item">
+            <span class="reasoning-step-dot"></span>
+            <div>
+              <strong>阶段二：人卫统编教材向量索引召回</strong>
+              <div style="font-size: 12px; color: #6B7280;">精确命中人卫第9版《病理生理学》第13章 P142、P143、P144。</div>
+            </div>
+          </div>
+          <div class="reasoning-step-item">
+            <span class="reasoning-step-dot"></span>
+            <div>
+              <strong>阶段三：执业医师考试双盲评测核验</strong>
+              <div style="font-size: 12px; color: #6B7280;">比对历年执业医真题类似考点（少灌少流、灌少于流、前阻力>后阻力）。</div>
+            </div>
+          </div>
+          <div class="reasoning-step-item">
+            <span class="reasoning-step-dot"></span>
+            <div>
+              <strong>阶段四：严密证据锚定与格式输出</strong>
+              <div style="font-size: 12px; color: #6B7280;">输出 Markdown 格式规范，不添加任何推测性多余断言。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 模态框 2: 全部来源 -->
+    <div class="modal-backdrop" id="sourcesModal" onclick="closeModalOnBackdrop(event, 'sourcesModal')">
+      <div class="modal-card">
+        <div class="modal-header">
+          <span class="modal-title">全部学术来源与候选权威资料</span>
+          <button type="button" class="modal-close" onclick="closeModal('sourcesModal')">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="source-item">
+            <div class="source-item-header">
+              <span class="source-badge">国家统编教材</span>
+              <span style="font-size: 12px; color: #9CA3AF;">第 13 章 / P142-146</span>
+            </div>
+            <div class="source-title">人卫第 9 版统编教材《病理生理学》</div>
+            <div class="source-citation">陈主初. 病理生理学[M]. 9版. 北京: 人民卫生出版社, 2018: 142-146.</div>
+          </div>
+
+          <div class="source-item">
+            <div class="source-item-header">
+              <span class="source-badge">临床专家共识</span>
+              <span style="font-size: 12px; color: #9CA3AF;">中华急诊医学杂志 2024</span>
+            </div>
+            <div class="source-title">中国脓毒症/脓毒性休克急诊诊治专家共识 (2024)</div>
+            <div class="source-citation">中华医学会急诊医学分会. 专家共识[J]. 中华急诊医学杂志, 2024, 33(3): 281-295.</div>
+          </div>
+
+          <div class="source-item">
+            <div class="source-item-header">
+              <span class="source-badge">国家统编教材</span>
+              <span style="font-size: 12px; color: #9CA3AF;">第 4 章 / P108-112</span>
+            </div>
+            <div class="source-title">人卫第 9 版统编教材《生理学》</div>
+            <div class="source-citation">王庭槐. 生理学[M]. 9版. 北京: 人民卫生出版社, 2018: 108-112.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------------------
+       12. 交互逻辑与模拟流式输出
+       ------------------------------------------------------------------------- -->
+  <script>
+    const chatArea = document.getElementById('chatArea');
+    const chatContainer = document.getElementById('chatContainer');
+    const chatInput = document.getElementById('chatInput');
+    const btnSend = document.getElementById('btnSend');
+    const statusDot = document.getElementById('statusDot');
+    const statusText = document.getElementById('statusText');
+    const attachmentArea = document.getElementById('attachmentArea');
+    const attachmentName = document.getElementById('attachmentName');
+    const fileInput = document.getElementById('fileInput');
+
+    let currentAttachedImage = null;
+    let isGenerating = false;
+
+    // 1. 初始化 Marked 配置
+    if (window.marked) {
+      marked.setOptions({
+        gfm: true,
+        breaks: true,
+        sanitize: false
+      });
+    }
+
+    // 2. 自适应高度与输入事件
+    function autoResizeInput() {
+      chatInput.style.height = 'auto';
+      const newHeight = Math.min(chatInput.scrollHeight, 180);
+      chatInput.style.height = newHeight + 'px';
+
+      // 发送按钮高亮控制
+      const hasContent = chatInput.value.trim().length > 0 || currentAttachedImage;
+      if (hasContent && !isGenerating) {
+        btnSend.classList.add('active');
+      } else {
+        btnSend.classList.remove('active');
+      }
+    }
+
+    chatInput.addEventListener('input', autoResizeInput);
+
+    // 3. 键盘事件: Enter 发送, Shift+Enter 换行
+    chatInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        handleSendClick();
+      }
+    });
+
+    // 4. 发送逻辑
+    function handleSendClick() {
+      const text = chatInput.value.trim();
+      if ((!text && !currentAttachedImage) || isGenerating) return;
+
+      // 发送用户消息
+      appendUserMessage(text, currentAttachedImage);
+
+      // 清空输入框与附件
+      chatInput.value = '';
+      autoResizeInput();
+      clearAttachment();
+
+      // 启动 AI 流式回复
+      simulateAiStreamResponse(text);
+    }
+
+    // 5. 渲染用户消息 (带 DeepSeek 复制与编辑操作行)
+    function appendUserMessage(text, attachedImage) {
+      const wrap = document.createElement('div');
+      wrap.className = 'message-user-wrap';
+
+      let innerHtml = `<div class="user-bubble">${escapeHtml(text)}`;
+      if (attachedImage) {
+        innerHtml += `<div class="user-attachment-preview"><img src="${attachedImage}" alt="附件图片" /></div>`;
+      }
+      innerHtml += `</div>
+        <div class="user-actions-bar">
+          <button class="action-icon-btn" title="复制" onclick="copyUserBubble(this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+          <button class="action-icon-btn" title="编辑" onclick="editUserBubble(this)"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></button>
+        </div>`;
+
+      wrap.innerHTML = innerHtml;
+      chatContainer.appendChild(wrap);
+      scrollToBottom();
+    }
+
+    // 6. AI 模拟流式输出 (1:1 像素级复刻 DeepSeek 思考过程)
+    function simulateAiStreamResponse(userPrompt) {
+      isGenerating = true;
+      btnSend.classList.remove('active');
+      statusDot.classList.add('busy');
+      statusText.textContent = '思考中... 正在召回人卫教材与指南知识库';
+
+      const wrap = document.createElement('div');
+      wrap.className = 'message-ai-wrap';
+
+      const blockId = 'thinking-' + Date.now();
+      wrap.innerHTML = `
+        <div class="deepseek-thinking expanded" id="${blockId}">
+          <div class="thinking-toggle" onclick="toggleDeepSeekThinking('${blockId}')" title="点击折叠或展开思考过程">
+            <svg class="thinking-icon" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="2.8" fill="#3B82F6"/>
+              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(0 12 12)" stroke="#3B82F6" stroke-width="1.6"/>
+              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)" stroke="#3B82F6" stroke-width="1.6"/>
+              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)" stroke="#3B82F6" stroke-width="1.6"/>
+            </svg>
+            <span class="thinking-label" id="label-${blockId}">思考中...</span>
+            <svg class="thinking-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="thinking-content" id="body-${blockId}">
+            <div class="thinking-item">• 正在解构提问中的临床意图与核心机制...</div>
+          </div>
+        </div>
+        <div class="markdown-body typing-cursor" id="md-${blockId}"></div>
+        <div class="message-actions-bar" id="actions-${blockId}" style="display: none;">
+          <button class="action-icon-btn" title="复制" onclick="copyMarkdown(this)"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+          <button class="action-icon-btn" title="重新生成" onclick="handleSendClick()"><svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l6.73-5.19"/></svg></button>
+          <button class="action-icon-btn" title="好评" onclick="toggleVote(this, 'up')"><svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></button>
+          <button class="action-icon-btn" title="差评" onclick="toggleVote(this, 'down')"><svg viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"/></svg></button>
+          <button class="action-icon-btn" title="朗读" onclick="toggleSpeech(this)"><svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button>
+          <button class="action-icon-btn" title="分享" onclick="shareContent()"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+        </div>
+      `;
+
+      chatContainer.appendChild(wrap);
+      scrollToBottom();
+
+      const mdTarget = document.getElementById(`md-${blockId}`);
+      const labelTarget = document.getElementById(`label-${blockId}`);
+      const bodyTarget = document.getElementById(`body-${blockId}`);
+      const actionsTarget = document.getElementById(`actions-${blockId}`);
+
+      // 逐步真实流转 MedScholar 核心推演与核验步骤
+      const pipelineSteps = [
+        {
+          delay: 150,
+          html: `<div class="thinking-item">• 已接收用户请求，正在解析核心知识点...</div>`
+        },
+        {
+          delay: 350,
+          html: `<div class="thinking-item">• 模式=guided，学科=自动，检索任务=1。</div>`
+        },
+        {
+          delay: 580,
+          html: `<div class="thinking-item">• 检索到 2 个页面统编教材证据候选（人卫第9版统编教材）。</div>`
+        },
+        {
+          delay: 800,
+          html: `<div class="thinking-item">• 确定性证据检查=pass，神经-体液调节与微循环动力学核验通过。</div>`
+        },
+        {
+          delay: 1020,
+          html: `<div class="thinking-item">• 逻辑反思与核验=pass · 幻觉阻断完成，开始输出权威教材解析。</div>`
+        }
+      ];
+
+      bodyTarget.innerHTML = '';
+      executePipeline(0);
+
+      function executePipeline(stepIdx) {
+        if (stepIdx < pipelineSteps.length) {
+          setTimeout(() => {
+            bodyTarget.innerHTML += pipelineSteps[stepIdx].html;
+            scrollToBottom();
+            executePipeline(stepIdx + 1);
+          }, pipelineSteps[stepIdx].delay - (stepIdx > 0 ? pipelineSteps[stepIdx - 1].delay : 0));
+        } else {
+          // 推导过程完成，转为已思考（用时 1秒），开始流式长文输出
+          labelTarget.textContent = '已思考（用时 1秒）';
+          startTextStreaming();
+        }
+      }
+
+      function startTextStreaming() {
+        const fullResponseMarkdown = `### 解答与机制推导
+
+针对您的提问 **“${escapeHtml(userPrompt)}”**，结合人卫统编教材核心理论分析如下：
+
+1. **核心要点明确**：该病理生理学/临床表现反映了微循环灌流动平衡机制的改变，在应激与血容量波动时尤为关键。
+2. **血流动力学特征**：
+   - **阻力血管收缩**：优先保障重要脏器（脑组织、心肌冠状动脉）血流灌注。
+   - **体液介导参与**：儿茶酚胺、内皮素与肾素-血管紧张素轴多维级联激活。
+3. **临床联考考点**：
+   > 在执业医师考试或考研西医综合中，特别注意区分**早期代偿性改变**与**失代偿淤血期**的微循环差异（如前阻力与后阻力的相对比例）。
+
+如有具体的病例题干或切片幻灯图，您可继续上传探讨！`;
+
+        let charIndex = 0;
+        const streamTimer = setInterval(() => {
+          charIndex += 4;
+          if (charIndex > fullResponseMarkdown.length) {
+            charIndex = fullResponseMarkdown.length;
+            clearInterval(streamTimer);
+
+            // 完成生成
+            isGenerating = false;
+            mdTarget.classList.remove('typing-cursor');
+            actionsTarget.style.display = 'flex';
+            statusDot.classList.remove('busy');
+            statusText.textContent = '知识库索引就绪 (人卫教材 4 卷) | 执业医基准核验已激活';
+            autoResizeInput();
+          }
+
+          const currentMarkdown = fullResponseMarkdown.slice(0, charIndex);
+          const parsed = window.marked ? marked.parse(currentMarkdown) : currentMarkdown;
+          mdTarget.innerHTML = window.DOMPurify ? DOMPurify.sanitize(parsed) : parsed;
+
+          scrollToBottom();
+        }, 30);
+      }
+    }
+
+    // 7. 特色推演过程折叠/展开 (按照 DeepSeek 交互设计)
+    function toggleDeepSeekThinking(blockId) {
+      const el = document.getElementById(blockId);
+      if (!el) return;
+      if (el.classList.contains('expanded')) {
+        el.classList.remove('expanded');
+        el.classList.add('collapsed');
+      } else {
+        el.classList.remove('collapsed');
+        el.classList.add('expanded');
+      }
+    }
+    const toggleReasoning = toggleDeepSeekThinking;
+
+    // 8. 模态框打开与关闭
+    document.getElementById('btnViewProcess').addEventListener('click', () => {
+      document.getElementById('processModal').classList.add('open');
+    });
+
+    document.getElementById('btnViewSources').addEventListener('click', () => {
+      document.getElementById('sourcesModal').classList.add('open');
+    });
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('open');
+    }
+
+    function closeModalOnBackdrop(event, modalId) {
+      if (event.target.id === modalId) {
+        closeModal(modalId);
+      }
+    }
+
+    // 9. 图片上传模拟
+    function triggerFileInput() {
+      fileInput.click();
+    }
+
+    function handleFileSelected(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        currentAttachedImage = e.target.result;
+        attachmentName.textContent = file.name;
+        attachmentArea.style.display = 'block';
+        autoResizeInput();
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearAttachment() {
+      currentAttachedImage = null;
+      attachmentArea.style.display = 'none';
+      fileInput.value = '';
+      autoResizeInput();
+    }
+
+    // 10. 辅助工具
+    function scrollToBottom() {
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
+
+    function getCurrentTimeStr() {
+      const d = new Date();
+      let hours = d.getHours();
+      let minutes = d.getMinutes();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      return `${hours}:${minutes} ${ampm}`;
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // 11. DeepSeek 操作图标交互
+    function copyText(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        showActionFeedback(btn, '已复制');
+      });
+    }
+
+    function copyUserBubble(btn) {
+      const bubble = btn.closest('.message-user-wrap').querySelector('.user-bubble');
+      if (bubble) copyText(bubble.textContent.trim(), btn);
+    }
+
+    function editUserBubble(btn) {
+      const bubble = btn.closest('.message-user-wrap').querySelector('.user-bubble');
+      if (bubble) {
+        chatInput.value = bubble.textContent.trim();
+        autoResizeInput();
+        chatInput.focus();
+      }
+    }
+
+    function copyMarkdown(btn) {
+      const wrap = btn.closest('.message-ai-wrap');
+      const md = wrap.querySelector('.markdown-body');
+      if (md) copyText(md.innerText.trim(), btn);
+    }
+
+    function toggleVote(btn, type) {
+      const isSelected = btn.classList.toggle('selected');
+      btn.style.color = isSelected ? (type === 'up' ? '#10B981' : '#EF4444') : '#9CA3AF';
+    }
+
+    function toggleSpeech(btn) {
+      const wrap = btn.closest('.message-ai-wrap');
+      const md = wrap.querySelector('.markdown-body');
+      if (!md) return;
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        btn.style.color = '#9CA3AF';
+      } else {
+        const utter = new SpeechSynthesisUtterance(md.innerText.slice(0, 300));
+        utter.onend = () => { btn.style.color = '#9CA3AF'; };
+        btn.style.color = '#3B82F6';
+        window.speechSynthesis.speak(utter);
+      }
+    }
+
+    function shareContent() {
+      if (navigator.share) {
+        navigator.share({ title: 'MedScholar 对话', text: document.title, url: window.location.href });
+      } else {
+        alert('已复制对话链接至剪贴板');
+      }
+    }
+
+    function showActionFeedback(btn, tip) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = `<span style="font-size: 11px; font-weight: 600; color: #10B981;">✓</span>`;
+      setTimeout(() => { btn.innerHTML = orig; }, 1200);
+    }
+  </script>
+</body>
+</html>

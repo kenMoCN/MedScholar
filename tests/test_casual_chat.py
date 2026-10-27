@@ -1,6 +1,6 @@
 import unittest
 
-from casual_chat import CasualConversationEngine, is_casual_chat_candidate
+from core.casual_chat import CasualConversationEngine, is_casual_chat_candidate
 
 
 class FakeClient:

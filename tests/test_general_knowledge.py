@@ -1,6 +1,6 @@
 import unittest
 
-from general_knowledge import (
+from evidence.general_knowledge import (
     GeneralKnowledgeAnswerEngine,
     is_low_risk_foundational_question,
 )

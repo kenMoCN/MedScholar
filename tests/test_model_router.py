@@ -1,7 +1,7 @@
 import unittest
 
-from config_loader import normalize_legacy_env
-from model_router import (
+from core.config_loader import normalize_legacy_env
+from core.model_router import (
     ModelRegistry,
     ModelRole,
     RouteUnavailableError,

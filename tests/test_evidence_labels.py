@@ -1,6 +1,6 @@
 import unittest
 
-from evidence_labels import (
+from evidence.evidence_labels import (
     friendly_claim_certainty,
     friendly_evidence_label,
     friendly_resource_intro,

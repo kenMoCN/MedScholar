@@ -1,7 +1,7 @@
 import unittest
 
-from external_answer_engine import ExternalAnswerEngine
-from official_evidence import OfficialEvidenceItem
+from evidence.external_answer_engine import ExternalAnswerEngine
+from evidence.official_evidence import OfficialEvidenceItem
 
 
 class FakeGenerator:

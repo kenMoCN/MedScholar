@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from document_importer import (
+from retrieval.document_importer import (
     DocumentImportManifest,
     DocumentImporter,
     ImportStatus,

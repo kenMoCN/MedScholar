@@ -1,6 +1,6 @@
 import unittest
 
-from learning_companion import (
+from core.learning_companion import (
     LearningIntent,
     analyze_learning_turn,
     learning_action_options,

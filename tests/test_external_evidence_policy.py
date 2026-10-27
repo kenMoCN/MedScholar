@@ -1,7 +1,7 @@
 import unittest
 from types import SimpleNamespace
 
-from external_evidence_policy import (
+from evidence.external_evidence_policy import (
     assess_authority,
     evaluate_external_publication_gate,
 )

@@ -24,8 +24,8 @@ class UiThemeTests(unittest.TestCase):
             self.assertEqual(configured_ui_theme(base), "system")
 
     def test_frontend_receives_theme_and_has_dark_palette(self):
-        html = (APP_DIR / "preview.html").read_text(encoding="utf-8")
-        source = (APP_DIR / "tutor_window.py").read_text(encoding="utf-8")
+        html = (APP_DIR / "ui" / "preview.html").read_text(encoding="utf-8")
+        source = (APP_DIR / "ui" / "tutor_window.py").read_text(encoding="utf-8")
         self.assertIn("document.documentElement.dataset.theme", html)
         self.assertIn('html[data-theme="dark"]', html)
         self.assertIn("window.pyBridge.themeChanged.connect", html)
@@ -34,7 +34,7 @@ class UiThemeTests(unittest.TestCase):
 
     def test_secondary_dialog_follows_main_window_theme(self):
         from PySide6.QtWidgets import QApplication, QDialog, QWidget
-        from dialog_theme import apply_dialog_theme
+        from ui.dialog_theme import apply_dialog_theme
 
         app = QApplication.instance() or QApplication([])
         parent = QWidget()

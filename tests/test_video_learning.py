@@ -1,7 +1,7 @@
 import unittest
 import urllib.parse
 
-from video_learning import VideoLearningRetriever
+from evidence.video_learning import VideoLearningRetriever
 
 
 class FakeFetcher:

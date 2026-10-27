@@ -1,13 +1,13 @@
 import copy
 import unittest
 
-from answer_contract import (
+from evidence.answer_contract import (
     AnswerContractError,
     build_answer_generation_request,
     parse_answer_draft,
 )
-from evidence_bundle import EvidenceBundle, EvidenceItem
-from semantic_claim_verifier import (
+from evidence.evidence_bundle import EvidenceBundle, EvidenceItem
+from evidence.semantic_claim_verifier import (
     SemanticClaimVerifier,
     _quote_is_from_source,
     build_semantic_verification_request,

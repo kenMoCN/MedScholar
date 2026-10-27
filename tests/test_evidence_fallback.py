@@ -1,16 +1,16 @@
 import unittest
 
-from evidence_fallback import (
+from evidence.evidence_fallback import (
     EvidenceFallbackController,
     EvidencePolicy,
     FallbackQuestionType,
     classify_fallback_question,
     normalize_evidence_policy,
 )
-from external_retrievers import ExternalResource, OpenFullTextRecord
-from official_guidelines import OfficialGuidelinePacket, OfficialGuidelineRecord
-from retrieval_agent import RetrievalPacket, RetrievalPlan
-from research_evidence import ResearchPaper, ResearchPacket, ResearchSearchPlan
+from evidence.external_retrievers import ExternalResource, OpenFullTextRecord
+from evidence.official_guidelines import OfficialGuidelinePacket, OfficialGuidelineRecord
+from retrieval.retrieval_agent import RetrievalPacket, RetrievalPlan
+from evidence.research_evidence import ResearchPaper, ResearchPacket, ResearchSearchPlan
 
 
 class FakeLayeredRetriever:

@@ -3,9 +3,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from answer_contract import AnswerClaim, AnswerDraft
+from evidence.answer_contract import AnswerClaim, AnswerDraft
 
-from agent_orchestrator import (
+from core.agent_orchestrator import (
     AgentOrchestrator,
     AgentRequest,
     ExecutionPlan,
@@ -19,11 +19,11 @@ from agent_orchestrator import (
     _substantially_repeats,
     _trim_repeated_explanation,
 )
-from evidence_bundle import EvidenceBundleBuilder
-from evidence_verify import EvidenceVerifier
-from page_text_index import PageTextIndex, PageTextRecord, save_page_text_index
-from structure_retriever import RetrievalHit, RetrievalResult, StructureAwareRetriever
-from semantic_claim_verifier import (
+from evidence.evidence_bundle import EvidenceBundleBuilder
+from evidence.evidence_verify import EvidenceVerifier
+from retrieval.page_text_index import PageTextIndex, PageTextRecord, save_page_text_index
+from retrieval.structure_retriever import RetrievalHit, RetrievalResult, StructureAwareRetriever
+from evidence.semantic_claim_verifier import (
     ClaimSemanticVerdict,
     SemanticVerificationReport,
 )

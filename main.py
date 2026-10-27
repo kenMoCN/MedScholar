@@ -14,21 +14,21 @@ except ModuleNotFoundError as exc:
         "缺少 PySide6，请先运行: py -m pip install -r requirements.txt"
     ) from exc
 
-from app_runtime import (
+from core.app_runtime import (
     RuntimeConfigurationError,
     RuntimePaths,
     build_application_service,
     inspect_runtime,
 )
-from conversation_store import ConversationStore
-from config_loader import read_env_file
-from dynamic_config import dynamic_config_exists, load_dynamic_config
-from model_settings_dialog import ModelSettingsDialog
-from knowledge_base_dialog import KnowledgeBaseDialog
-from skill_review_dialog import SkillReviewDialog
-from evaluation_dialog import EvaluationDialog
-from setup import AgentSetupWizard, is_configured
-from tutor_window import TutorMainWindow
+from core.conversation_store import ConversationStore
+from core.config_loader import read_env_file
+from core.dynamic_config import dynamic_config_exists, load_dynamic_config
+from ui.model_settings_dialog import ModelSettingsDialog
+from ui.knowledge_base_dialog import KnowledgeBaseDialog
+from ui.skill_review_dialog import SkillReviewDialog
+from ui.evaluation_dialog import EvaluationDialog
+from ui.setup import AgentSetupWizard, is_configured
+from ui.tutor_window import TutorMainWindow
 
 
 def configured_ui_theme(base_dir: str | Path) -> str:
@@ -98,7 +98,9 @@ class ApplicationController(QObject):
         self.wizard = None
         if self.window is not None:
             self.window.setEnabled(True)
+            self.window.showMaximized()
             self.window.raise_()
+            self.window.activateWindow()
 
     @Slot(str)
     def _configuration_completed(self, _: str) -> None:
@@ -155,7 +157,9 @@ class ApplicationController(QObject):
         )
         self.window.skills_requested.connect(self._show_skills)
         self.window.evaluation_requested.connect(self._show_evaluation)
-        self.window.show()
+        self.window.showMaximized()
+        self.window.raise_()
+        self.window.activateWindow()
         if old_window is not None:
             old_window.close()
 
@@ -267,8 +271,13 @@ class ApplicationController(QObject):
 
 def main() -> int:
     app = QApplication(sys.argv)
-    base_dir = Path(__file__).resolve().parent
+    if getattr(sys, "frozen", False):
+        base_dir = Path(sys.executable).resolve().parent
+    else:
+        base_dir = Path(__file__).resolve().parent
     icon_path = base_dir / "MedScholar.ico"
+    if not icon_path.is_file():
+        icon_path = base_dir / "ui" / "logo.png"
     if not icon_path.is_file():
         icon_path = base_dir / "logo.png"
     if icon_path.is_file():
