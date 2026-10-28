@@ -337,6 +337,8 @@ class WebBridge(QObject):
     approvalRequested = Signal(str)
     approvalCleared = Signal()
     maximizedChanged = Signal(bool)
+    windowTransitionStarted = Signal()
+    windowTransitionFinished = Signal()
 
     def __init__(self, window: Any) -> None:
         super().__init__()
@@ -375,38 +377,17 @@ class WebBridge(QObject):
 
     @Slot()
     def minimize(self) -> None:
-        try:
-            import ctypes
-            hwnd = int(self.window.winId())
-            # SW_MINIMIZE = 6 (带系统原生缩进任务栏动画)
-            ctypes.windll.user32.ShowWindow(hwnd, 6)
-        except Exception:
-            self.window.showMinimized()
+        self.window.minimize_window()
 
     @Slot()
     def maximizeOrRestore(self) -> None:
-        try:
-            import ctypes
-            hwnd = int(self.window.winId())
-            # 检查当前是否最大化
-            if self.window.isMaximized():
-                # SW_RESTORE = 9 (带系统动画还原)
-                ctypes.windll.user32.ShowWindow(hwnd, 9)
-            else:
-                # SW_MAXIMIZE = 3 (带系统动画最大化)
-                ctypes.windll.user32.ShowWindow(hwnd, 3)
-        except Exception:
-            if self.window.isMaximized():
-                self.window.showNormal()
-            else:
-                self.window.showMaximized()
+        self.window.maximizeOrRestore()
 
     @Slot()
     def close(self) -> None:
-        if hasattr(self.window, "close_with_animation"):
-            self.window.close_with_animation()
-        else:
-            self.window.close()
+        if hasattr(self.window, "_status_animator"):
+            self.window._status_animator.stop()
+        self.window.close()
 
     @Slot(result=bool)
     def isMaximized(self) -> bool:
@@ -701,31 +682,26 @@ class TutorMainWindow(QMainWindow):
     def changeEvent(self, event: QEvent) -> None:
         if event.type() == QEvent.WindowStateChange:
             is_max = self.isMaximized()
-            if not self.isMinimized():
-                self.setWindowOpacity(1.0)
             if hasattr(self, "web_bridge") and self.web_bridge is not None:
                 self.web_bridge.maximizedChanged.emit(is_max)
+                QTimer.singleShot(40, self._finish_transition)
             if hasattr(self, "central_layout") and self.central_layout is not None:
                 margin = 0 if is_max else self.BORDER_WIDTH
                 self.central_layout.setContentsMargins(margin, margin, margin, margin)
         super().changeEvent(event)
 
+    def _finish_transition(self) -> None:
+        if hasattr(self, "web_bridge") and self.web_bridge is not None:
+            self.web_bridge.windowTransitionFinished.emit()
+
     def maximizeOrRestore(self) -> None:
-        """Toggle maximize or restore using Windows API ShowWindow for native smooth animation."""
-        try:
-            import ctypes
-            hwnd = int(self.winId())
-            if self.isMaximized():
-                # SW_RESTORE = 9 (带系统动画还原)
-                ctypes.windll.user32.ShowWindow(hwnd, 9)
-            else:
-                # SW_MAXIMIZE = 3 (带系统动画最大化)
-                ctypes.windll.user32.ShowWindow(hwnd, 3)
-        except Exception:
-            if self.isMaximized():
-                self.showNormal()
-            else:
-                self.showMaximized()
+        """Toggle maximize or restore instantly with frontend freeze-masking to eliminate tearing."""
+        if hasattr(self, "web_bridge") and self.web_bridge is not None:
+            self.web_bridge.windowTransitionStarted.emit()
+        if self.isMaximized():
+            self.showNormal()
+        else:
+            self.showMaximized()
 
     def toggle_maximize(self) -> None:
         self.maximizeOrRestore()
@@ -733,14 +709,8 @@ class TutorMainWindow(QMainWindow):
     toggle_maximize_with_animation = maximizeOrRestore
 
     def minimize_window(self) -> None:
-        """Trigger Windows native taskbar-sucking minimize animation via ShowWindow(hwnd, SW_MINIMIZE)."""
-        try:
-            import ctypes
-            hwnd = int(self.winId())
-            # SW_MINIMIZE = 6 (带系统原生缩进任务栏动画)
-            ctypes.windll.user32.ShowWindow(hwnd, 6)
-        except Exception:
-            self.showMinimized()
+        """Native system minimize - Qt and Windows DWM smoothly animate to taskbar without flicker."""
+        self.showMinimized()
 
     minimize = minimize_window
     minimize_with_animation = minimize_window
@@ -750,45 +720,14 @@ class TutorMainWindow(QMainWindow):
         self._setup_windows_frameless()
 
     def _setup_windows_frameless(self) -> None:
-        """Ensure Windows DWM native transitions and styles are active for frameless animations."""
-        try:
-            import ctypes
-            from ctypes import c_int, byref
-            hwnd = int(self.winId())
-            # DWMWA_TRANSITIONS_FORCEDISABLED = 3 (0 = do not force-disable transitions)
-            disabled = c_int(0)
-            ctypes.windll.dwmapi.DwmSetWindowAttribute(hwnd, 3, byref(disabled), 4)
-
-            GWL_STYLE = -16
-            style = ctypes.windll.user32.GetWindowLongW(hwnd, GWL_STYLE)
-            WS_THICKFRAME = 0x00040000
-            WS_MINIMIZEBOX = 0x00020000
-            WS_MAXIMIZEBOX = 0x00010000
-            WS_SYSMENU = 0x00080000
-            target_style = style | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SYSMENU
-            if style != target_style:
-                ctypes.windll.user32.SetWindowLongW(hwnd, GWL_STYLE, target_style)
-                SWP_FLAGS = 0x0020 | 0x0002 | 0x0001 | 0x0004 | 0x0010
-                ctypes.windll.user32.SetWindowPos(hwnd, 0, 0, 0, 0, 0, SWP_FLAGS)
-        except Exception:
-            pass
+        """Keep frameless window setup clean and native without intrusive win32 style hacks."""
+        pass
 
     def close_with_animation(self) -> None:
-        """Smoothly fade out window opacity before closing."""
-        if getattr(self, "_is_closing_window", False):
-            return
-        self._is_closing_window = True
-        self._close_anim = QPropertyAnimation(self, b"windowOpacity")
-        self._close_anim.setDuration(160)
-        self._close_anim.setEasingCurve(QEasingCurve.OutCubic)
-        self._close_anim.setStartValue(1.0)
-        self._close_anim.setEndValue(0.0)
-
-        def on_close_finished():
-            self.close()
-
-        self._close_anim.finished.connect(on_close_finished)
-        self._close_anim.start()
+        """Close window cleanly."""
+        if hasattr(self, "_status_animator"):
+            self._status_animator.stop()
+        self.close()
 
     def _resolve_effective_theme(self) -> str:
         if self.theme_mode != "system":

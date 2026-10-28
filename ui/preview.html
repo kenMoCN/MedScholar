@@ -131,10 +131,12 @@
       -webkit-backdrop-filter: blur(8px);
     }
 
-    /* Desktop Native Smooth Scroll & Scrollbar Styling */
+    /* Desktop Native Smooth Scroll & Minimalist Scrollbars (4px - 6px) */
     * {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      scrollbar-width: thin;
+      scrollbar-color: #E2E8F0 transparent;
     }
     html {
       scroll-behavior: smooth;
@@ -145,10 +147,43 @@
     .scrollbar-stable {
       scrollbar-gutter: stable;
     }
-    ::-webkit-scrollbar { width: 5px; height: 5px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: #E4E4E7; border-radius: 9999px; }
-    ::-webkit-scrollbar-thumb:hover { background: #CBD5E1; }
+    /* Global Minimalist Scrollbars (4px - 6px, ultra light, darker on hover) */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E2E8F0;
+      border-radius: 9999px;
+      transition: background-color 0.2s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #CBD5E1;
+    }
+
+    /* Custom Minimalist Scrollbars for Sidebar and Chat Area (4px - 6px) */
+    .custom-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #E2E8F0 transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #E2E8F0;
+      border-radius: 9999px;
+      transition: background-color 0.2s ease;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #CBD5E1;
+    }
 
     /* Window Controls (Min, Max, Close) Transitions */
     .window-control-btn {
@@ -181,16 +216,20 @@
       visibility: visible;
     }
     
-    /* Composer Textarea: Auto-grow & Hide ugly gray scrollbars */
+    /* Composer Textarea: Two-tier layout (min-height: 48px, max-height: 28vh) */
     .composer-textarea {
       field-sizing: content;
-      min-height: 44px;
-      max-height: 220px;
-      scrollbar-width: none;
+      min-height: 48px;
+      max-height: 28vh;
+      scrollbar-width: thin;
       transition: height 120ms cubic-bezier(0.16, 1, 0.3, 1);
     }
     .composer-textarea::-webkit-scrollbar {
-      display: none;
+      width: 4px;
+    }
+    .composer-textarea::-webkit-scrollbar-thumb {
+      background: #E2E8F0;
+      border-radius: 9999px;
     }
     
     .border-hairline { border-width: 0.5px; }
@@ -221,7 +260,15 @@
     html[data-theme="dark"] [class~="bg-[#FAFAFA]"] { background-color: #111318 !important; }
     html[data-theme="dark"] [class~="bg-[#F8F9FA]"],
     html[data-theme="dark"] [class~="bg-[#F8F9FA]/80"],
-    html[data-theme="dark"] [class~="bg-[#F9FAFB]"] { background-color: #171B22 !important; }
+    html[data-theme="dark"] [class~="bg-[#F9FAFB]"],
+    html[data-theme="dark"] [class~="bg-[#F7F8FA]"],
+    html[data-theme="dark"] [class~="bg-[#F4F5F7]"],
+    html[data-theme="dark"] [class~="bg-[#F2F4F7]"] { background-color: #171B22 !important; }
+    html[data-theme="dark"] [class~="text-[#333333]"] { color: #E4E4E7 !important; }
+    html[data-theme="dark"] [class~="text-[#666666]"] { color: #A1A1AA !important; }
+    html[data-theme="dark"] * { scrollbar-color: #374151 transparent; }
+    html[data-theme="dark"] .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; }
+    html[data-theme="dark"] .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #4B5563; }
     html[data-theme="dark"] [class~="bg-white"] { background-color: #1E232E !important; }
     html[data-theme="dark"] [class~="bg-[#F4F4F5]"],
     html[data-theme="dark"] [class~="bg-[#EAEAEA]"],
@@ -283,11 +330,37 @@
     }
     .app-fading {
       opacity: 0.3 !important;
-      transform: scale(0.98) !important; /* 轻微缩小，模拟一种被吸入或弹出的感觉 */
+      transform: scale(0.98) !important;
+    }
+
+    /* Freeze & Mask Layer for Clean State Transitions (No Flicker / Tearing) */
+    #transition-mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2147483640;
+      background-color: #FFFFFF;
+      display: none;
+      pointer-events: none;
+    }
+    html[data-theme="dark"] #transition-mask {
+      background-color: #111318 !important;
+    }
+    body.is-transitioning #transition-mask {
+      display: block !important;
+    }
+    body.is-transitioning #app,
+    body.is-transitioning #root {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
     }
   </style>
 </head>
 <body class="bg-[#FAFAFA] text-[#18181B] antialiased select-none font-sans overflow-hidden h-screen w-screen flex flex-col">
+  <div id="transition-mask"></div>
   <div id="app" class="h-full w-full flex flex-col"><div id="root" class="h-full w-full flex flex-col"></div></div>
 
   <script type="text/babel">
@@ -1008,19 +1081,20 @@
               }
 
               const ctrl = window.windowControl || window.pyBridge;
+              if (ctrl && ctrl.windowTransitionStarted) {
+                ctrl.windowTransitionStarted.connect(startTransition);
+              }
+              if (ctrl && ctrl.windowTransitionFinished) {
+                ctrl.windowTransitionFinished.connect(finishTransition);
+              }
               if (ctrl && ctrl.maximizedChanged) {
                 ctrl.maximizedChanged.connect(function(val) {
                   setIsMaximized(Boolean(val));
-                  const appEl = document.getElementById('app') || document.getElementById('root');
-                  if (appEl) {
-                    setTimeout(() => appEl.classList.remove('app-fading'), 50);
-                  }
+                  finishTransition();
                 });
               }
-              window.addEventListener('focus', () => {
-                const appEl = document.getElementById('app') || document.getElementById('root');
-                if (appEl) appEl.classList.remove('app-fading');
-              });
+              window.addEventListener('resize', finishTransition);
+              window.addEventListener('focus', finishTransition);
 
               if (window.pyBridge.framelessModeChanged) {
                 window.pyBridge.framelessModeChanged.connect(function(val) {
@@ -1370,41 +1444,50 @@
       };
 
       const triggerWithFading = (action, delay = 120) => {
-        const appEl = document.getElementById('app') || document.getElementById('root');
-        if (appEl) {
-          appEl.classList.add('app-fading');
-        }
-        setTimeout(() => {
-          try {
-            action();
-          } finally {
-            setTimeout(() => {
-              if (appEl) appEl.classList.remove('app-fading');
-            }, 60);
-          }
-        }, delay);
+        action();
+      };
+
+      const startTransition = () => {
+        document.body.classList.add('is-transitioning');
+        const mask = document.getElementById('transition-mask');
+        if (mask) mask.style.display = 'block';
+      };
+
+      const finishTransition = () => {
+        requestAnimationFrame(() => {
+          document.body.classList.remove('is-transitioning');
+          const mask = document.getElementById('transition-mask');
+          if (mask) mask.style.display = 'none';
+          const appEl = document.getElementById('app') || document.getElementById('root');
+          if (appEl) appEl.classList.remove('app-fading');
+        });
       };
 
       const handleWindowMinimize = () => {
         const ctrl = window.windowControl || window.pyBridge;
-        triggerWithFading(() => {
-          if (ctrl && ctrl.minimize) ctrl.minimize();
-          else if (ctrl && ctrl.minimizeWindow) ctrl.minimizeWindow();
-        });
+        if (ctrl && ctrl.minimize) ctrl.minimize();
+        else if (ctrl && ctrl.minimizeWindow) ctrl.minimizeWindow();
       };
+
       const handleWindowMaximize = () => {
         const ctrl = window.windowControl || window.pyBridge;
-        triggerWithFading(() => {
-          if (ctrl && ctrl.maximizeOrRestore) ctrl.maximizeOrRestore();
-          else if (ctrl && ctrl.maximizeWindow) ctrl.maximizeWindow();
-        });
+        startTransition();
+        setTimeout(finishTransition, 200);
+        if (ctrl && ctrl.maximizeOrRestore) ctrl.maximizeOrRestore();
+        else if (ctrl && ctrl.maximizeWindow) ctrl.maximizeWindow();
       };
+
       const handleWindowClose = () => {
-        const ctrl = window.windowControl || window.pyBridge;
-        triggerWithFading(() => {
+        const appEl = document.getElementById('app') || document.getElementById('root');
+        if (appEl) {
+          appEl.style.transition = 'opacity 0.15s ease-out';
+          appEl.style.opacity = '0';
+        }
+        setTimeout(() => {
+          const ctrl = window.windowControl || window.pyBridge;
           if (ctrl && ctrl.close) ctrl.close();
           else if (ctrl && ctrl.closeWindow) ctrl.closeWindow();
-        });
+        }, 150);
       };
 
       const renderMarkdown = (content) => {
@@ -1970,13 +2053,13 @@
             {/* -------------------------------------------------------------------
                 4. 中间主区 (Center Workspace: Header + Messages + Input + Status)
                ------------------------------------------------------------------- */}
-            <main className="flex-1 flex flex-col bg-[#FAFAFA] overflow-hidden relative">
+            <main className="flex-1 flex flex-col bg-white overflow-hidden relative">
               
               {/* Top Subheader */}
 
               {/* Message History Area */}
-              <div ref={chatScrollRef} onScroll={handleChatScroll} className="flex-1 overflow-y-auto px-6 py-6 scrollbar-stable">
-                <div className="max-w-[840px] mx-auto w-full space-y-6">
+              <div ref={chatScrollRef} onScroll={handleChatScroll} className="flex-1 overflow-y-auto px-4 sm:px-6 pt-[40px] pb-4 scrollbar-stable custom-scrollbar">
+                <div className="max-w-[800px] mx-auto w-full space-y-6">
                 {messages.length === 0 && (
                   <div className="max-w-xl mx-auto mt-12 p-6 rounded-[16px] bg-white border border-[#EEEEEE] shadow-soft-md text-center">
                     <div className="w-12 h-12 mx-auto rounded-[14px] bg-[#F4F5FF] flex items-center justify-center text-[#5B6CFF] mb-3">
@@ -2004,7 +2087,7 @@
                   if (msg.sender === 'user') {
                     return (
                       /* 用户消息：右侧浅灰圆角气泡，DeepSeek 1:1 风格 */
-                      <div key={msg.id || index} className="flex flex-col items-end group py-1">
+                      <div key={msg.id || index} className="flex flex-col items-end group py-1 pr-1 sm:pr-2">
                         <div className="max-w-[78%] rounded-[18px] bg-[#F4F4F5] px-4 py-3 text-[14.5px] text-[#18181B] shadow-soft-xs leading-relaxed custom-selection">
                           <p className="whitespace-pre-wrap">{msg.text}</p>
                           {msg.attachment && (
@@ -2314,148 +2397,158 @@
               </div>
 
               {/* -----------------------------------------------------------------
-                  底部输入区 (Input Card: 16-18px rounded, light glow on focus)
+                  底部交互区 (Bottom Area: Input Card + Status Bar)
+                  统一限制 max-w-[800px] 居中对齐，与上方聊天区在垂直方向上完美对齐
                  ----------------------------------------------------------------- */}
-              <div className="px-6 pb-2 pt-2 flex-shrink-0 bg-[#FAFAFA]">
-                <div className="rounded-[18px] bg-white border border-[#E4E4E7] shadow-soft-md focus-within:border-[#5B6CFF] focus-within:ring-2 focus-within:ring-[#5B6CFF]/15 transition-all duration-150 p-3.5">
-                  
-                  {/* Top Bar inside Input: 左「向智能体提问」 + 右上「发送方式选择器 (Enter / Ctrl+Enter / Shift+Enter)」 */}
-                  <div className="flex items-center justify-between pb-2 text-xs">
-                    <div className="flex items-center space-x-1.5 text-[#71717A] font-medium">
-                      <span className="text-[#5B6CFF]">💬</span>
-                      <span>向智能体提问</span>
+              <div className="flex-shrink-0 bg-white px-4 sm:px-6 pb-2.5 pt-1 select-none">
+                <div className="max-w-[800px] mx-auto w-full">
+                  {/* 输入框卡片：上下两段式布局，总高约 88px-96px，超大圆角 24px，高级浅灰底色 */}
+                  <div className="rounded-[24px] bg-[#F7F8FA] hover:bg-[#F2F4F7] focus-within:bg-white border border-[#E5E7EB] focus-within:border-[#5B6CFF] focus-within:ring-2 focus-within:ring-[#5B6CFF]/15 shadow-sm transition-all duration-150 p-3 px-4 flex flex-col justify-between min-h-[88px]">
+                    
+                    {/* Attachment Badge */}
+                    {attachmentName && (
+                      <div className="mb-2 flex items-center space-x-1.5 px-2.5 py-0.5 rounded-[6px] bg-[#EEF2FF] text-[#5B6CFF] text-[11px] font-medium w-fit border border-[#D5DAFF]">
+                        <Icon name="paperclip" size={12} />
+                        <span className="truncate max-w-xs">{attachmentName}</span>
+                        <button 
+                          type="button"
+                          onClick={handleClearAttachment}
+                          className="hover:text-red-500 ml-1 cursor-pointer"
+                        >
+                          <Icon name="x" size={11} />
+                        </button>
+                      </div>
+                    )}
+
+                    {/* 上半区：输入框 (textarea)，占据主要空间，支持多行自动撑开 */}
+                    <div className="flex-1 w-full flex flex-col">
+                      <textarea
+                        ref={inputRef}
+                        rows="2"
+                        value={inputText}
+                        onChange={(e) => setInputText(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                        onCompositionEnd={handleCompositionEnd}
+                        placeholder={
+                          sendKeyMode === 'Enter'
+                            ? '输入医学课程问题，按 Enter 发送，Shift+Enter 换行...'
+                            : sendKeyMode === 'Shift+Enter'
+                            ? '输入医学课程问题，按 Shift+Enter 发送，Enter 换行...'
+                            : '输入医学课程问题（如：休克分期、三羧酸循环），按 Ctrl+Enter 发送...'
+                        }
+                        className="w-full text-[14px] text-[#18181B] placeholder-[#9CA3AF] bg-transparent resize-none border-none outline-none leading-relaxed composer-textarea overflow-y-auto"
+                        style={{ minHeight: '48px', maxHeight: '28vh' }}
+                      />
                     </div>
 
-                    {/* 发送方式选择器 (Dropdown) */}
-                    <div className="relative">
-                      <button
-                        type="button"
-                        onClick={() => setSendModeDropdownOpen(!sendModeDropdownOpen)}
-                        className="flex items-center space-x-1 px-2.5 py-1 rounded-[6px] text-xs font-mono text-[#71717A] hover:text-[#5B6CFF] hover:bg-[#F4F5FF] border border-transparent hover:border-[#D5DAFF] transition-all cursor-pointer select-none"
-                        title="点击选择发送快捷键 (Enter / Ctrl+Enter / Shift+Enter)"
-                      >
-                        <span>{SEND_MODES.find(m => m.key === sendKeyMode)?.label || 'Enter 发送'}</span>
-                        <Icon name="chevronDown" size={12} className={`text-[#A1A1AA] transition-transform duration-150 ${sendModeDropdownOpen ? 'rotate-180' : ''}`} />
-                      </button>
+                    {/* 下半区：功能按钮区。左侧放置“添加图片”与提示，右侧放置“Enter 发送”提示与放大发送按钮 */}
+                    <div className="flex items-center justify-between pt-1.5 mt-1 border-t border-transparent select-none">
+                      {/* 左侧：添加图片 + 向智能体提问 */}
+                      <div className="flex items-center space-x-2">
+                        <button 
+                          type="button"
+                          onClick={handleChooseImage}
+                          className="flex items-center space-x-1.5 px-2.5 py-1 rounded-[8px] bg-white/70 hover:bg-white text-xs text-[#52525B] hover:text-[#18181B] active:scale-95 transition-all cursor-pointer border border-[#E5E7EB]/60 shadow-soft-xs"
+                          title="添加图片或 PDF 课件"
+                        >
+                          <Icon name="image" size={14} className="text-[#64748B]" />
+                          <span className="font-medium text-[11.5px]">添加图片</span>
+                        </button>
 
-                      {sendModeDropdownOpen && (
-                        <div className="absolute right-0 bottom-full mb-1.5 w-56 bg-white rounded-[14px] border border-[#EEEEEE] shadow-soft-lg p-1.5 space-y-0.5 z-50 text-xs animate-fade-in-up">
-                          <div className="px-2.5 py-1 text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider border-b border-[#F4F4F5] mb-1">
-                            选择发送方式
-                          </div>
-                          {SEND_MODES.map((mode) => {
-                            const isSelected = mode.key === sendKeyMode;
-                            return (
-                              <button
-                                key={mode.key}
-                                type="button"
-                                onClick={() => handleSelectSendMode(mode.key)}
-                                className={`w-full text-left px-2.5 py-1.5 rounded-[8px] flex items-center justify-between hover:bg-[#F4F5FF] active:scale-[0.98] transition-all cursor-pointer ${
-                                  isSelected ? 'text-[#5B6CFF] font-semibold bg-[#F4F5FF]' : 'text-[#3F3F46]'
-                                }`}
-                              >
-                                <div>
-                                  <div className="text-xs font-medium">{mode.label}</div>
-                                  <div className="text-xs text-[#A1A1AA] font-normal">{mode.hint}</div>
-                                </div>
-                                {isSelected && <span className="text-xs font-bold">✓</span>}
-                              </button>
-                            );
-                          })}
+                        {/* 向智能体提问 标签 (保留提示语义与自动化测试契约) */}
+                        <div className="flex items-center space-x-1 text-xs text-[#71717A] font-medium select-none pl-1">
+                          <span className="text-[#5B6CFF]">💬</span>
+                          <span className="text-[11.5px]">向智能体提问</span>
                         </div>
-                      )}
+                      </div>
+
+                      {/* 右侧：发送方式选择 + 停止回答 + 稍微放大的圆形发送按钮 */}
+                      <div className="flex items-center space-x-2">
+                        {/* 发送方式选择器 (Dropdown) */}
+                        <div className="relative">
+                          <button
+                            type="button"
+                            onClick={() => setSendModeDropdownOpen(!sendModeDropdownOpen)}
+                            className="flex items-center space-x-1 px-2 py-1 rounded-[6px] text-xs font-mono text-[#71717A] hover:text-[#5B6CFF] hover:bg-white/80 transition-all cursor-pointer select-none"
+                            title="点击选择发送快捷键 (Enter / Ctrl+Enter / Shift+Enter)"
+                          >
+                            <span>{SEND_MODES.find(m => m.key === sendKeyMode)?.label || 'Enter 发送'}</span>
+                            <Icon name="chevronDown" size={11} className={`text-[#A1A1AA] transition-transform duration-150 ${sendModeDropdownOpen ? 'rotate-180' : ''}`} />
+                          </button>
+
+                          {sendModeDropdownOpen && (
+                            <div className="absolute right-0 bottom-full mb-2 w-56 bg-white rounded-[12px] border border-[#EEEEEE] shadow-soft-lg p-1.5 space-y-0.5 z-50 text-xs animate-fade-in-up">
+                              <div className="px-2.5 py-1 text-[11px] font-semibold text-[#A1A1AA] uppercase tracking-wider border-b border-[#F4F4F5] mb-1">
+                                选择发送方式
+                              </div>
+                              {SEND_MODES.map((mode) => {
+                                const isSelected = mode.key === sendKeyMode;
+                                return (
+                                  <button
+                                    key={mode.key}
+                                    type="button"
+                                    onClick={() => handleSelectSendMode(mode.key)}
+                                    className={`w-full text-left px-2.5 py-1.5 rounded-[8px] flex items-center justify-between hover:bg-[#F4F5FF] active:scale-[0.98] transition-all cursor-pointer ${
+                                      isSelected ? 'text-[#5B6CFF] font-semibold bg-[#F4F5FF]' : 'text-[#3F3F46]'
+                                    }`}
+                                  >
+                                    <div>
+                                      <div className="text-xs font-medium">{mode.label}</div>
+                                      <div className="text-[11px] text-[#A1A1AA] font-normal">{mode.hint}</div>
+                                    </div>
+                                    {isSelected && <span className="text-xs font-bold text-[#5B6CFF]">✓</span>}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* 停止回答按钮 */}
+                        {isSending && (
+                          <button
+                            type="button"
+                            onClick={handleStopAnswer}
+                            className="flex items-center space-x-1 px-2.5 py-1 rounded-full bg-[#FEE2E2] hover:bg-[#FECACA] active:scale-[0.98] text-[#DC2626] text-xs font-medium transition-all cursor-pointer"
+                            title="停止回答"
+                          >
+                            <Icon name="stopCircle" size={13} />
+                            <span className="hidden sm:inline">停止</span>
+                          </button>
+                        )}
+
+                        {/* 圆形发送按钮 (放大至 w-9 h-9 36px，更协调大气) */}
+                        <button
+                          type="button"
+                          onClick={() => handleSendMessage()}
+                          disabled={(!inputText.trim() && !attachmentName) || isSending}
+                          className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-120 flex-shrink-0 ${
+                            (inputText.trim() || attachmentName) && !isSending
+                              ? 'bg-[#5B6CFF] hover:bg-[#4858EC] text-white shadow-soft-sm hover:scale-105 active:scale-95 cursor-pointer'
+                              : 'bg-[#E4E4E7] text-[#A1A1AA] opacity-50 cursor-not-allowed'
+                          }`}
+                          title="发送消息"
+                        >
+                          <Icon name="arrowUp" size={16} />
+                        </button>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Multiline Input Textarea */}
-                  <textarea
-                    ref={inputRef}
-                    rows="2"
-                    value={inputText}
-                    onChange={(e) => setInputText(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    onCompositionEnd={handleCompositionEnd}
-                    placeholder={
-                      sendKeyMode === 'Enter'
-                        ? '输入医学课程问题，按 Enter 发送，Shift+Enter 换行...'
-                        : sendKeyMode === 'Shift+Enter'
-                        ? '输入医学课程问题，按 Shift+Enter 发送，Enter 换行...'
-                        : '输入医学课程问题（如：休克分期、三羧酸循环、动作电位），按 Ctrl+Enter 发送...'
-                    }
-                    className="w-full text-sm text-[#18181B] placeholder-[#A1A1AA] bg-transparent resize-none border-none outline-none leading-relaxed composer-textarea"
-                  />
-
-                  {/* Attachment Badge */}
-                  {attachmentName && (
-                    <div className="mb-2 flex items-center space-x-1.5 px-2.5 py-1 rounded-[8px] bg-[#F4F5FF] text-[#5B6CFF] text-xs font-medium w-fit border border-[#D5DAFF]">
-                      <Icon name="paperclip" size={13} />
-                      <span className="truncate max-w-xs">{attachmentName}</span>
-                      <button 
-                        onClick={handleClearAttachment}
-                        className="hover:text-red-500 ml-1"
-                      >
-                        <Icon name="x" size={12} />
-                      </button>
-                    </div>
-                  )}
-
-                  {/* Bottom Toolbar: 左「添加图片 / 可拖入图片或 PDF」+ 右侧圆形发送按钮 */}
-                  <div className="flex items-center justify-between pt-2 border-t border-[#F4F4F5] mt-1">
+                  {/* 最底部状态条：与输入框保持 8px (mt-2) 间距，字号 12px，颜色浅灰，完美对齐 800px 宽度 */}
+                  <div className="mt-2 flex items-center justify-between text-xs text-[#9CA3AF] px-2 select-none">
                     <div className="flex items-center space-x-2">
-                      <button 
-                        onClick={handleChooseImage}
-                        className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-[8px] bg-[#F4F4F5] hover:bg-[#EAEAEA] active:scale-[0.98] text-xs text-[#52525B] transition-all duration-150 cursor-pointer"
-                      >
-                        <Icon name="image" size={14} className="text-[#71717A]" />
-                        <span>添加图片</span>
-                      </button>
-                      <span className="text-xs text-[#71717A] hidden sm:inline">
-                        可拖入图片或 PDF 课件
-                      </span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse-dot"></span>
+                      <span className="font-medium text-[#4B5563] text-xs">{statusText}</span>
+                      <span className="w-px h-2.5 bg-[#E5E7EB] mx-1 inline-block" />
+                      <span className="font-mono text-xs text-[#9CA3AF] hidden sm:inline">知识库: 14 份 / deepseek-chat</span>
                     </div>
-
-                    <div className="flex items-center space-x-2">
-                      {isSending && (
-                        <button
-                          onClick={handleStopAnswer}
-                          className="flex items-center space-x-1 px-3 py-1.5 rounded-[8px] bg-[#FEE2E2] hover:bg-[#FECACA] active:scale-[0.98] text-[#DC2626] text-xs font-medium transition-all"
-                        >
-                          <Icon name="stopCircle" size={13} />
-                          <span>停止回答</span>
-                        </button>
-                      )}
-
-                      {/* Circular Send Button */}
-                      <button
-                        onClick={() => handleSendMessage()}
-                        disabled={(!inputText.trim() && !attachmentName) || isSending}
-                        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-120 ${
-                          (inputText.trim() || attachmentName) && !isSending
-                            ? 'bg-[#5B6CFF] hover:bg-[#4858EC] text-white shadow-soft-sm hover:scale-105 active:scale-95 cursor-pointer'
-                            : 'bg-[#E4E4E7] text-[#A1A1AA] opacity-50 cursor-not-allowed'
-                        }`}
-                      >
-                        <Icon name="arrowUp" size={15} />
-                      </button>
+                    <div className="text-xs text-[#9CA3AF] truncate max-w-[55%] text-right">
+                      AI 生成内容仅供医学教学与科研参考，请遵医嘱
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* -----------------------------------------------------------------
-                  最底部状态条 (Status Bar: 准备就绪 + 免责声明)
-                 ----------------------------------------------------------------- */}
-              <footer className="h-7 bg-[#FAFAFA] border-t border-[#EEEEEE] flex items-center justify-between px-6 text-xs text-[#71717A] flex-shrink-0 select-none">
-                <div className="flex items-center space-x-2">
-                  <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse-dot"></span>
-                  <span className="font-medium text-[#3F3F46]">{statusText}</span>
-                  <span className="w-px h-3 bg-[#E4E4E7] mx-1 inline-block" />
-                  <span className="font-mono text-xs text-[#71717A]">知识库索引: 14 份 / 模型: deepseek-chat</span>
-                </div>
-                <div className="text-xs text-[#71717A] truncate">
-                  AI 生成内容仅供医学教学与科研参考，临床诊疗请以权威指南与医师医嘱为准
-                </div>
-              </footer>
 
               {pendingApproval && ReactDOM.createPortal(
                 <div className={`fixed inset-0 isolate flex items-center justify-center bg-[#18181B]/35 p-6 modal-frosted-overlay ${closingModal === 'approval' ? 'modal-fade-out pointer-events-none' : 'modal-fade-in'}`} style={{ zIndex: 2147483647 }}>

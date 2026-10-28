@@ -4,7 +4,7 @@
 [Setup]
 AppId={{5A4F7B3E-91C8-4D2A-8F3E-2A4B8C1D6E5F}
 AppName=MedScholar
-AppVersion=1.0.0
+AppVersion=1.0.1
 AppPublisher=MedScholar Team
 AppPublisherURL=https://github.com/kenMoCN/MedScholar
 AppSupportURL=https://github.com/kenMoCN/MedScholar
