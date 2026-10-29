@@ -136,5 +136,37 @@ class TopToolbarStyleTests(unittest.TestCase):
             self.assertTrue((PREVIEW.parent / "web" / "assets" / filename).is_file())
 
 
+    def test_sidebar_workspace_tree_and_zero_jitter_hover(self):
+        html = PREVIEW.read_text(encoding="utf-8")
+        self.assertIn("工作区", html)
+        self.assertNotIn("对话列表", html)
+        self.assertIn('Icon name="folderPlus"', html)
+        self.assertIn('Icon name="search"', html)
+        self.assertIn(".session-item", html)
+        self.assertIn(".session-item-content", html)
+        self.assertIn(".session-item-time", html)
+        self.assertIn(".session-item-actions", html)
+        self.assertIn(".session-action-btn", html)
+        self.assertIn("padding-right: 76px", html)
+        self.assertIn("position: absolute", html)
+        self.assertIn("transition: opacity 0.2s ease, visibility 0.2s ease", html)
+        self.assertIn('"Microsoft YaHei"', html)
+        self.assertIn("font-weight: bold", html)
+        self.assertIn("drop-indicator-line", html)
+        self.assertIn("handleSessionDrop", html)
+        self.assertIn('draggable="true"', html)
+        self.assertIn("-webkit-user-drag: element !important", html)
+        self.assertIn("data-session-id", html)
+        self.assertIn("data-workspace-id", html)
+        self.assertIn("handleContainerDrop", html)
+        self.assertIn("setDragImage", html)
+        self.assertIn("currentActiveFolderId", html)
+        self.assertIn(".drag-hover", html)
+        self.assertIn("renderList", html)
+        self.assertIn("STORAGE_KEY", html)
+        self.assertIn("saveData", html)
+        self.assertIn("loadData", html)
+
+
 if __name__ == "__main__":
     unittest.main()

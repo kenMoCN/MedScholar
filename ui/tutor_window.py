@@ -12,13 +12,17 @@ from threading import Event
 from typing import Any
 
 from PySide6.QtCore import (
+    Property,
     QEasingCurve,
     QEvent,
+    QEventLoop,
     QObject,
+    QParallelAnimationGroup,
     QPoint,
     QPropertyAnimation,
     QRect,
     QRectF,
+    QSize,
     QThread,
     QTimer,
     QUrl,
@@ -44,6 +48,7 @@ from PySide6.QtGui import (
     QShowEvent,
 )
 from PySide6.QtWebChannel import QWebChannel
+from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import (
     QApplication,
@@ -515,7 +520,160 @@ class WebBridge(QObject):
         QDesktopServices.openUrl(url)
 
 
-class TutorMainWindow(QMainWindow):
+
+import sys
+
+if sys.platform == "win32":
+    import ctypes
+    from ctypes import wintypes
+
+    user32 = ctypes.windll.user32
+    dwmapi = ctypes.windll.dwmapi
+
+    GWL_STYLE = -16
+    WS_CAPTION = 0x00C00000
+    WS_CLIPCHILDREN = 0x02000000
+    WS_MINIMIZEBOX = 0x00020000
+    WS_MAXIMIZEBOX = 0x00010000
+    WS_SYSMENU = 0x00080000
+    WS_SIZEBOX = 0x00040000
+    WS_THICKFRAME = 0x00040000
+    SWP_FRAMECHANGED = 0x0020
+    SWP_NOMOVE = 0x0002
+    SWP_NOSIZE = 0x0001
+    SWP_NOZORDER = 0x0004
+    SM_CXFRAME = 32
+    SM_CYFRAME = 33
+    SM_CXPADDEDBORDER = 92
+    WM_NCCALCSIZE = 0x0083
+
+    if ctypes.sizeof(ctypes.c_void_p) == 8:
+        _win32_set_window_long_ptr = user32.SetWindowLongPtrW
+        _win32_set_window_long_ptr.argtypes = [wintypes.HWND, ctypes.c_int, ctypes.c_ssize_t]
+        _win32_set_window_long_ptr.restype = ctypes.c_ssize_t
+        _win32_get_window_long_ptr = user32.GetWindowLongPtrW
+        _win32_get_window_long_ptr.argtypes = [wintypes.HWND, ctypes.c_int]
+        _win32_get_window_long_ptr.restype = ctypes.c_ssize_t
+    else:
+        _win32_set_window_long_ptr = user32.SetWindowLongW
+        _win32_set_window_long_ptr.argtypes = [wintypes.HWND, ctypes.c_int, wintypes.LONG]
+        _win32_set_window_long_ptr.restype = wintypes.LONG
+        _win32_get_window_long_ptr = user32.GetWindowLongW
+        _win32_get_window_long_ptr.argtypes = [wintypes.HWND, ctypes.c_int]
+        _win32_get_window_long_ptr.restype = wintypes.LONG
+
+    class _Win32Rect(ctypes.Structure):
+        _fields_ = [
+            ("left", wintypes.LONG),
+            ("top", wintypes.LONG),
+            ("right", wintypes.LONG),
+            ("bottom", wintypes.LONG),
+        ]
+
+    class _Win32NcCalcSizeParams(ctypes.Structure):
+        _fields_ = [
+            ("rgrc", _Win32Rect * 3),
+            ("lppos", ctypes.c_void_p),
+        ]
+
+    class _Win32Margins(ctypes.Structure):
+        _fields_ = [
+            ("cxLeftWidth", wintypes.INT),
+            ("cxRightWidth", wintypes.INT),
+            ("cyTopHeight", wintypes.INT),
+            ("cyBottomHeight", wintypes.INT),
+        ]
+
+    class _Win32Msg(ctypes.Structure):
+        _fields_ = [
+            ("hwnd", wintypes.HWND),
+            ("message", wintypes.UINT),
+            ("wParam", wintypes.WPARAM),
+            ("lParam", wintypes.LPARAM),
+            ("time", wintypes.DWORD),
+            ("pt", wintypes.POINT),
+        ]
+
+
+class AnimatedFramelessWindow(QMainWindow):
+    """
+    Base frameless window implementing smooth QPropertyAnimation + QEventLoop state transitions
+    (animSize, animGeometry) following CSDN MStudyStudio architecture:
+    - Q_PROPERTY(QSize animSize READ animSize WRITE setAnimSize)
+    - Q_PROPERTY(QRect animGeometry READ animGeometry WRITE setAnimGeometry)
+    - Signals: animStarted, animSizeChanged, animFinished
+    - Non-blocking synchronous-feel event loop via QEventLoop
+    """
+    animStarted = Signal()
+    animSizeChanged = Signal()
+    animFinished = Signal()
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        super().__init__(parent)
+        self._is_animating = False
+        self._normal_geometry: QRect | None = None
+
+        self.m_pAnimation = QPropertyAnimation(self)
+        self.m_pAnimation.setEasingCurve(QEasingCurve.Type.OutCubic)
+        self.m_pAnimation.setTargetObject(self)
+        self.m_pAnimation.setPropertyName(b"animGeometry")
+        self.m_pAnimation.valueChanged.connect(self._on_anim_value_changed)
+
+    def _on_anim_value_changed(self) -> None:
+        self.animSizeChanged.emit()
+
+    def getAnimSize(self) -> QSize:
+        return self.size()
+
+    def setAnimSize(self, size: QSize) -> None:
+        self.resize(size)
+
+    animSize = Property(QSize, getAnimSize, setAnimSize)
+
+    def getAnimGeometry(self) -> QRect:
+        return self.geometry()
+
+    def setAnimGeometry(self, rect: QRect) -> None:
+        self.setGeometry(rect)
+
+    animGeometry = Property(QRect, getAnimGeometry, setAnimGeometry)
+
+    def run(
+        self,
+        start_val: QRect | QSize,
+        end_val: QRect | QSize,
+        duration: int = 240,
+        easing: QEasingCurve.Type = QEasingCurve.Type.OutCubic,
+        prop_name: bytes = b"animGeometry",
+    ) -> None:
+        """Core animation loop driving QPropertyAnimation and waiting via local QEventLoop."""
+        if start_val == end_val or self._is_animating:
+            return
+
+        self._is_animating = True
+        self.m_pAnimation.stop()
+        self.m_pAnimation.setPropertyName(prop_name)
+        self.m_pAnimation.setEasingCurve(easing)
+        self.m_pAnimation.setDuration(duration)
+        self.m_pAnimation.setStartValue(start_val)
+        self.m_pAnimation.setEndValue(end_val)
+
+        loop = QEventLoop()
+        self.m_pAnimation.finished.connect(loop.quit)
+        self.animStarted.emit()
+        self.m_pAnimation.start()
+        loop.exec()
+        try:
+            self.m_pAnimation.finished.disconnect(loop.quit)
+        except Exception:
+            pass
+        self._is_animating = False
+        self.animFinished.emit()
+
+    run_animation = run
+
+
+class TutorMainWindow(AnimatedFramelessWindow):
     settings_requested = Signal()
     knowledge_requested = Signal()
     skills_requested = Signal(object, str)
@@ -694,14 +852,36 @@ class TutorMainWindow(QMainWindow):
         if hasattr(self, "web_bridge") and self.web_bridge is not None:
             self.web_bridge.windowTransitionFinished.emit()
 
+    def nativeEvent(self, eventType: Any, message: Any) -> tuple[bool, int]:
+        if sys.platform == "win32" and eventType in (b"windows_generic_MSG", "windows_generic_MSG"):
+            try:
+                msg = _Win32Msg.from_address(int(message))
+                if msg.message == WM_NCCALCSIZE:
+                    if msg.wParam and msg.lParam:
+                        if getattr(self, "_hwnd", None) and user32.IsZoomed(self._hwnd):
+                            bx = user32.GetSystemMetrics(SM_CXFRAME) + user32.GetSystemMetrics(SM_CXPADDEDBORDER)
+                            by = user32.GetSystemMetrics(SM_CYFRAME) + user32.GetSystemMetrics(SM_CXPADDEDBORDER)
+                            params = _Win32NcCalcSizeParams.from_address(msg.lParam)
+                            params.rgrc[0].left += bx
+                            params.rgrc[0].top += by
+                            params.rgrc[0].right -= bx
+                            params.rgrc[0].bottom -= by
+                    return True, 0
+            except Exception:
+                pass
+        return super().nativeEvent(eventType, message)
+
     def maximizeOrRestore(self) -> None:
-        """Toggle maximize or restore instantly with frontend freeze-masking to eliminate tearing."""
+        """Toggle maximize or restore using Windows DWM hardware-accelerated animations."""
         if hasattr(self, "web_bridge") and self.web_bridge is not None:
             self.web_bridge.windowTransitionStarted.emit()
         if self.isMaximized():
             self.showNormal()
         else:
             self.showMaximized()
+        if hasattr(self, "web_bridge") and self.web_bridge is not None:
+            self.web_bridge.maximizedChanged.emit(self.isMaximized())
+            self.web_bridge.windowTransitionFinished.emit()
 
     def toggle_maximize(self) -> None:
         self.maximizeOrRestore()
@@ -709,8 +889,12 @@ class TutorMainWindow(QMainWindow):
     toggle_maximize_with_animation = maximizeOrRestore
 
     def minimize_window(self) -> None:
-        """Native system minimize - Qt and Windows DWM smoothly animate to taskbar without flicker."""
+        """Native system minimize - Windows DWM smoothly animates to taskbar without frame drops."""
+        if hasattr(self, "web_bridge") and self.web_bridge is not None:
+            self.web_bridge.windowTransitionStarted.emit()
         self.showMinimized()
+        if hasattr(self, "web_bridge") and self.web_bridge is not None:
+            self.web_bridge.windowTransitionFinished.emit()
 
     minimize = minimize_window
     minimize_with_animation = minimize_window
@@ -720,8 +904,23 @@ class TutorMainWindow(QMainWindow):
         self._setup_windows_frameless()
 
     def _setup_windows_frameless(self) -> None:
-        """Keep frameless window setup clean and native without intrusive win32 style hacks."""
-        pass
+        """
+        Restore native Windows DWM hardware-accelerated animations using Win32 API
+        (SetWindowLongPtr with WS_CAPTION | WS_CLIPCHILDREN | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SYSMENU | WS_SIZEBOX)
+        and DwmExtendFrameIntoClientArea, eliminating software animation lag and stuttering.
+        """
+        if sys.platform != "win32":
+            return
+        try:
+            self._hwnd = int(self.winId())
+            cur = _win32_get_window_long_ptr(self._hwnd, GWL_STYLE)
+            target = cur | WS_CAPTION | WS_CLIPCHILDREN | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SYSMENU | WS_SIZEBOX
+            _win32_set_window_long_ptr(self._hwnd, GWL_STYLE, target)
+            margins = _Win32Margins(1, 1, 1, 1)
+            dwmapi.DwmExtendFrameIntoClientArea(self._hwnd, ctypes.byref(margins))
+            user32.SetWindowPos(self._hwnd, 0, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED)
+        except Exception:
+            pass
 
     def close_with_animation(self) -> None:
         """Close window cleanly."""
@@ -753,13 +952,27 @@ class TutorMainWindow(QMainWindow):
         self.web_channel = QWebChannel(self)
         self.web_channel.registerObject("bridge", self.web_bridge)
 
+        if not hasattr(TutorMainWindow, "_shared_web_profile") or TutorMainWindow._shared_web_profile is None:
+            profile_path = Path.home() / ".medscholar" / "web_profile"
+            try:
+                profile_path.mkdir(parents=True, exist_ok=True)
+            except Exception:
+                pass
+            prof = QWebEngineProfile("MedScholarPersistentProfile", QApplication.instance())
+            prof.setPersistentStoragePath(str(profile_path / "storage"))
+            prof.setCachePath(str(profile_path / "cache"))
+            TutorMainWindow._shared_web_profile = prof
+        self.web_profile = TutorMainWindow._shared_web_profile
+        self.web_page = QWebEnginePage(self.web_profile, self)
         self.web_view = QWebEngineView(self)
+        self.web_view.setPage(self.web_page)
         # Match the HTML canvas while Chromium briefly re-composites on
         # Windows activation changes, instead of exposing the default white.
         self.web_view.page().setBackgroundColor(QColor("#111318" if self._effective_theme == "dark" else "#FAFAFA"))
-        # Let the top-level window keep handling file drops so the existing
-        # image/PDF drag-and-drop workflow is not swallowed by Chromium.
-        self.web_view.setAcceptDrops(False)
+        # Enable drops so native Chromium HTML5 drag and drop operates smoothly
+        # without native OS-level prohibition (🚫) cursor, and install filter for files.
+        self.web_view.setAcceptDrops(True)
+        self.web_view.installEventFilter(self)
         self.web_view.page().setWebChannel(self.web_channel)
         # Load the packaged frontend next to this module, independent of the
         # process working directory or which shortcut launched the app.
@@ -1939,6 +2152,26 @@ class TutorMainWindow(QMainWindow):
             return
         self._handle_dropped_paths(paths)
         event.acceptProposedAction()
+
+    def eventFilter(self, watched: QObject, event: QEvent) -> bool:
+        if hasattr(self, "web_view") and watched == self.web_view:
+            if event.type() in (QEvent.Type.DragEnter, QEvent.Type.DragMove):
+                if hasattr(event, "mimeData") and event.mimeData().hasUrls():
+                    if self._supported_drop_paths(event.mimeData().urls()):
+                        event.acceptProposedAction()
+                        self._set_drag_active(True)
+                        return True
+            elif event.type() == QEvent.Type.DragLeave:
+                self._set_drag_active(False)
+            elif event.type() == QEvent.Type.Drop:
+                if hasattr(event, "mimeData") and event.mimeData().hasUrls():
+                    self._set_drag_active(False)
+                    paths = self._supported_drop_paths(event.mimeData().urls())
+                    if paths:
+                        self._handle_dropped_paths(paths)
+                        event.acceptProposedAction()
+                        return True
+        return super().eventFilter(watched, event)
 
     def _set_drag_active(self, active: bool) -> None:
         self.composer.setProperty("dragActive", active)

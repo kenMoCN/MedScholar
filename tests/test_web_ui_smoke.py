@@ -52,7 +52,7 @@ class WebUiSmokeTests(unittest.TestCase):
                 "JSON.stringify({"
                 "textarea: !!document.querySelector('textarea'),"
                 "bridge: !!window.pyBridge,"
-                "appText: document.body.innerText.includes('向智能体提问')"
+                "appText: document.body.innerText.includes('添加图片')"
                 "})",
                 on_javascript,
             )

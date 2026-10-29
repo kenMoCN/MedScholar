@@ -3,6 +3,104 @@
   "privacy": "local_session_images_no_secrets_no_hidden_reasoning",
   "sessions": [
     {
+      "session_id": "37a5362aa99f46a9bc9bf59684325475",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:15:14.949767+00:00",
+      "updated_at": "2026-10-29T15:15:14.949767+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "66c68e92c39c405283180bcaef0cd81d",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:15:14.798178+00:00",
+      "updated_at": "2026-10-29T15:15:14.798178+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "ddd1c6445d8f4fceb16db03883634344",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:14:21.356143+00:00",
+      "updated_at": "2026-10-29T15:14:21.356143+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "75ec87af44b548fa942f506d8ed75af7",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:14:21.216666+00:00",
+      "updated_at": "2026-10-29T15:14:21.216666+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "12c1dc52d67541d48d1fb1f4938c56fc",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:14:20.784151+00:00",
+      "updated_at": "2026-10-29T15:14:20.784151+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "7b304432532845df81f214e017923330",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:14:20.621784+00:00",
+      "updated_at": "2026-10-29T15:14:20.621784+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "b3d2c4d7b1914cc19328a6b997547c9f",
+      "title": "新对话",
+      "created_at": "2026-10-29T15:14:19.620618+00:00",
+      "updated_at": "2026-10-29T15:14:19.620618+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "cba7025989e04ab48915cabf1d53540e",
+      "title": "新对话",
+      "created_at": "2026-10-29T14:24:14.815767+00:00",
+      "updated_at": "2026-10-29T14:24:14.815767+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "0154437f5a97420a948b26a8a8b346dd",
+      "title": "新对话",
+      "created_at": "2026-10-29T14:24:13.136818+00:00",
+      "updated_at": "2026-10-29T14:24:13.136818+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "c87ecdc8f3d242078354bb33ade7c52d",
+      "title": "新对话",
+      "created_at": "2026-10-29T13:51:26.420166+00:00",
+      "updated_at": "2026-10-29T13:51:26.420166+00:00",
+      "messages": []
+    },
+    {
+      "session_id": "fcdd3014d2f24a999948529166fa0fc9",
+      "title": "你好2",
+      "created_at": "2026-10-29T13:24:51.150971+00:00",
+      "updated_at": "2026-10-29T13:24:55.570109+00:00",
+      "messages": [
+        {
+          "role": "user",
+          "title": "你",
+          "body": "你好2",
+          "tone": "user",
+          "created_at": "2026-10-29T13:24:55.151687+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        },
+        {
+          "role": "assistant",
+          "title": "需要补充信息",
+          "body": "• 你想了解哪个具体医学概念、机制或题目？",
+          "tone": "clarification",
+          "created_at": "2026-10-29T13:24:55.570109+00:00",
+          "resources": [],
+          "question_context": "",
+          "attachments": []
+        }
+      ]
+    },
+    {
       "session_id": "5a0a71b4a6f94a9ca865793d3096041b",
       "title": "请结合当前学科的基础教材概念，深入浅出地讲解核心…",
       "created_at": "2026-10-10T18:04:57.211057+00:00",

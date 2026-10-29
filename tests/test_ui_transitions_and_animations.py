@@ -70,5 +70,35 @@ class UiTransitionsAndAnimationsTests(unittest.TestCase):
         self.assertIn("triggerWithFading", html)
 
 
+
+    def test_animated_frameless_window_property_animation_and_event_loop(self):
+        from ui.tutor_window import AnimatedFramelessWindow
+        from PySide6.QtCore import QRect, QSize
+
+        app = QApplication.instance() or QApplication([])
+        win = AnimatedFramelessWindow()
+        win.setGeometry(QRect(100, 100, 400, 300))
+
+        # Test property getters & setters as per CSDN article
+        win.setAnimSize(QSize(500, 400))
+        self.assertEqual(win.animSize, QSize(500, 400))
+        self.assertEqual(win.getAnimSize(), QSize(500, 400))
+
+        win.setAnimGeometry(QRect(120, 120, 480, 360))
+        self.assertEqual(win.animGeometry, QRect(120, 120, 480, 360))
+        self.assertEqual(win.getAnimGeometry(), QRect(120, 120, 480, 360))
+
+        # Test signals and run method with QEventLoop
+        started = []
+        finished = []
+        win.animStarted.connect(lambda: started.append(True))
+        win.animFinished.connect(lambda: finished.append(True))
+
+        win.run(QRect(120, 120, 480, 360), QRect(150, 150, 600, 450), duration=40)
+        self.assertTrue(len(started) > 0)
+        self.assertTrue(len(finished) > 0)
+        self.assertEqual(win.geometry(), QRect(150, 150, 600, 450))
+        win.close()
+
 if __name__ == "__main__":
     unittest.main()
